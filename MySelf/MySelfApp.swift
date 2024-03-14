@@ -11,7 +11,9 @@ import SwiftUI
 struct MySelfApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      AppView(store: .init(initialState: AppCore.State()) {
+        AppCore()
+      })
     }
   }
 }
