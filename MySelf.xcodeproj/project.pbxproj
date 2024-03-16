@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3C6BDE2BA5E13700F44AB7 /* RepresentedPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C6BDD2BA5E13700F44AB7 /* RepresentedPageControl.swift */; };
+		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
 		8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */; };
 		8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD422B8229E2001CA0EE /* AppView.swift */; };
 		8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFD442B8229E3001CA0EE /* Assets.xcassets */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D3C6BDD2BA5E13700F44AB7 /* RepresentedPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentedPageControl.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
 		8D7BFD422B8229E2001CA0EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7BFD6F2B822C15001CA0EE /* ComposableArchitecture in Frameworks */,
+				8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */,
 				8D7BFD6C2B822C09001CA0EE /* TCACoordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8D3C6BDC2BA5E11F00F44AB7 /* Common */,
+				8D7BFD442B8229E3001CA0EE /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8D3C6BDB2BA5E0FB00F44AB7 /* UIViewRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				8D3C6BDD2BA5E13700F44AB7 /* RepresentedPageControl.swift */,
+			);
+			path = UIViewRepresentable;
+			sourceTree = "<group>";
+		};
+		8D3C6BDC2BA5E11F00F44AB7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8D3C6BDB2BA5E0FB00F44AB7 /* UIViewRepresentable */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		8D7BFD342B8229E2001CA0EE = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +136,7 @@
 				8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */,
 				8D7BFD702B82333B001CA0EE /* App */,
 				8D7BFD742B823382001CA0EE /* Scene */,
-				8D7BFD442B8229E3001CA0EE /* Assets.xcassets */,
+				8D3C6BDA2BA5E0D800F44AB7 /* Resource */,
 				8D7BFD462B8229E3001CA0EE /* Preview Content */,
 			);
 			path = MySelf;
@@ -207,6 +236,7 @@
 			packageProductDependencies = (
 				8D7BFD6B2B822C09001CA0EE /* TCACoordinators */,
 				8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */,
+				8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */,
 			);
 			productName = MySelf;
 			productReference = 8D7BFD3D2B8229E2001CA0EE /* MySelf.app */;
@@ -283,6 +313,7 @@
 			packageReferences = (
 				8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */,
 				8D7BFD6D2B822C15001CA0EE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = 8D7BFD3E2B8229E2001CA0EE /* Products */;
 			projectDirPath = "";
@@ -330,6 +361,7 @@
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				8DEB14402B82365A00AAC47C /* MeScreen.swift in Sources */,
+				8D3C6BDE2BA5E13700F44AB7 /* RepresentedPageControl.swift in Sources */,
 				8D8498412BA3344700FA9537 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +700,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 		8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
@@ -687,6 +727,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
 		8D7BFD6B2B822C09001CA0EE /* TCACoordinators */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */;
