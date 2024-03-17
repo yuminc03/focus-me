@@ -31,7 +31,7 @@ struct RepresentedPageControl: UIViewRepresentable {
   }
   
   func updateUIView(_ uiView: UIPageControl, context: Context) {
-    
+    uiView.currentPage = currentPage
   }
   
   func makeCoordinator() -> Coordinator {
@@ -50,6 +50,7 @@ struct RepresentedPageControl: UIViewRepresentable {
     
     private func bind() {
       parent.pageControl.currentPagePublisher
+        .receive(on: DispatchQueue.main)
         .sink { [weak self] in
           self?.parent.pageControl.currentPage = $0
         }
