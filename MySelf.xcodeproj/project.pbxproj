@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D3C6BDE2BA5E13700F44AB7 /* RepresentedPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C6BDD2BA5E13700F44AB7 /* RepresentedPageControl.swift */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
+		8D5A6BF92BA72B34002D5854 /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A6BF82BA72B34002D5854 /* PagingScrollView.swift */; };
+		8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A6BFA2BA72C7E002D5854 /* Card.swift */; };
 		8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */; };
 		8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD422B8229E2001CA0EE /* AppView.swift */; };
 		8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFD442B8229E3001CA0EE /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		8D3C6BDD2BA5E13700F44AB7 /* RepresentedPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentedPageControl.swift; sourceTree = "<group>"; };
+		8D5A6BF82BA72B34002D5854 /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
+		8D5A6BFA2BA72C7E002D5854 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
 		8D7BFD422B8229E2001CA0EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		8D5A6BF52BA7239A002D5854 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				8D5A6BF82BA72B34002D5854 /* PagingScrollView.swift */,
+				8D5A6BFA2BA72C7E002D5854 /* Card.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -358,11 +364,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7BFD762B8233A2001CA0EE /* MeCoordinator in Sources */,
+				8D5A6BF92BA72B34002D5854 /* PagingScrollView.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				8DEB14402B82365A00AAC47C /* MeScreen.swift in Sources */,
 				8D3C6BDE2BA5E13700F44AB7 /* RepresentedPageControl.swift in Sources */,
 				8D8498412BA3344700FA9537 /* RootView.swift in Sources */,
+				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
