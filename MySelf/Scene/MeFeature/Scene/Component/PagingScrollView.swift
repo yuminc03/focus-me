@@ -36,7 +36,9 @@ struct PagingScrollView: View {
   }
   
   var body: some View {
-    Text("")
+    HStack(alignment: .center, spacing: 20) {
+      contentView
+    }
   }
 }
 
@@ -48,5 +50,11 @@ struct PagingScrollView: View {
 }
 
 extension PagingScrollView {
-  
+  private var contentView: some View {
+    ForEach(Card.dummy) { card in
+      GeometryReader { geometry in
+        CardItem(cardInfo: card)
+      }
+    }
+  }
 }

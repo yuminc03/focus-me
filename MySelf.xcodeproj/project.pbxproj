@@ -22,6 +22,7 @@
 		8D7BFD6F2B822C15001CA0EE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */; };
 		8D7BFD762B8233A2001CA0EE /* MeCoordinator in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD752B8233A2001CA0EE /* MeCoordinator */; };
 		8D8498412BA3344700FA9537 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8498402BA3344700FA9537 /* RootView.swift */; };
+		8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40F022BB05C1800A7D271 /* CardItem.swift */; };
 		8DEB14402B82365A00AAC47C /* MeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB143F2B82365A00AAC47C /* MeScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D7BFD752B8233A2001CA0EE /* MeCoordinator */ = {isa = PBXFileReference; lastKnownFileType = text; path = MeCoordinator; sourceTree = "<group>"; };
 		8D8498402BA3344700FA9537 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		8DA40F022BB05C1800A7D271 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		8DEB143F2B82365A00AAC47C /* MeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5A6BF82BA72B34002D5854 /* PagingScrollView.swift */,
-				8D5A6BFA2BA72C7E002D5854 /* Card.swift */,
+				8DA40F022BB05C1800A7D271 /* CardItem.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 			children = (
 				8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */,
 				8D7BFD702B82333B001CA0EE /* App */,
+				8DA40F002BB05BE600A7D271 /* Core */,
 				8D7BFD742B823382001CA0EE /* Scene */,
 				8D3C6BDA2BA5E0D800F44AB7 /* Resource */,
 				8D7BFD462B8229E3001CA0EE /* Preview Content */,
@@ -212,6 +215,22 @@
 				8D7BFD712B823341001CA0EE /* MeFeature */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		8DA40F002BB05BE600A7D271 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8DA40F012BB05BEF00A7D271 /* Model */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8DA40F012BB05BEF00A7D271 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D5A6BFA2BA72C7E002D5854 /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8DEB14412B82365F00AAC47C /* Coordinator */ = {
@@ -368,6 +387,7 @@
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				8DEB14402B82365A00AAC47C /* MeScreen.swift in Sources */,
+				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
 				8D3C6BDE2BA5E13700F44AB7 /* RepresentedPageControl.swift in Sources */,
 				8D8498412BA3344700FA9537 /* RootView.swift in Sources */,
 				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,
