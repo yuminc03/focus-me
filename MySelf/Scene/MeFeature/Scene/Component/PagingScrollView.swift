@@ -9,7 +9,8 @@ import SwiftUI
 
 import ComposableArchitecture
 
-struct PagingScrollCore: Reducer {
+@Reducer
+struct PagingScrollCore {
   struct State: Equatable {
     
   }

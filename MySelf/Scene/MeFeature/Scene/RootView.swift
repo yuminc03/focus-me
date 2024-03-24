@@ -33,14 +33,19 @@ struct RootCore {
     let id = UUID()
     let numberOfPages = 3
     @BindingState var currentPage = 0
+    var pagingView = PagingScrollCore.State()
   }
   
   enum Action: BindableAction, Equatable {
     case binding(BindingAction<State>)
+    case pagingView(PagingScrollCore.Action)
   }
   
   var body: some ReducerOf<Self> {
     BindingReducer()
+    Scope(state: \.pagingView, action: \.pagingView) {
+      PagingScrollCore()
+    }
     Reduce { state, action in
       switch action {
       case .binding:
@@ -91,7 +96,10 @@ extension RootView {
   
   private var pagingView: some View {
     GeometryReader { geometry in
-      
+      PagingScrollView(store: store.scope(
+        state: \.pagingView, 
+        action: \.pagingView
+      ))
     }
   }
 }

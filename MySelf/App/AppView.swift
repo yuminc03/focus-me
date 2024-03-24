@@ -26,14 +26,7 @@ struct AppCore: Reducer {
   }
   
   var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      switch action {
-      default:
-        break
-      }
-      
-      return .none
-    }
+    EmptyReducer()
   }
 }
 
