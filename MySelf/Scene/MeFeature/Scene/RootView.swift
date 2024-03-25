@@ -15,13 +15,18 @@ struct RootCore {
     let id = UUID()
     let numberOfPages = 3
     let cardWidth: CGFloat = 260
+    let cardPadding: CGFloat = 20
     @BindingState var currentPage = 0
+    @BindingState var currentScrollOffset: CGFloat = 0
+    @BindingState var dragOffset: CGFloat = 0
     var pagingView = PagingScrollCore.State()
+    var initialOffset: CGFloat = 0
   }
   
   enum Action: BindableAction, Equatable {
     case binding(BindingAction<State>)
     case pagingView(PagingScrollCore.Action)
+    case setupOffset(CGFloat)
   }
   
   var body: some ReducerOf<Self> {
@@ -33,10 +38,24 @@ struct RootCore {
       switch action {
       case .binding:
         break
+        
+      case let .setupOffset(cardWidth):
+        state.initialOffset = ((
+          cardWidth - state.cardWidth - 2 * state.cardPadding
+        ) / 2) + state.cardPadding
+        state.currentScrollOffset = countOffset(state: &state)
       }
       
       return .none
     }
+  }
+  
+  private func setupOffset() {
+    
+  }
+  
+  private func countOffset(state: inout State) -> CGFloat {
+    CGFloat(state.currentPage) * (state.cardWidth + state.cardPadding)
   }
 }
 
@@ -81,8 +100,11 @@ extension RootView {
   
   private var pagingView: some View {
     GeometryReader { geometry in
-      HStack(alignment: .center, spacing: 20) {
+      HStack(alignment: .center, spacing: viewStore.cardPadding) {
         cardsView
+      }
+      .onAppear {
+        store.send(.setupOffset(geometry.size.width))
       }
     }
   }
