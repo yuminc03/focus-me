@@ -19,7 +19,6 @@ struct CardItem: View {
       titleText
       contentView
     }
-    .padding(.horizontal, 20)
   }
 }
 
@@ -44,6 +43,7 @@ extension CardItem {
         .padding(20)
     }
     .frame(maxWidth: .infinity, alignment: .leading)
+    .frame(height: 300)
     .padding(20)
     .background(Color.blue56A7FF)
     .cornerRadius(25)
