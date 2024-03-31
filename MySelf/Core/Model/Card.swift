@@ -14,6 +14,10 @@ struct Card: Equatable, Identifiable {
   
   static let dummy: [Card] = [
     .init(
+      title: "Judging",
+      subTitle: "일을 시작하기 전 미리 계획하고 순서를 정하는 나"
+    ),
+    .init(
       title: "Introvert",
       subTitle: "혼자 있고 싶은 나"
     ),
@@ -28,6 +32,10 @@ struct Card: Equatable, Identifiable {
     .init(
       title: "Judging",
       subTitle: "일을 시작하기 전 미리 계획하고 순서를 정하는 나"
+    ),
+    .init(
+      title: "Introvert",
+      subTitle: "혼자 있고 싶은 나"
     )
   ]
 }

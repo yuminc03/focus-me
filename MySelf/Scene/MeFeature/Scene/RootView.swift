@@ -13,49 +13,28 @@ import ComposableArchitecture
 struct RootCore {
   struct State: Equatable {
     let id = UUID()
-    let numberOfPages = 3
-    let cardWidth: CGFloat = 260
-    let cardPadding: CGFloat = 20
-    @BindingState var currentPage = 0
-    @BindingState var currentScrollOffset: CGFloat = 0
-    @BindingState var dragOffset: CGFloat = 0
-    var pagingView = PagingScrollCore.State()
-    var initialOffset: CGFloat = 0
+    let cards = Card.dummy
+    @BindingState var currentPage = 1
   }
   
   enum Action: BindableAction, Equatable {
     case binding(BindingAction<State>)
-    case pagingView(PagingScrollCore.Action)
-    case setupOffset(CGFloat)
+    case changePage(Int)
   }
   
   var body: some ReducerOf<Self> {
     BindingReducer()
-    Scope(state: \.pagingView, action: \.pagingView) {
-      PagingScrollCore()
-    }
     Reduce { state, action in
       switch action {
       case .binding:
         break
         
-      case let .setupOffset(cardWidth):
-        state.initialOffset = ((
-          cardWidth - state.cardWidth - 2 * state.cardPadding
-        ) / 2) + state.cardPadding
-        state.currentScrollOffset = countOffset(state: &state)
+      case let .changePage(index):
+        state.currentPage = index
       }
       
       return .none
     }
-  }
-  
-  private func setupOffset() {
-    
-  }
-  
-  private func countOffset(state: inout State) -> CGFloat {
-    CGFloat(state.currentPage) * (state.cardWidth + state.cardPadding)
   }
 }
 
@@ -70,6 +49,8 @@ struct RootView: View {
   
   var body: some View {
     ZStack {
+      Color.black
+        .ignoresSafeArea()
       VStack(alignment: .center, spacing: 25) {
         pageControl
         pagingView
@@ -87,43 +68,32 @@ struct RootView: View {
 extension RootView {
   private var pageControl: some View {
     HStack(spacing: 0) {
-      RepresentedPageControl(
-        numberOfPage: viewStore.numberOfPages,
-        currentPage: viewStore.$currentPage
+      CustomPageIndicator(
+        selectedIndex: (viewStore.currentPage == 0) ?
+        3 : (viewStore.currentPage == 5) ?
+        1 : viewStore.currentPage - 1,
+        maxCount: viewStore.cards.count - 2
       )
-      .foregroundColor(.blue)
-      .aspectRatio(3 / 2, contentMode: .fit)
-      .frame(width: 165, height: 42)
       Spacer()
     }
+    .padding(20)
   }
   
   private var pagingView: some View {
-    GeometryReader { geometry in
-      HStack(alignment: .center, spacing: viewStore.cardPadding) {
-        cardsView
-      }
-      .onAppear {
-        store.send(.setupOffset(geometry.size.width))
+    TabView(selection: viewStore.$currentPage) {
+      ForEach(0 ..< viewStore.cards.count, id: \.self) {
+        CardItem(cardInfo: viewStore.cards[$0])
+          .tag($0)
+          .frame(width: UIScreen.main.bounds.width - 40)
       }
     }
-  }
-  
-  private var cardsView: some View {
-    ForEach(Card.dummy) { card in
-      GeometryReader { geometry in
-        CardItem(cardInfo: card)
-          .rotation3DEffect(
-            Angle(degrees: (
-              Double(geometry.frame(in: .global).minX) - 20
-            ) - 15),
-            axis: (x: 0, y: 90, z: 0)
-          )
-          .scaleEffect(
-            viewStore.currentPage == Card.dummy.firstIndex(of: card) ?? 0 ? 1.05 : 1
-          )
+    .onChange(of: viewStore.currentPage) { newValue in
+      if newValue == 0 {
+        store.send(.changePage(4))
+      } else if newValue == 5 {
+        store.send(.changePage(1))
       }
-      .frame(width: viewStore.cardWidth, height: 600)
     }
+    .tabViewStyle(.page(indexDisplayMode: .never))
   }
 }

@@ -22,16 +22,20 @@ struct CardItem: View {
   }
 }
 
-#Preview {
-  CardItem(cardInfo: .init(
-    title: "It's Title",
-    subTitle: "Save me"
-  ))
+struct CardItem_Previews: PreviewProvider {
+  static var previews: some View {
+    CardItem(cardInfo: .init(
+      title: "It's Title",
+      subTitle: "Save me"
+    ))
+    .previewLayout(.sizeThatFits)
+  }
 }
 
 extension CardItem {
   private var titleText: some View {
     Text(cardInfo.title.capitalized)
+      .foregroundColor(.white)
       .font(.system(size: 48, weight: .semibold, design: .rounded))
   }
   
