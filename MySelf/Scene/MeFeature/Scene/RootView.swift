@@ -54,6 +54,8 @@ struct RootView: View {
       VStack(alignment: .center, spacing: 25) {
         pageControl
         pagingView
+        Spacer()
+        continueButton
       }
     }
   }
@@ -95,5 +97,30 @@ extension RootView {
       }
     }
     .tabViewStyle(.page(indexDisplayMode: .never))
+  }
+  
+  private var continueButton: some View {
+    Button {
+      
+    } label: {
+      contnueButtonLabel
+    }
+  }
+  
+  private var contnueButtonLabel: some View {
+    HStack {
+      Image(systemName: "paperplane.fill")
+        .frame(width: 20, height: 20)
+      Text("계속하기")
+        .padding(10)
+    }
+    .foregroundColor(.white)
+    .padding(10)
+    .background(LinearGradient(
+      colors: [.purple, .blue],
+      startPoint: .topLeading,
+      endPoint: .bottomTrailing
+    ))
+    .clipShape(Capsule())
   }
 }
