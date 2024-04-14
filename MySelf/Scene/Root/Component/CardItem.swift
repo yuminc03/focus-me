@@ -24,10 +24,14 @@ struct CardItem: View {
 
 struct CardItem_Previews: PreviewProvider {
   static var previews: some View {
-    CardItem(cardInfo: .init(
-      title: "It's Title",
-      subTitle: "Save me"
-    ))
+    ZStack {
+      Color.black
+        .ignoresSafeArea()
+      CardItem(cardInfo: .init(
+        title: "It's Title",
+        subTitle: "Save me"
+      ))
+    }
     .previewLayout(.sizeThatFits)
   }
 }
@@ -36,7 +40,7 @@ extension CardItem {
   private var titleText: some View {
     Text(cardInfo.title.capitalized)
       .foregroundColor(.white)
-      .font(.system(size: 48, weight: .semibold, design: .rounded))
+      .font(.system(size: 48, weight: .semibold))
   }
   
   private var contentView: some View {

@@ -1,5 +1,5 @@
 //
-//  MeCoordinator.swift
+//  RootCoordinator.swift
 //  MySelf
 //
 //  Created by Yumin Chu on 2/18/24.
@@ -10,17 +10,17 @@ import SwiftUI
 import ComposableArchitecture
 import TCACoordinators
 
-struct MeCoordinator: Reducer {
+struct RootCoordinator: Reducer {
   struct State: Equatable, IdentifiedRouterState {
     static let initialState = State(
       routes: [.root(.root(.init()), embedInNavigationView: true)]
     )
-    var routes: IdentifiedArrayOf<Route<MeScreen.State>>
+    var routes: IdentifiedArrayOf<Route<RootScreen.State>>
   }
   
   enum Action: IdentifiedRouterAction {
-    case routeAction(MeScreen.State.ID, action: MeScreen.Action)
-    case updateRoutes(IdentifiedArrayOf<Route<MeScreen.State>>)
+    case routeAction(RootScreen.State.ID, action: RootScreen.Action)
+    case updateRoutes(IdentifiedArrayOf<Route<RootScreen.State>>)
   }
   
   var body: some ReducerOf<Self> {
@@ -35,10 +35,10 @@ struct MeCoordinator: Reducer {
   }
 }
 
-struct MeCoordinatorView: View {
-  private let store: StoreOf<MeCoordinator>
+struct RootCoordinatorView: View {
+  private let store: StoreOf<RootCoordinator>
   
-  init(store: StoreOf<MeCoordinator>) {
+  init(store: StoreOf<RootCoordinator>) {
     self.store = store
   }
   
@@ -48,8 +48,8 @@ struct MeCoordinatorView: View {
         switch screen {
         case .root:
           CaseLet(
-            /MeScreen.State.root,
-            action: MeScreen.Action.root,
+            /RootScreen.State.root,
+            action: RootScreen.Action.root,
             then: RootView.init
           )
         }

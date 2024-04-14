@@ -112,6 +112,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		8D1E1C2D2BCC04AD0047E618 /* IntuitionFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8D84EAA02BCC055600D6E77A /* Scene */,
+				8D84EAA22BCC055A00D6E77A /* Coordinator */,
+			);
+			path = IntuitionFeature;
+			sourceTree = "<group>";
+		};
 		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +234,69 @@
 			children = (
 				8D1E1C292BCC038E0047E618 /* Root */,
 				8D7BFD712B823341001CA0EE /* IntrovertFeature */,
+				8D1E1C2D2BCC04AD0047E618 /* IntuitionFeature */,
+				8D84EA982BCC04F100D6E77A /* FeelingFeature */,
+				8D84EA9A2BCC050A00D6E77A /* JudgingFeature */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		8D84EA982BCC04F100D6E77A /* FeelingFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8D84EAA42BCC056900D6E77A /* Scene */,
+				8D84EAA32BCC056300D6E77A /* Coordinator */,
+			);
+			path = FeelingFeature;
+			sourceTree = "<group>";
+		};
+		8D84EA9A2BCC050A00D6E77A /* JudgingFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8D84EAA62BCC057300D6E77A /* Scene */,
+				8D84EAA52BCC056D00D6E77A /* Coordinator */,
+			);
+			path = JudgingFeature;
+			sourceTree = "<group>";
+		};
+		8D84EAA02BCC055600D6E77A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		8D84EAA22BCC055A00D6E77A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8D84EAA32BCC056300D6E77A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8D84EAA42BCC056900D6E77A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		8D84EAA52BCC056D00D6E77A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8D84EAA62BCC057300D6E77A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Scene;
 			sourceTree = "<group>";

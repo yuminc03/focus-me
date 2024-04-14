@@ -15,12 +15,6 @@ struct AppCore: Reducer {
     
   }
   
-  enum Page: Hashable {
-    case me
-    case inside
-    case outside
-  }
-  
   enum Action {
     
   }
@@ -40,13 +34,9 @@ struct AppView: View {
   }
   
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+    VStack(alignment: .leading, spacing: 20) {
+      titleLabel
     }
-    .padding()
   }
 }
 
@@ -54,4 +44,11 @@ struct AppView: View {
   AppView(store: .init(initialState: AppCore.State()) {
     AppCore()
   })
+}
+
+extension AppView {
+  private var titleLabel: some View {
+    Text("안녕하십니까!")
+      .foregroundColor(Color(R.color.bgColor))
+  }
 }

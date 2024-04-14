@@ -1,5 +1,5 @@
 //
-//  MeScreen.swift
+//  RootScreen.swift
 //  MySelf
 //
 //  Created by Yumin Chu on 2/18/24.
@@ -9,7 +9,7 @@ import Foundation
 
 import ComposableArchitecture
 
-struct MeScreen: Reducer {
+struct RootScreen: Reducer {
   enum State: Equatable, Identifiable {
     case root(RootCore.State)
     
