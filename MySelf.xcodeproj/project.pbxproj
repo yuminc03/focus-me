@@ -24,6 +24,9 @@
 		8D8498412BA3344700FA9537 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8498402BA3344700FA9537 /* RootView.swift */; };
 		8D84EAA82BCC0D8400D6E77A /* IntrovertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAA72BCC0D8400D6E77A /* IntrovertCoordinator.swift */; };
 		8D84EAAB2BCC0D9B00D6E77A /* IntrovertScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAAA2BCC0D9B00D6E77A /* IntrovertScreen.swift */; };
+		8D84EAAE2BCC108800D6E77A /* IntuitionIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAAD2BCC108800D6E77A /* IntuitionIntroView.swift */; };
+		8D84EAB12BCC13B400D6E77A /* IntuitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAB02BCC13B400D6E77A /* IntuitionCoordinator.swift */; };
+		8D84EAB42BCC13C100D6E77A /* IntuitionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAB32BCC13C100D6E77A /* IntuitionScreen.swift */; };
 		8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40F022BB05C1800A7D271 /* CardItem.swift */; };
 		8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB143F2B82365A00AAC47C /* RootScreen.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
@@ -63,6 +66,9 @@
 		8D8498402BA3344700FA9537 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8D84EAA72BCC0D8400D6E77A /* IntrovertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovertCoordinator.swift; sourceTree = "<group>"; };
 		8D84EAAA2BCC0D9B00D6E77A /* IntrovertScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovertScreen.swift; sourceTree = "<group>"; };
+		8D84EAAD2BCC108800D6E77A /* IntuitionIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitionIntroView.swift; sourceTree = "<group>"; };
+		8D84EAB02BCC13B400D6E77A /* IntuitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitionCoordinator.swift; sourceTree = "<group>"; };
+		8D84EAB32BCC13C100D6E77A /* IntuitionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitionScreen.swift; sourceTree = "<group>"; };
 		8DA40F022BB05C1800A7D271 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		8DEB143F2B82365A00AAC47C /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
@@ -266,6 +272,7 @@
 		8D84EAA02BCC055600D6E77A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D84EAAD2BCC108800D6E77A /* IntuitionIntroView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -273,6 +280,8 @@
 		8D84EAA22BCC055A00D6E77A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				8D84EAB02BCC13B400D6E77A /* IntuitionCoordinator.swift */,
+				8D84EAB32BCC13C100D6E77A /* IntuitionScreen.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -477,7 +486,10 @@
 				8D7BFD762B8233A2001CA0EE /* RootCoordinator.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D84EAAB2BCC0D9B00D6E77A /* IntrovertScreen.swift in Sources */,
+				8D84EAB12BCC13B400D6E77A /* IntuitionCoordinator.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
+				8D84EAAE2BCC108800D6E77A /* IntuitionIntroView.swift in Sources */,
+				8D84EAB42BCC13C100D6E77A /* IntuitionScreen.swift in Sources */,
 				8D1E1C262BCC02750047E618 /* IntrovertIntroView.swift in Sources */,
 				8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */,
 				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
