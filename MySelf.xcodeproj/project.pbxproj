@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */; };
+		8D1E1C262BCC02750047E618 /* IntrovertIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E1C252BCC02750047E618 /* IntrovertIntroView.swift */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
 		8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A6BFA2BA72C7E002D5854 /* Card.swift */; };
 		8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */; };
@@ -18,10 +20,10 @@
 		8D7BFD5E2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */; };
 		8D7BFD6C2B822C09001CA0EE /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 8D7BFD6B2B822C09001CA0EE /* TCACoordinators */; };
 		8D7BFD6F2B822C15001CA0EE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */; };
-		8D7BFD762B8233A2001CA0EE /* MeCoordinator in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD752B8233A2001CA0EE /* MeCoordinator */; };
+		8D7BFD762B8233A2001CA0EE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD752B8233A2001CA0EE /* RootCoordinator.swift */; };
 		8D8498412BA3344700FA9537 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8498402BA3344700FA9537 /* RootView.swift */; };
 		8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40F022BB05C1800A7D271 /* CardItem.swift */; };
-		8DEB14402B82365A00AAC47C /* MeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB143F2B82365A00AAC47C /* MeScreen.swift */; };
+		8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB143F2B82365A00AAC47C /* RootScreen.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D1E1C252BCC02750047E618 /* IntrovertIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovertIntroView.swift; sourceTree = "<group>"; };
 		8D5A6BFA2BA72C7E002D5854 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
@@ -54,10 +57,10 @@
 		8D7BFD572B8229E3001CA0EE /* MySelfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySelfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8D7BFD752B8233A2001CA0EE /* MeCoordinator */ = {isa = PBXFileReference; lastKnownFileType = text; path = MeCoordinator; sourceTree = "<group>"; };
+		8D7BFD752B8233A2001CA0EE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		8D8498402BA3344700FA9537 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8DA40F022BB05C1800A7D271 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
-		8DEB143F2B82365A00AAC47C /* MeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeScreen.swift; sourceTree = "<group>"; };
+		8DEB143F2B82365A00AAC47C /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7BFD6F2B822C15001CA0EE /* ComposableArchitecture in Frameworks */,
+				8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */,
 				8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */,
 				8D7BFD6C2B822C09001CA0EE /* TCACoordinators in Frameworks */,
 			);
@@ -89,6 +93,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D1E1C292BCC038E0047E618 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				8D8498402BA3344700FA9537 /* RootView.swift */,
+				8D1E1C2B2BCC03990047E618 /* Coordinator */,
+				8D5A6BF52BA7239A002D5854 /* Component */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		8D1E1C2B2BCC03990047E618 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8D7BFD752B8233A2001CA0EE /* RootCoordinator.swift */,
+				8DEB143F2B82365A00AAC47C /* RootScreen.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +132,7 @@
 		8D5A6BF42BA7226E002D5854 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8D8498402BA3344700FA9537 /* RootView.swift */,
-				8D5A6BF52BA7239A002D5854 /* Component */,
+				8D1E1C252BCC02750047E618 /* IntrovertIntroView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -189,19 +211,20 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		8D7BFD712B823341001CA0EE /* MeFeature */ = {
+		8D7BFD712B823341001CA0EE /* IntrovertFeature */ = {
 			isa = PBXGroup;
 			children = (
 				8D5A6BF42BA7226E002D5854 /* Scene */,
 				8DEB14412B82365F00AAC47C /* Coordinator */,
 			);
-			path = MeFeature;
+			path = IntrovertFeature;
 			sourceTree = "<group>";
 		};
 		8D7BFD742B823382001CA0EE /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8D7BFD712B823341001CA0EE /* MeFeature */,
+				8D1E1C292BCC038E0047E618 /* Root */,
+				8D7BFD712B823341001CA0EE /* IntrovertFeature */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -225,8 +248,6 @@
 		8DEB14412B82365F00AAC47C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				8D7BFD752B8233A2001CA0EE /* MeCoordinator */,
-				8DEB143F2B82365A00AAC47C /* MeScreen.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -245,12 +266,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				8D1E1C202BCBFAEA0047E618 /* PBXTargetDependency */,
 			);
 			name = MySelf;
 			packageProductDependencies = (
 				8D7BFD6B2B822C09001CA0EE /* TCACoordinators */,
 				8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */,
 				8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */,
+				8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */,
 			);
 			productName = MySelf;
 			productReference = 8D7BFD3D2B8229E2001CA0EE /* MySelf.app */;
@@ -328,6 +351,7 @@
 				8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */,
 				8D7BFD6D2B822C15001CA0EE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = 8D7BFD3E2B8229E2001CA0EE /* Products */;
 			projectDirPath = "";
@@ -371,10 +395,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7BFD762B8233A2001CA0EE /* MeCoordinator in Sources */,
+				8D7BFD762B8233A2001CA0EE /* RootCoordinator.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
-				8DEB14402B82365A00AAC47C /* MeScreen.swift in Sources */,
+				8D1E1C262BCC02750047E618 /* IntrovertIntroView.swift in Sources */,
+				8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */,
 				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				8D8498412BA3344700FA9537 /* RootView.swift in Sources */,
@@ -402,6 +427,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8D1E1C202BCBFAEA0047E618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8D1E1C1F2BCBFAEA0047E618 /* RswiftGenerateInternalResources */;
+		};
 		8D7BFD4F2B8229E3001CA0EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D7BFD3C2B8229E2001CA0EE /* MySelf */;
@@ -559,9 +588,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.MySelf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -590,9 +623,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.MySelf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -716,6 +753,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
 		8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
@@ -743,6 +788,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		8D1E1C1F2BCBFAEA0047E618 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
 		8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */;

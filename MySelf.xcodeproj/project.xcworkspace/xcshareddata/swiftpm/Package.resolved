@@ -1,5 +1,5 @@
 {
-  "originHash" : "ea0df9f3390f45a87994c143c6cfca313feac67e184c11d1fc2f871136067431",
+  "originHash" : "59517fb5cfb8a67dcfb75f11587a673975940eaf586d47410264e30bc29bef35",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -24,8 +24,26 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/johnpatrickmorgan/FlowStacks",
       "state" : {
-        "revision" : "468de8179d68f9e150ffafcb4574dee52dfa3976",
-        "version" : "0.4.0"
+        "revision" : "a2b974b81612e1e8ee3ecd757d936a2919527356",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "r.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mac-cain13/R.swift",
+      "state" : {
+        "revision" : "384eab88d1a0b98ac96f4819e50a4308ecd5359f",
+        "version" : "7.5.0"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "46989693916f56d1186bd59ac15124caef896560",
+        "version" : "1.3.1"
       }
     },
     {
@@ -33,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-case-paths",
       "state" : {
-        "revision" : "551150d5e60e3be78972607d89cd69069cca3e7c",
-        "version" : "1.2.4"
+        "revision" : "79623dbe2c7672f5e450d8325613d231454390b3",
+        "version" : "1.3.2"
       }
     },
     {
@@ -60,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-composable-architecture",
       "state" : {
-        "revision" : "cf967a28a8605629559533320d604168d733fc9c",
-        "version" : "1.8.0"
+        "revision" : "115fe5af41d333b6156d4924d7c7058bc77fd580",
+        "version" : "1.9.2"
       }
     },
     {
@@ -78,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-custom-dump",
       "state" : {
-        "revision" : "6ea3b1b6a4957806d72030a32360d4bcb155a0d2",
-        "version" : "1.2.0"
+        "revision" : "f01efb26f3a192a0e88dcdb7c3c391ec2fc25d9c",
+        "version" : "1.3.0"
       }
     },
     {
@@ -87,8 +105,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-dependencies",
       "state" : {
-        "revision" : "09e49dd46932adfe80ce672b4b3772d79ee6c21a",
-        "version" : "1.2.1"
+        "revision" : "d3a5af3038a09add4d7682f66555d6212058a3c0",
+        "version" : "1.2.2"
       }
     },
     {
@@ -105,8 +123,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-perception",
       "state" : {
-        "revision" : "42240120b2a8797595433288ab4118f8042214c3",
-        "version" : "1.1.1"
+        "revision" : "520c458a832d1287e6b698c5f657ae848fd696ff",
+        "version" : "1.1.4"
       }
     },
     {
@@ -114,8 +132,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax",
       "state" : {
-        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
-        "version" : "509.1.1"
+        "revision" : "fa8f95c2d536d6620cc2f504ebe8a6167c9fc2dd",
+        "version" : "510.0.1"
       }
     },
     {
@@ -123,8 +141,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swiftui-navigation",
       "state" : {
-        "revision" : "d9e72f3083c08375794afa216fb2f89c0114f303",
-        "version" : "1.2.1"
+        "revision" : "2ec6c3a15293efff6083966b38439a4004f25565",
+        "version" : "1.3.0"
       }
     },
     {
@@ -137,12 +155,21 @@
       }
     },
     {
+      "identity" : "xcodeedit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomlokhorst/XcodeEdit",
+      "state" : {
+        "revision" : "b6b67389a0f1a6fdd9c6457a8ab5b02eaab13c5c",
+        "version" : "2.9.2"
+      }
+    },
+    {
       "identity" : "xctest-dynamic-overlay",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
       "state" : {
-        "revision" : "b58e6627149808b40634c4552fcf2f44d0b3ca87",
-        "version" : "1.1.0"
+        "revision" : "6f30bdba373bbd7fbfe241dddd732651f2fbd1e2",
+        "version" : "1.1.2"
       }
     }
   ],
