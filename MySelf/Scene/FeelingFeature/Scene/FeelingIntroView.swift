@@ -26,8 +26,8 @@ struct FeelingIntroCore: Reducer {
 }
 
 struct FeelingIntroView: View {
-  let store: StoreOf<FeelingIntroCore>
-  @ObservedObject var viewStore: ViewStoreOf<FeelingIntroCore>
+  private let store: StoreOf<FeelingIntroCore>
+  @ObservedObject private var viewStore: ViewStoreOf<FeelingIntroCore>
   
   init(store: StoreOf<FeelingIntroCore>) {
     self.store = store

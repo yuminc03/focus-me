@@ -26,8 +26,8 @@ struct IntrovertIntroCore: Reducer {
 }
 
 struct IntrovertIntroView: View {
-  let store: StoreOf<IntrovertIntroCore>
-  @ObservedObject var viewStore: ViewStoreOf<IntrovertIntroCore>
+  private let store: StoreOf<IntrovertIntroCore>
+  @ObservedObject private var viewStore: ViewStoreOf<IntrovertIntroCore>
   
   init(store: StoreOf<IntrovertIntroCore>) {
     self.store = store
