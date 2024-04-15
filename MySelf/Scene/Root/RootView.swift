@@ -14,7 +14,14 @@ struct RootCore {
   struct State: Equatable {
     let id = UUID()
     let cards = Card.dummy
-    @BindingState var currentPage = 1
+    @BindingState var currentPage = CardType.introvert.rawValue + 1
+  }
+  
+  private enum CardType: Int {
+    case introvert
+    case intuition
+    case feeling
+    case judging
   }
   
   enum Action: BindableAction, Equatable {
@@ -112,6 +119,7 @@ extension RootView {
       Image(systemName: "paperplane.fill")
         .frame(width: 20, height: 20)
       Text("계속하기")
+        .font(.custom(R.font.notoSansKRMedium, size: 20))
         .padding(10)
     }
     .foregroundColor(.white)
