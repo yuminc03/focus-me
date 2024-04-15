@@ -40,13 +40,13 @@ extension CardItem {
   private var titleText: some View {
     Text(cardInfo.title.capitalized)
       .foregroundColor(.white)
-      .font(.system(size: 48, weight: .semibold))
+      .font(.custom(R.font.notoSansKRSemiBold, size: 48))
   }
   
   private var contentView: some View {
     VStack(alignment: .leading, spacing: 25) {
       Text(cardInfo.subTitle)
-        .fontWeight(.semibold)
+        .font(.custom(R.font.notoSansKRMedium, size: 20))
         .lineLimit(3)
         .padding(20)
     }
