@@ -34,6 +34,15 @@
 		8D84EAC02BCC184D00D6E77A /* JudgingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EABF2BCC184D00D6E77A /* JudgingCoordinator.swift */; };
 		8D84EAC22BCC186400D6E77A /* JudgingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAC12BCC186400D6E77A /* JudgingScreen.swift */; };
 		8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40F022BB05C1800A7D271 /* CardItem.swift */; };
+		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
+		8DDC07D52BCD6D260019D478 /* NotoSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */; };
+		8DDC07D62BCD6D260019D478 /* NotoSansKR-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CD2BCD6D250019D478 /* NotoSansKR-Black.ttf */; };
+		8DDC07D72BCD6D260019D478 /* NotoSansKR-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CE2BCD6D250019D478 /* NotoSansKR-ExtraLight.ttf */; };
+		8DDC07D82BCD6D260019D478 /* NotoSansKR-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CF2BCD6D250019D478 /* NotoSansKR-Light.ttf */; };
+		8DDC07D92BCD6D260019D478 /* NotoSansKR-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D02BCD6D250019D478 /* NotoSansKR-Thin.ttf */; };
+		8DDC07DA2BCD6D260019D478 /* NotoSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D12BCD6D250019D478 /* NotoSansKR-SemiBold.ttf */; };
+		8DDC07DB2BCD6D260019D478 /* NotoSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */; };
+		8DDC07DC2BCD6D260019D478 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */; };
 		8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB143F2B82365A00AAC47C /* RootScreen.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +91,16 @@
 		8D84EABF2BCC184D00D6E77A /* JudgingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgingCoordinator.swift; sourceTree = "<group>"; };
 		8D84EAC12BCC186400D6E77A /* JudgingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgingScreen.swift; sourceTree = "<group>"; };
 		8DA40F022BB05C1800A7D271 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.ttf"; sourceTree = "<group>"; };
+		8DDC07CD2BCD6D250019D478 /* NotoSansKR-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.ttf"; sourceTree = "<group>"; };
+		8DDC07CE2BCD6D250019D478 /* NotoSansKR-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8DDC07CF2BCD6D250019D478 /* NotoSansKR-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.ttf"; sourceTree = "<group>"; };
+		8DDC07D02BCD6D250019D478 /* NotoSansKR-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.ttf"; sourceTree = "<group>"; };
+		8DDC07D12BCD6D250019D478 /* NotoSansKR-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-SemiBold.ttf"; sourceTree = "<group>"; };
+		8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.ttf"; sourceTree = "<group>"; };
+		8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
+		8DDC07DE2BCD6D700019D478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DEB143F2B82365A00AAC47C /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +165,7 @@
 		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8DDC07CA2BCD6D150019D478 /* Fonts */,
 				8D3C6BDC2BA5E11F00F44AB7 /* Common */,
 				8D7BFD442B8229E3001CA0EE /* Assets.xcassets */,
 			);
@@ -199,6 +219,7 @@
 		8D7BFD3F2B8229E2001CA0EE /* MySelf */ = {
 			isa = PBXGroup;
 			children = (
+				8DDC07DE2BCD6D700019D478 /* Info.plist */,
 				8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */,
 				8D7BFD702B82333B001CA0EE /* App */,
 				8DA40F002BB05BE600A7D271 /* Core */,
@@ -348,6 +369,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8DDC07CA2BCD6D150019D478 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8DDC07CD2BCD6D250019D478 /* NotoSansKR-Black.ttf */,
+				8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */,
+				8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */,
+				8DDC07CE2BCD6D250019D478 /* NotoSansKR-ExtraLight.ttf */,
+				8DDC07CF2BCD6D250019D478 /* NotoSansKR-Light.ttf */,
+				8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */,
+				8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */,
+				8DDC07D12BCD6D250019D478 /* NotoSansKR-SemiBold.ttf */,
+				8DDC07D02BCD6D250019D478 /* NotoSansKR-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8DEB14412B82365F00AAC47C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,7 +512,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7BFD482B8229E3001CA0EE /* Preview Assets.xcassets in Resources */,
+				8DDC07DA2BCD6D260019D478 /* NotoSansKR-SemiBold.ttf in Resources */,
+				8DDC07D92BCD6D260019D478 /* NotoSansKR-Thin.ttf in Resources */,
+				8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */,
 				8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */,
+				8DDC07D62BCD6D260019D478 /* NotoSansKR-Black.ttf in Resources */,
+				8DDC07D82BCD6D260019D478 /* NotoSansKR-Light.ttf in Resources */,
+				8DDC07DB2BCD6D260019D478 /* NotoSansKR-Medium.ttf in Resources */,
+				8DDC07D72BCD6D260019D478 /* NotoSansKR-ExtraLight.ttf in Resources */,
+				8DDC07D52BCD6D260019D478 /* NotoSansKR-Regular.ttf in Resources */,
+				8DDC07DC2BCD6D260019D478 /* NotoSansKR-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +736,7 @@
 				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySelf/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MySelf;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -725,6 +772,7 @@
 				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySelf/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MySelf;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
