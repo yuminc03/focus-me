@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */; };
-		8D1E1C262BCC02750047E618 /* IntrovertIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E1C252BCC02750047E618 /* IntrovertIntroView.swift */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
 		8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A6BFA2BA72C7E002D5854 /* Card.swift */; };
 		8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */; };
@@ -18,21 +17,6 @@
 		8D7BFD522B8229E3001CA0EE /* MySelfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD512B8229E3001CA0EE /* MySelfTests.swift */; };
 		8D7BFD5C2B8229E3001CA0EE /* MySelfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */; };
 		8D7BFD5E2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */; };
-		8D7BFD6C2B822C09001CA0EE /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 8D7BFD6B2B822C09001CA0EE /* TCACoordinators */; };
-		8D7BFD6F2B822C15001CA0EE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */; };
-		8D7BFD762B8233A2001CA0EE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD752B8233A2001CA0EE /* RootCoordinator.swift */; };
-		8D8498412BA3344700FA9537 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8498402BA3344700FA9537 /* RootView.swift */; };
-		8D84EAA82BCC0D8400D6E77A /* IntrovertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAA72BCC0D8400D6E77A /* IntrovertCoordinator.swift */; };
-		8D84EAAB2BCC0D9B00D6E77A /* IntrovertScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAAA2BCC0D9B00D6E77A /* IntrovertScreen.swift */; };
-		8D84EAAE2BCC108800D6E77A /* IntuitionIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAAD2BCC108800D6E77A /* IntuitionIntroView.swift */; };
-		8D84EAB12BCC13B400D6E77A /* IntuitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAB02BCC13B400D6E77A /* IntuitionCoordinator.swift */; };
-		8D84EAB42BCC13C100D6E77A /* IntuitionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAB32BCC13C100D6E77A /* IntuitionScreen.swift */; };
-		8D84EAB62BCC146B00D6E77A /* FeelingIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAB52BCC146B00D6E77A /* FeelingIntroView.swift */; };
-		8D84EAB92BCC14C300D6E77A /* FeelingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAB82BCC14C300D6E77A /* FeelingCoordinator.swift */; };
-		8D84EABB2BCC14CE00D6E77A /* FeelingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EABA2BCC14CE00D6E77A /* FeelingScreen.swift */; };
-		8D84EABD2BCC158B00D6E77A /* JudgingIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EABC2BCC158B00D6E77A /* JudgingIntroView.swift */; };
-		8D84EAC02BCC184D00D6E77A /* JudgingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EABF2BCC184D00D6E77A /* JudgingCoordinator.swift */; };
-		8D84EAC22BCC186400D6E77A /* JudgingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84EAC12BCC186400D6E77A /* JudgingScreen.swift */; };
 		8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40F022BB05C1800A7D271 /* CardItem.swift */; };
 		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
 		8DDC07D52BCD6D260019D478 /* NotoSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */; };
@@ -43,7 +27,6 @@
 		8DDC07DA2BCD6D260019D478 /* NotoSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D12BCD6D250019D478 /* NotoSansKR-SemiBold.ttf */; };
 		8DDC07DB2BCD6D260019D478 /* NotoSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */; };
 		8DDC07DC2BCD6D260019D478 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */; };
-		8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB143F2B82365A00AAC47C /* RootScreen.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D1E1C252BCC02750047E618 /* IntrovertIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovertIntroView.swift; sourceTree = "<group>"; };
 		8D5A6BFA2BA72C7E002D5854 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
@@ -77,19 +59,6 @@
 		8D7BFD572B8229E3001CA0EE /* MySelfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySelfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8D7BFD752B8233A2001CA0EE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
-		8D8498402BA3344700FA9537 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		8D84EAA72BCC0D8400D6E77A /* IntrovertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovertCoordinator.swift; sourceTree = "<group>"; };
-		8D84EAAA2BCC0D9B00D6E77A /* IntrovertScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovertScreen.swift; sourceTree = "<group>"; };
-		8D84EAAD2BCC108800D6E77A /* IntuitionIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitionIntroView.swift; sourceTree = "<group>"; };
-		8D84EAB02BCC13B400D6E77A /* IntuitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitionCoordinator.swift; sourceTree = "<group>"; };
-		8D84EAB32BCC13C100D6E77A /* IntuitionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitionScreen.swift; sourceTree = "<group>"; };
-		8D84EAB52BCC146B00D6E77A /* FeelingIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingIntroView.swift; sourceTree = "<group>"; };
-		8D84EAB82BCC14C300D6E77A /* FeelingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingCoordinator.swift; sourceTree = "<group>"; };
-		8D84EABA2BCC14CE00D6E77A /* FeelingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingScreen.swift; sourceTree = "<group>"; };
-		8D84EABC2BCC158B00D6E77A /* JudgingIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgingIntroView.swift; sourceTree = "<group>"; };
-		8D84EABF2BCC184D00D6E77A /* JudgingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgingCoordinator.swift; sourceTree = "<group>"; };
-		8D84EAC12BCC186400D6E77A /* JudgingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgingScreen.swift; sourceTree = "<group>"; };
 		8DA40F022BB05C1800A7D271 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
 		8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.ttf"; sourceTree = "<group>"; };
@@ -101,7 +70,6 @@
 		8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.ttf"; sourceTree = "<group>"; };
 		8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		8DDC07DE2BCD6D700019D478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8DEB143F2B82365A00AAC47C /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,10 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7BFD6F2B822C15001CA0EE /* ComposableArchitecture in Frameworks */,
 				8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */,
 				8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */,
-				8D7BFD6C2B822C09001CA0EE /* TCACoordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,34 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D1E1C292BCC038E0047E618 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				8D8498402BA3344700FA9537 /* RootView.swift */,
-				8D1E1C2B2BCC03990047E618 /* Coordinator */,
-				8D5A6BF52BA7239A002D5854 /* Component */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		8D1E1C2B2BCC03990047E618 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				8D7BFD752B8233A2001CA0EE /* RootCoordinator.swift */,
-				8DEB143F2B82365A00AAC47C /* RootScreen.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		8D1E1C2D2BCC04AD0047E618 /* IntuitionFeature */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAA02BCC055600D6E77A /* Scene */,
-				8D84EAA22BCC055A00D6E77A /* Coordinator */,
-			);
-			path = IntuitionFeature;
-			sourceTree = "<group>";
-		};
 		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,22 +116,6 @@
 				8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		8D5A6BF42BA7226E002D5854 /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				8D1E1C252BCC02750047E618 /* IntrovertIntroView.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		8D5A6BF52BA7239A002D5854 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				8DA40F022BB05C1800A7D271 /* CardItem.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		8D7BFD342B8229E2001CA0EE = {
@@ -263,92 +185,10 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		8D7BFD712B823341001CA0EE /* IntrovertFeature */ = {
-			isa = PBXGroup;
-			children = (
-				8D5A6BF42BA7226E002D5854 /* Scene */,
-				8DEB14412B82365F00AAC47C /* Coordinator */,
-			);
-			path = IntrovertFeature;
-			sourceTree = "<group>";
-		};
 		8D7BFD742B823382001CA0EE /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8D1E1C292BCC038E0047E618 /* Root */,
-				8D7BFD712B823341001CA0EE /* IntrovertFeature */,
-				8D1E1C2D2BCC04AD0047E618 /* IntuitionFeature */,
-				8D84EA982BCC04F100D6E77A /* FeelingFeature */,
-				8D84EA9A2BCC050A00D6E77A /* JudgingFeature */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		8D84EA982BCC04F100D6E77A /* FeelingFeature */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAA42BCC056900D6E77A /* Scene */,
-				8D84EAA32BCC056300D6E77A /* Coordinator */,
-			);
-			path = FeelingFeature;
-			sourceTree = "<group>";
-		};
-		8D84EA9A2BCC050A00D6E77A /* JudgingFeature */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAA62BCC057300D6E77A /* Scene */,
-				8D84EAA52BCC056D00D6E77A /* Coordinator */,
-			);
-			path = JudgingFeature;
-			sourceTree = "<group>";
-		};
-		8D84EAA02BCC055600D6E77A /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAAD2BCC108800D6E77A /* IntuitionIntroView.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		8D84EAA22BCC055A00D6E77A /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAB02BCC13B400D6E77A /* IntuitionCoordinator.swift */,
-				8D84EAB32BCC13C100D6E77A /* IntuitionScreen.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		8D84EAA32BCC056300D6E77A /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAB82BCC14C300D6E77A /* FeelingCoordinator.swift */,
-				8D84EABA2BCC14CE00D6E77A /* FeelingScreen.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		8D84EAA42BCC056900D6E77A /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAB52BCC146B00D6E77A /* FeelingIntroView.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		8D84EAA52BCC056D00D6E77A /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EABF2BCC184D00D6E77A /* JudgingCoordinator.swift */,
-				8D84EAC12BCC186400D6E77A /* JudgingScreen.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		8D84EAA62BCC057300D6E77A /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EABC2BCC158B00D6E77A /* JudgingIntroView.swift */,
+				8DA40F022BB05C1800A7D271 /* CardItem.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -385,15 +225,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		8DEB14412B82365F00AAC47C /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				8D84EAA72BCC0D8400D6E77A /* IntrovertCoordinator.swift */,
-				8D84EAAA2BCC0D9B00D6E77A /* IntrovertScreen.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,8 +243,6 @@
 			);
 			name = MySelf;
 			packageProductDependencies = (
-				8D7BFD6B2B822C09001CA0EE /* TCACoordinators */,
-				8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */,
 				8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */,
 				8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */,
 			);
@@ -490,8 +319,6 @@
 			);
 			mainGroup = 8D7BFD342B8229E2001CA0EE;
 			packageReferences = (
-				8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */,
-				8D7BFD6D2B822C15001CA0EE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */,
 			);
@@ -546,25 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D84EAB62BCC146B00D6E77A /* FeelingIntroView.swift in Sources */,
-				8D84EAB92BCC14C300D6E77A /* FeelingCoordinator.swift in Sources */,
-				8D84EABD2BCC158B00D6E77A /* JudgingIntroView.swift in Sources */,
-				8D84EAA82BCC0D8400D6E77A /* IntrovertCoordinator.swift in Sources */,
-				8D7BFD762B8233A2001CA0EE /* RootCoordinator.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
-				8D84EAC22BCC186400D6E77A /* JudgingScreen.swift in Sources */,
-				8D84EAAB2BCC0D9B00D6E77A /* IntrovertScreen.swift in Sources */,
-				8D84EAB12BCC13B400D6E77A /* IntuitionCoordinator.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
-				8D84EABB2BCC14CE00D6E77A /* FeelingScreen.swift in Sources */,
-				8D84EAAE2BCC108800D6E77A /* IntuitionIntroView.swift in Sources */,
-				8D84EAB42BCC13C100D6E77A /* IntuitionScreen.swift in Sources */,
-				8D1E1C262BCC02750047E618 /* IntrovertIntroView.swift in Sources */,
-				8D84EAC02BCC184D00D6E77A /* JudgingCoordinator.swift in Sources */,
-				8DEB14402B82365A00AAC47C /* RootScreen.swift in Sources */,
 				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
-				8D8498412BA3344700FA9537 /* RootView.swift in Sources */,
 				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MySelf/Preview Content\"";
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MySelf/Info.plist;
@@ -769,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MySelf/Preview Content\"";
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MySelf/Info.plist;
@@ -933,22 +745,6 @@
 				minimumVersion = 0.4.1;
 			};
 		};
-		8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.8.0;
-			};
-		};
-		8D7BFD6D2B822C15001CA0EE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -965,16 +761,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
-		};
-		8D7BFD6B2B822C09001CA0EE /* TCACoordinators */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8D7BFD6A2B822C09001CA0EE /* XCRemoteSwiftPackageReference "TCACoordinators" */;
-			productName = TCACoordinators;
-		};
-		8D7BFD6E2B822C15001CA0EE /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8D7BFD6D2B822C15001CA0EE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
