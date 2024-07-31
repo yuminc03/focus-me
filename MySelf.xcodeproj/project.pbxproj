@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
 		8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
 		8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A6BFA2BA72C7E002D5854 /* Card.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		8D5A6BFA2BA72C7E002D5854 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
@@ -100,6 +102,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05DC6A772C59F740005BE3BB /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				05DC6A7C2C59F750005BE3BB /* Font */,
+				8D3C6BDA2BA5E0D800F44AB7 /* Resource */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		05DC6A7C2C59F750005BE3BB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				05DC6A7F2C59F75A005BE3BB /* Font+.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +165,7 @@
 				8D7BFD702B82333B001CA0EE /* App */,
 				8DA40F002BB05BE600A7D271 /* Core */,
 				8D7BFD742B823382001CA0EE /* Scene */,
-				8D3C6BDA2BA5E0D800F44AB7 /* Resource */,
+				05DC6A772C59F740005BE3BB /* DesignSystem */,
 				8D7BFD462B8229E3001CA0EE /* Preview Content */,
 			);
 			path = MySelf;
@@ -373,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
