@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct AppView: View {
+  @State private var emailText: String = ""
+  
   var body: some View {
     ZStack {
       Color.bg
@@ -8,14 +10,18 @@ struct AppView: View {
       
       VStack(spacing: 20) {
         TitleLabel
+        
+        EmailView
       }
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding(.horizontal, 20)
     }
   }
 }
 
 private extension AppView {
   var TitleLabel: some View {
-    VStack(alignment: .leading, spacing: 20) {
+    VStack(alignment: .leading, spacing: 10) {
       Text("로그인")
         .customFont(.notoSansKRSemiBold, size: 30)
 
@@ -23,7 +29,14 @@ private extension AppView {
         .customFont(size: 16)
     }
     .frame(maxWidth: .infinity, alignment: .leading)
-    .padding(.horizontal, 20)
+  }
+  
+  var EmailView: some View {
+    VStack(alignment: .leading, spacing: 10) {
+      Text("이메일")
+        .customFont(.notoSansKRMedium, size: 20)
+      FMTextField(placeholder: "이메일을 입력하세요", text: $emailText)
+    }
   }
 }
 
