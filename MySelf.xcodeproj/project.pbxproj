@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
 		05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A862C5A089E005BE3BB /* FMTextField.swift */; };
+		05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F65A6F2C5B7C960075E7D6 /* LoginView.swift */; };
 		8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
 		8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A6BFA2BA72C7E002D5854 /* Card.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		05DC6A862C5A089E005BE3BB /* FMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMTextField.swift; sourceTree = "<group>"; };
+		05F65A6F2C5B7C960075E7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8D5A6BFA2BA72C7E002D5854 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 				05DC6A862C5A089E005BE3BB /* FMTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		05F65A6D2C5B7C890075E7D6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				05F65A6F2C5B7C960075E7D6 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		8D3C6BDA2BA5E0D800F44AB7 /* Resource */ = {
@@ -218,6 +228,7 @@
 		8D7BFD742B823382001CA0EE /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				05F65A6D2C5B7C890075E7D6 /* Login */,
 				8DA40F022BB05C1800A7D271 /* CardItem.swift */,
 			);
 			path = Scene;
@@ -409,6 +420,7 @@
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
+				05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */,
 				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
