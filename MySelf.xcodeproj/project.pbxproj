@@ -20,7 +20,6 @@
 		8D7BFD522B8229E3001CA0EE /* MySelfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD512B8229E3001CA0EE /* MySelfTests.swift */; };
 		8D7BFD5C2B8229E3001CA0EE /* MySelfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */; };
 		8D7BFD5E2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */; };
-		8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40F022BB05C1800A7D271 /* CardItem.swift */; };
 		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
 		8DDC07D52BCD6D260019D478 /* NotoSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */; };
 		8DDC07D62BCD6D260019D478 /* NotoSansKR-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CD2BCD6D250019D478 /* NotoSansKR-Black.ttf */; };
@@ -65,7 +64,6 @@
 		8D7BFD572B8229E3001CA0EE /* MySelfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySelfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8DA40F022BB05C1800A7D271 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
 		8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.ttf"; sourceTree = "<group>"; };
 		8DDC07CD2BCD6D250019D478 /* NotoSansKR-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.ttf"; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				05F65A6D2C5B7C890075E7D6 /* Login */,
-				8DA40F022BB05C1800A7D271 /* CardItem.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
-				8DA40F032BB05C1800A7D271 /* CardItem.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */,
 				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,

@@ -61,7 +61,7 @@ struct FMTextField: View {
     .padding(.vertical, 14)
     .background(
       RoundedRectangle(cornerRadius: cornerRadius)
-        .fill(Color.gray)
+        .fill(Color.lightGray)
     )
   }
 }

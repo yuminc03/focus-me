@@ -64,7 +64,7 @@ private extension LoginView {
     } label: {
       Text("로그인")
         .foregroundColor(.white)
-        .font(.system(size: 16))
+        .customFont()
         .frame(maxWidth: .infinity)
         .frame(height: 50)
         .background(RoundedRectangle(cornerRadius: 10))
@@ -73,5 +73,5 @@ private extension LoginView {
 }
 
 #Preview {
-  AppView()
+  LoginView()
 }
