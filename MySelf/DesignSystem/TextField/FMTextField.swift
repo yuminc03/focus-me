@@ -12,6 +12,12 @@ extension FMTextField {
     state.hasClearButton = hasClear
     return state
   }
+  
+  func errorMessage(errorMessage: Binding<String>?) -> FMTextField {
+    var state = self
+    state.errorMessage = errorMessage
+    return state
+  }
 }
 
 /// 공통으로 사용할 TextField
@@ -20,7 +26,7 @@ struct FMTextField: View {
   let placeholder: String
 
   @Binding var text: String
-  var errorMessage: Binding<String?>?
+  var errorMessage: Binding<String>?
   var cornerRadius: CGFloat = 10
   var hasClearButton = true
   
@@ -32,37 +38,36 @@ struct FMTextField: View {
   init(
     type: TextFieldType = .default,
     placeholder: String,
-    text: Binding<String>,
-    errorMessage: Binding<String?>? = nil
+    text: Binding<String>
   ) {
     self.type = type
     self.placeholder = placeholder
     self._text = text
-    self.errorMessage = errorMessage
   }
   
   var body: some View {
-    HStack(spacing: 10) {
-      AnyTextField
-        .autocorrectionDisabled()
-      
-      if hasClearButton && text.isEmpty == false {
-        Button {
-          
-        } label: {
-          Image(systemName: "xmark.circle.fill")
-            .resizable()
-            .frame(width: 20, height: 20)
-            .foregroundColor(.black)
+    VStack(alignment: .leading, spacing: 10) {
+      HStack(spacing: 10) {
+        AnyTextField
+          .autocorrectionDisabled()
+        
+        if hasClearButton && text.isEmpty == false {
+          ClearButton
         }
       }
+      .padding(.horizontal, 10)
+      .padding(.vertical, 14)
+      .background(
+        RoundedRectangle(cornerRadius: cornerRadius)
+          .fill(Color.lightGray)
+      )
+      
+      if let errorMessage {
+        Text(errorMessage.wrappedValue)
+          .customFont(size: 12)
+          .foregroundColor(.red)
+      }
     }
-    .padding(.horizontal, 10)
-    .padding(.vertical, 14)
-    .background(
-      RoundedRectangle(cornerRadius: cornerRadius)
-        .fill(Color.lightGray)
-    )
   }
 }
 
@@ -74,6 +79,17 @@ private extension FMTextField {
       TextField(placeholder, text: $text)
     case .secure:
       SecureField(placeholder, text: $text)
+    }
+  }
+  
+  var ClearButton: some View {
+    Button {
+      text = ""
+    } label: {
+      Image(systemName: "xmark.circle.fill")
+        .resizable()
+        .frame(width: 20, height: 20)
+        .foregroundColor(.black)
     }
   }
 }
