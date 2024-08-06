@@ -62,7 +62,7 @@ struct FMTextField: View {
           .fill(Color.lightGray)
       )
       
-      if let errorMessage {
+      if let errorMessage, errorMessage.wrappedValue.isEmpty == false {
         Text(errorMessage.wrappedValue)
           .customFont(size: 12)
           .foregroundColor(.red)

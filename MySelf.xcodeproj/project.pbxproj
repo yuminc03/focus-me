@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA1C2C61B55D0090F466 /* SignUpView.swift */; };
+		051ABA232C61C1500090F466 /* FMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA222C61C1500090F466 /* FMButton.swift */; };
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
 		05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A862C5A089E005BE3BB /* FMTextField.swift */; };
 		05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F65A6F2C5B7C960075E7D6 /* LoginView.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051ABA1C2C61B55D0090F466 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		051ABA222C61C1500090F466 /* FMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMButton.swift; sourceTree = "<group>"; };
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		05DC6A862C5A089E005BE3BB /* FMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMTextField.swift; sourceTree = "<group>"; };
 		05F65A6F2C5B7C960075E7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -104,9 +108,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051ABA1B2C61B53E0090F466 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				051ABA1C2C61B55D0090F466 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		051ABA202C61C1480090F466 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				051ABA222C61C1500090F466 /* FMButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		05DC6A772C59F740005BE3BB /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				051ABA202C61C1480090F466 /* Button */,
 				05DC6A832C5A06DF005BE3BB /* TextField */,
 				05DC6A7C2C59F750005BE3BB /* Font */,
 				8D3C6BDA2BA5E0D800F44AB7 /* Resource */,
@@ -227,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				05F65A6D2C5B7C890075E7D6 /* Login */,
+				051ABA1B2C61B53E0090F466 /* SignUp */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -414,7 +436,9 @@
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
+				051ABA232C61C1500090F466 /* FMButton.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
+				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */,
 				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,
