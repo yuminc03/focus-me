@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct SignUpView: View {
+  @StateObject private var vm = SignUpVM()
   @State private var email = ""
-  @State private var emailError = ""
   @State private var password = ""
   @State private var confirmPassword = ""
+  @State private var confirmPasswordError = ""
   @State private var name = ""
   
   var body: some View {
@@ -49,7 +50,6 @@ private extension SignUpView {
         placeholder: "예) test01@gmail.com",
         text: $email
       )
-      .errorMessage(errorMessage: $emailError)
     }
   }
   
@@ -74,6 +74,7 @@ private extension SignUpView {
         placeholder: "비밀번호 다시 입력",
         text: $confirmPassword
       )
+      .errorMessage(errorMessage: $confirmPasswordError)
     }
   }
   
@@ -91,8 +92,18 @@ private extension SignUpView {
   
   var SignUpButton: some View {
     FMButton(title: "회원가입") {
-      
+      tapSignUpButton()
     }
+  }
+}
+
+private extension SignUpView {
+  private func tapSignUpButton() {
+    vm.signup(email: email, password: password, name: name)
+  }
+  
+  private func changeConfirmPassword() {
+    
   }
 }
 

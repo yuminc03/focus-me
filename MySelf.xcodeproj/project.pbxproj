@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA1C2C61B55D0090F466 /* SignUpView.swift */; };
 		051ABA232C61C1500090F466 /* FMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA222C61C1500090F466 /* FMButton.swift */; };
+		051ABA272C61FB380090F466 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA262C61FB380090F466 /* SignUpVM.swift */; };
+		051ABA2A2C62108D0090F466 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 051ABA292C62108D0090F466 /* FirebaseAuth */; };
+		051ABA2C2C62108D0090F466 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 051ABA2B2C62108D0090F466 /* FirebaseDatabase */; };
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
 		05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A862C5A089E005BE3BB /* FMTextField.swift */; };
 		05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F65A6F2C5B7C960075E7D6 /* LoginView.swift */; };
@@ -54,6 +57,7 @@
 /* Begin PBXFileReference section */
 		051ABA1C2C61B55D0090F466 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		051ABA222C61C1500090F466 /* FMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMButton.swift; sourceTree = "<group>"; };
+		051ABA262C61FB380090F466 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		05DC6A862C5A089E005BE3BB /* FMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMTextField.swift; sourceTree = "<group>"; };
 		05F65A6F2C5B7C960075E7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */,
+				051ABA2A2C62108D0090F466 /* FirebaseAuth in Frameworks */,
+				051ABA2C2C62108D0090F466 /* FirebaseDatabase in Frameworks */,
 				8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +117,7 @@
 		051ABA1B2C61B53E0090F466 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				051ABA262C61FB380090F466 /* SignUpVM.swift */,
 				051ABA1C2C61B55D0090F466 /* SignUpView.swift */,
 			);
 			path = SignUp;
@@ -305,6 +312,8 @@
 			packageProductDependencies = (
 				8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */,
 				8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */,
+				051ABA292C62108D0090F466 /* FirebaseAuth */,
+				051ABA2B2C62108D0090F466 /* FirebaseDatabase */,
 			);
 			productName = MySelf;
 			productReference = 8D7BFD3D2B8229E2001CA0EE /* MySelf.app */;
@@ -381,6 +390,7 @@
 			packageReferences = (
 				8D3C6BE02BA5E69200F44AB7 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */,
+				051ABA282C62108D0090F466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 8D7BFD3E2B8229E2001CA0EE /* Products */;
 			projectDirPath = "";
@@ -441,6 +451,7 @@
 				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */,
+				051ABA272C61FB380090F466 /* SignUpVM.swift in Sources */,
 				8D5A6BFB2BA72C7E002D5854 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +804,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		051ABA282C62108D0090F466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
 		8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -812,6 +831,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		051ABA292C62108D0090F466 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051ABA282C62108D0090F466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		051ABA2B2C62108D0090F466 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051ABA282C62108D0090F466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8D1E1C1C2BCBFACF0047E618 /* XCRemoteSwiftPackageReference "R" */;
