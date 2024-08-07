@@ -4,7 +4,9 @@ import SwiftUI
 struct MySelfApp: App {
   var body: some Scene {
     WindowGroup {
-      SignUpView()
+      NavigationStack {
+        SignUpView()
+      }
     }
   }
 }
