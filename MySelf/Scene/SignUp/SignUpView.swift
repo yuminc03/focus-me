@@ -59,6 +59,7 @@ private extension SignUpView {
         .customFont(.notoSansKRSemiBold, size: 16)
       
       FMTextField(
+        type: .secure,
         placeholder: "비밀번호 입력",
         text: $password
       )
@@ -71,10 +72,14 @@ private extension SignUpView {
         .customFont(.notoSansKRSemiBold, size: 16)
       
       FMTextField(
+        type: .secure,
         placeholder: "비밀번호 다시 입력",
         text: $confirmPassword
       )
       .errorMessage(errorMessage: $confirmPasswordError)
+      .onChange(of: confirmPassword) { _ in
+        changeConfirmPassword()
+      }
     }
   }
   
@@ -103,7 +108,10 @@ private extension SignUpView {
   }
   
   private func changeConfirmPassword() {
-    
+    confirmPasswordError = vm.changeConfirmPassword(
+      password: password,
+      confirmPassword: confirmPassword
+    )
   }
 }
 
