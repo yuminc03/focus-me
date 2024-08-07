@@ -55,6 +55,7 @@ private extension SignUpView {
         placeholder: "예) test01@gmail.com",
         text: $email
       )
+      .keyboardType(.emailAddress)
     }
   }
   

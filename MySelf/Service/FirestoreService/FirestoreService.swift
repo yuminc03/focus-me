@@ -12,12 +12,15 @@ final class FirestoreService {
       do {
         try collection.addDocument(from: target.data) { error in
           if let error {
+            print("회원가입 실패: \(error.localizedDescription)")
             continuation.resume(with: .failure(error))
           } else {
+            print("회원가입 성공!")
             continuation.resume(with: .success(()))
           }
         }
       } catch {
+        print("회원가입 실패: \(error.localizedDescription)")
         continuation.resume(with: .failure(error))
       }
     }

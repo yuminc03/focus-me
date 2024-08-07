@@ -7,8 +7,8 @@ struct SignUpEntity: Encodable {
   let password: String
   let name: String
   
-  init(email: String, password: String, name: String) {
-    self.id = UUID().uuidString
+  init(id: String = UUID().uuidString, email: String, password: String, name: String) {
+    self.id = id
     self.email = email
     self.password = password
     self.name = name

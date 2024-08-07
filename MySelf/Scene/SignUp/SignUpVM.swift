@@ -28,12 +28,13 @@ final class SignUpVM: ObservableObject {
   func signup(email: String, password: String, name: String) {
     let entity = SignUpEntity(email: email, password: password, name: name)
     Task {
-      do {
-        try await FirestoreService.shared.save(target: .signup(entity))
-        print("회원가입 성공!")
-      } catch {
-        print("회원가입 실패: \(error.localizedDescription)")
+      guard let uid = try await AuthenticationService.shared.signup(entity: entity) else {
+        print("회원가입에 실패함")
+        return
       }
+      
+      let userEntity = SignUpEntity(id: uid, email: email, password: password, name: name)
+      try await FirestoreService.shared.save(target: .signup(userEntity))
     }
   }
   
