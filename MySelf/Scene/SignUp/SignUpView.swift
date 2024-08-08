@@ -1,12 +1,20 @@
 import SwiftUI
 
 struct SignUpView: View {
+  enum FocusField {
+    case email
+    case password
+    case confirmPassword
+    case name
+  }
+  
   @StateObject private var vm = SignUpVM()
   @State private var email = ""
   @State private var password = ""
   @State private var confirmPassword = ""
   @State private var confirmPasswordError = ""
   @State private var name = ""
+  @FocusState private var focusField: FocusField?
   
   var body: some View {
     ZStack {
@@ -60,6 +68,10 @@ private extension SignUpView {
         text: $email
       )
       .keyboardType(.emailAddress)
+      .focused($focusField, equals: .email)
+      .onSubmit {
+        focusField = .password
+      }
     }
   }
   
@@ -73,6 +85,10 @@ private extension SignUpView {
         placeholder: "비밀번호 입력",
         text: $password
       )
+      .focused($focusField, equals: .password)
+      .onSubmit {
+        focusField = .confirmPassword
+      }
     }
   }
   
@@ -87,8 +103,12 @@ private extension SignUpView {
         text: $confirmPassword
       )
       .errorMessage(errorMessage: $confirmPasswordError)
+      .focused($focusField, equals: .confirmPassword)
       .onChange(of: confirmPassword) { _ in
         changeConfirmPassword()
+      }
+      .onSubmit {
+        focusField = .name
       }
     }
   }
@@ -102,6 +122,7 @@ private extension SignUpView {
         placeholder: "이름 입력",
         text: $name
       )
+      .focused($focusField, equals: .name)
     }
   }
   
