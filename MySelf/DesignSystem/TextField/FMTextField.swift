@@ -30,6 +30,8 @@ struct FMTextField: View {
   var cornerRadius: CGFloat = 10
   var hasClearButton = true
   
+  @FocusState private var isFocused: Bool
+  
   enum TextFieldType {
     case `default`
     case secure
@@ -50,8 +52,9 @@ struct FMTextField: View {
       HStack(spacing: 10) {
         AnyTextField
           .autocorrectionDisabled()
+          .focused($isFocused)
         
-        if hasClearButton && text.isEmpty == false {
+        if hasClearButton && isFocused && text.isEmpty == false {
           ClearButton
         }
       }
@@ -85,6 +88,7 @@ private extension FMTextField {
   var ClearButton: some View {
     Button {
       text = ""
+      errorMessage?.wrappedValue = ""
     } label: {
       Image(systemName: "xmark.circle.fill")
         .resizable()

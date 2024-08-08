@@ -13,6 +13,7 @@
 		0564D9442C63124F00102A44 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0564D9432C63124F00102A44 /* FirebaseAnalytics */; };
 		0564D9462C63126400102A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564D9452C63126400102A44 /* AppDelegate.swift */; };
 		0564D9492C6314D900102A44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0564D9482C6314D900102A44 /* GoogleService-Info.plist */; };
+		05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */; };
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
 		05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A862C5A089E005BE3BB /* FMTextField.swift */; };
 		05E983E72C6333BB00393D08 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 05E983E62C6333BB00393D08 /* FirebaseFirestore */; };
@@ -68,6 +69,7 @@
 		051ABA262C61FB380090F466 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		0564D9452C63126400102A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0564D9482C6314D900102A44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+.swift"; sourceTree = "<group>"; };
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		05DC6A862C5A089E005BE3BB /* FMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMTextField.swift; sourceTree = "<group>"; };
 		05E983E92C63386800393D08 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				05E983E92C63386800393D08 /* Encodable+.swift */,
+				05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				05E983F12C634DF300393D08 /* FirestoreService.swift in Sources */,
 				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
 				05E983F32C634E9A00393D08 /* CollectionTarget.swift in Sources */,
+				05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */,
 				05E983ED2C634ADF00393D08 /* SignUpEntity.swift in Sources */,

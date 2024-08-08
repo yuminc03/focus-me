@@ -34,6 +34,10 @@ struct SignUpView: View {
       }
       .padding(.horizontal, 20)
     }
+    .contentShape(Rectangle())
+    .onTapGesture {
+      endEditing()
+    }
   }
 }
 
