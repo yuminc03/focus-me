@@ -16,4 +16,13 @@ final class AuthenticationService {
       return nil
     }
   }
+  
+  /// 로그인
+  func login(entity: LoginEntity) async throws {
+    do {
+      let result = try await Auth.auth().signIn(withEmail: entity.email, password: entity.password)
+    } catch {
+      print("Firebase Authentication 오류: \(error.localizedDescription)")
+    }
+  }
 }
