@@ -6,7 +6,10 @@ struct LoginView: View {
     case password
   }
   
+  @EnvironmentObject private var coordinator: Coordinator
+  
   @StateObject private var vm = LoginVM()
+  
   @State private var email = ""
   @State private var password = ""
   
@@ -88,7 +91,7 @@ private extension LoginView {
   
   var SignupButton: some View {
     Button {
-      
+      coordinator.push(destination: .signup)
     } label: {
       Text("회원가입 하러가기")
         .customFont(size: 16)

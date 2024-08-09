@@ -13,10 +13,9 @@ final class AppVM: ObservableObject {
   func getLoginUser() {
     do {
       try AuthenticationService.shared.getCurrentUser()
-      self.appState = .home
+      appState = .home
     } catch {
-      print(error.localizedDescription)
-      self.appState = .login
+      appState = .login
     }
   }
 }

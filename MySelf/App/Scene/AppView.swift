@@ -37,21 +37,29 @@ private extension AppView {
         Color.blue
           .ignoresSafeArea()
       }
-      .environmentObject(coordinator)
       .navigationDestination(for: Destination.self) { _ in
         
       }
     }
+    .environmentObject(coordinator)
   }
   
   var Login: some View {
     NavigationStack(path: $coordinator.route) {
       LoginView()
-        .environmentObject(coordinator)
-        .navigationDestination(for: Destination.self) { _ in
-          
+        .navigationDestination(for: Destination.self) { screen in
+          switch screen {
+          case .login:
+            LoginView()
+              .environmentObject(coordinator)
+            
+          case .signup:
+            SignUpView()
+              .environmentObject(coordinator)
+          }
         }
     }
+    .environmentObject(coordinator)
   }
 }
 

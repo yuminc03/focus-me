@@ -8,12 +8,16 @@ struct SignUpView: View {
     case name
   }
   
+  @EnvironmentObject private var coordinator: Coordinator
+  
   @StateObject private var vm = SignUpVM()
+  
   @State private var email = ""
   @State private var password = ""
   @State private var confirmPassword = ""
   @State private var confirmPasswordError = ""
   @State private var name = ""
+  
   @FocusState private var focusField: FocusField?
   
   var body: some View {
@@ -160,7 +164,7 @@ private extension SignUpView {
   }
   
   private func tapExistAccountButton() {
-    
+    coordinator.pop()
   }
 }
 
