@@ -87,6 +87,7 @@ private extension LoginView {
     FMButton(title: "로그인") {
       vm.login(email: email, password: password)
     }
+    .disabled(email.isEmpty || password.isEmpty)
   }
   
   var SignupButton: some View {

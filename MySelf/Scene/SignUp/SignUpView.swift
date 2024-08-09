@@ -134,6 +134,13 @@ private extension SignUpView {
     FMButton(title: "회원가입") {
       tapSignUpButton()
     }
+    .disabled(
+      email.isEmpty ||
+      password.isEmpty ||
+      confirmPassword.isEmpty ||
+      name.isEmpty ||
+      vm.confirmPasswordError.isEmpty == false
+    )
   }
   
   var ExistAccountButton: some View {
