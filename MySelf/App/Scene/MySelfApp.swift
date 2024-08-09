@@ -6,9 +6,7 @@ struct MySelfApp: App {
   
   var body: some Scene {
     WindowGroup {
-      NavigationStack {
-        LoginView()
-      }
+      AppView()
     }
   }
 }
