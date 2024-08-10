@@ -91,14 +91,14 @@
 		05E983F22C634E9A00393D08 /* CollectionTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTarget.swift; sourceTree = "<group>"; };
 		05E983F62C6365A500393D08 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		05F65A6F2C5B7C960075E7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		8D7BFD3D2B8229E2001CA0EE /* MySelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7BFD3D2B8229E2001CA0EE /* FocusMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
 		8D7BFD422B8229E2001CA0EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8D7BFD442B8229E3001CA0EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D7BFD472B8229E3001CA0EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8D7BFD4D2B8229E3001CA0EE /* MySelfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySelfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7BFD4D2B8229E3001CA0EE /* FocusMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD512B8229E3001CA0EE /* MySelfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfTests.swift; sourceTree = "<group>"; };
-		8D7BFD572B8229E3001CA0EE /* MySelfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySelfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7BFD572B8229E3001CA0EE /* FocusMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -297,9 +297,9 @@
 		8D7BFD342B8229E2001CA0EE = {
 			isa = PBXGroup;
 			children = (
-				8D7BFD3F2B8229E2001CA0EE /* MySelf */,
-				8D7BFD502B8229E3001CA0EE /* MySelfTests */,
-				8D7BFD5A2B8229E3001CA0EE /* MySelfUITests */,
+				8D7BFD3F2B8229E2001CA0EE /* FocusMe */,
+				8D7BFD502B8229E3001CA0EE /* FocusMeTests */,
+				8D7BFD5A2B8229E3001CA0EE /* FocusMeUITests */,
 				8D7BFD3E2B8229E2001CA0EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -307,14 +307,14 @@
 		8D7BFD3E2B8229E2001CA0EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D7BFD3D2B8229E2001CA0EE /* MySelf.app */,
-				8D7BFD4D2B8229E3001CA0EE /* MySelfTests.xctest */,
-				8D7BFD572B8229E3001CA0EE /* MySelfUITests.xctest */,
+				8D7BFD3D2B8229E2001CA0EE /* FocusMe.app */,
+				8D7BFD4D2B8229E3001CA0EE /* FocusMeTests.xctest */,
+				8D7BFD572B8229E3001CA0EE /* FocusMeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D7BFD3F2B8229E2001CA0EE /* MySelf */ = {
+		8D7BFD3F2B8229E2001CA0EE /* FocusMe */ = {
 			isa = PBXGroup;
 			children = (
 				0564D9482C6314D900102A44 /* GoogleService-Info.plist */,
@@ -326,7 +326,7 @@
 				05DC6A772C59F740005BE3BB /* DesignSystem */,
 				8D7BFD462B8229E3001CA0EE /* Preview Content */,
 			);
-			path = MySelf;
+			path = FocusMe;
 			sourceTree = "<group>";
 		};
 		8D7BFD462B8229E3001CA0EE /* Preview Content */ = {
@@ -337,21 +337,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8D7BFD502B8229E3001CA0EE /* MySelfTests */ = {
+		8D7BFD502B8229E3001CA0EE /* FocusMeTests */ = {
 			isa = PBXGroup;
 			children = (
 				8D7BFD512B8229E3001CA0EE /* MySelfTests.swift */,
 			);
-			path = MySelfTests;
+			path = FocusMeTests;
 			sourceTree = "<group>";
 		};
-		8D7BFD5A2B8229E3001CA0EE /* MySelfUITests */ = {
+		8D7BFD5A2B8229E3001CA0EE /* FocusMeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				8D7BFD5B2B8229E3001CA0EE /* MySelfUITests.swift */,
 				8D7BFD5D2B8229E3001CA0EE /* MySelfUITestsLaunchTests.swift */,
 			);
-			path = MySelfUITests;
+			path = FocusMeUITests;
 			sourceTree = "<group>";
 		};
 		8D7BFD702B82333B001CA0EE /* App */ = {
@@ -411,9 +411,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D7BFD3C2B8229E2001CA0EE /* MySelf */ = {
+		8D7BFD3C2B8229E2001CA0EE /* FocusMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D7BFD612B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "MySelf" */;
+			buildConfigurationList = 8D7BFD612B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "FocusMe" */;
 			buildPhases = (
 				8D7BFD392B8229E2001CA0EE /* Sources */,
 				8D7BFD3A2B8229E2001CA0EE /* Frameworks */,
@@ -424,7 +424,7 @@
 			dependencies = (
 				8D1E1C202BCBFAEA0047E618 /* PBXTargetDependency */,
 			);
-			name = MySelf;
+			name = FocusMe;
 			packageProductDependencies = (
 				8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */,
 				8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */,
@@ -433,12 +433,12 @@
 				05E983F82C63689E00393D08 /* FirebaseAuth */,
 			);
 			productName = MySelf;
-			productReference = 8D7BFD3D2B8229E2001CA0EE /* MySelf.app */;
+			productReference = 8D7BFD3D2B8229E2001CA0EE /* FocusMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8D7BFD4C2B8229E3001CA0EE /* MySelfTests */ = {
+		8D7BFD4C2B8229E3001CA0EE /* FocusMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D7BFD642B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "MySelfTests" */;
+			buildConfigurationList = 8D7BFD642B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "FocusMeTests" */;
 			buildPhases = (
 				8D7BFD492B8229E3001CA0EE /* Sources */,
 				8D7BFD4A2B8229E3001CA0EE /* Frameworks */,
@@ -449,14 +449,14 @@
 			dependencies = (
 				8D7BFD4F2B8229E3001CA0EE /* PBXTargetDependency */,
 			);
-			name = MySelfTests;
+			name = FocusMeTests;
 			productName = MySelfTests;
-			productReference = 8D7BFD4D2B8229E3001CA0EE /* MySelfTests.xctest */;
+			productReference = 8D7BFD4D2B8229E3001CA0EE /* FocusMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8D7BFD562B8229E3001CA0EE /* MySelfUITests */ = {
+		8D7BFD562B8229E3001CA0EE /* FocusMeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D7BFD672B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "MySelfUITests" */;
+			buildConfigurationList = 8D7BFD672B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "FocusMeUITests" */;
 			buildPhases = (
 				8D7BFD532B8229E3001CA0EE /* Sources */,
 				8D7BFD542B8229E3001CA0EE /* Frameworks */,
@@ -467,9 +467,9 @@
 			dependencies = (
 				8D7BFD592B8229E3001CA0EE /* PBXTargetDependency */,
 			);
-			name = MySelfUITests;
+			name = FocusMeUITests;
 			productName = MySelfUITests;
-			productReference = 8D7BFD572B8229E3001CA0EE /* MySelfUITests.xctest */;
+			productReference = 8D7BFD572B8229E3001CA0EE /* FocusMeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -495,7 +495,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D7BFD382B8229E2001CA0EE /* Build configuration list for PBXProject "MySelf" */;
+			buildConfigurationList = 8D7BFD382B8229E2001CA0EE /* Build configuration list for PBXProject "FocusMe" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -513,9 +513,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D7BFD3C2B8229E2001CA0EE /* MySelf */,
-				8D7BFD4C2B8229E3001CA0EE /* MySelfTests */,
-				8D7BFD562B8229E3001CA0EE /* MySelfUITests */,
+				8D7BFD3C2B8229E2001CA0EE /* FocusMe */,
+				8D7BFD4C2B8229E3001CA0EE /* FocusMeTests */,
+				8D7BFD562B8229E3001CA0EE /* FocusMeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -613,12 +613,12 @@
 		};
 		8D7BFD4F2B8229E3001CA0EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D7BFD3C2B8229E2001CA0EE /* MySelf */;
+			target = 8D7BFD3C2B8229E2001CA0EE /* FocusMe */;
 			targetProxy = 8D7BFD4E2B8229E3001CA0EE /* PBXContainerItemProxy */;
 		};
 		8D7BFD592B8229E3001CA0EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D7BFD3C2B8229E2001CA0EE /* MySelf */;
+			target = 8D7BFD3C2B8229E2001CA0EE /* FocusMe */;
 			targetProxy = 8D7BFD582B8229E3001CA0EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -750,11 +750,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MySelf/Preview Content\"";
-				DEVELOPMENT_TEAM = 54V3G99LL8;
+				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
+				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySelf/Info.plist;
+				INFOPLIST_FILE = FocusMe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MySelf;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -767,7 +767,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.MySelf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.FocusMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -786,11 +786,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MySelf/Preview Content\"";
-				DEVELOPMENT_TEAM = 54V3G99LL8;
+				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
+				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySelf/Info.plist;
+				INFOPLIST_FILE = FocusMe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MySelf;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -803,7 +803,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.MySelf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.FocusMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -831,7 +831,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySelf.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySelf";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FocusMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FocusMe";
 			};
 			name = Debug;
 		};
@@ -851,7 +851,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySelf.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySelf";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FocusMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FocusMe";
 			};
 			name = Release;
 		};
@@ -896,7 +896,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D7BFD382B8229E2001CA0EE /* Build configuration list for PBXProject "MySelf" */ = {
+		8D7BFD382B8229E2001CA0EE /* Build configuration list for PBXProject "FocusMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D7BFD5F2B8229E3001CA0EE /* Debug */,
@@ -905,7 +905,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D7BFD612B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "MySelf" */ = {
+		8D7BFD612B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "FocusMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D7BFD622B8229E3001CA0EE /* Debug */,
@@ -914,7 +914,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D7BFD642B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "MySelfTests" */ = {
+		8D7BFD642B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "FocusMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D7BFD652B8229E3001CA0EE /* Debug */,
@@ -923,7 +923,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D7BFD672B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "MySelfUITests" */ = {
+		8D7BFD672B8229E3001CA0EE /* Build configuration list for PBXNativeTarget "FocusMeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D7BFD682B8229E3001CA0EE /* Debug */,
