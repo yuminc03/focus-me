@@ -13,8 +13,25 @@ final class AuthenticationService {
       result.user.displayName = entity.name
       return result.user.uid
     } catch {
-      print("Firebase Authentication signup() 오류: \(error.localizedDescription)")
-      throw error.toFMError
+      let authError = error as NSError
+      guard let errorCode = AuthErrorCode(rawValue: authError.code) else {
+        print("signup() Error: \(error.localizedDescription)")
+        throw error.toFMError
+      }
+      
+      print("signup() Error: \(errorCode): \(error.localizedDescription)")
+      switch errorCode {
+      case .invalidEmail:
+        throw FMError.signup(.invalidEmail)
+      case .emailAlreadyInUse:
+        throw FMError.signup(.emailAlreadyInUse)
+      case .operationNotAllowed:
+        throw FMError.signup(.operationNotAllowed)
+      case .weakPassword:
+        throw FMError.signup(.weakPassword)
+      default:
+        throw error.toFMError
+      }
     }
   }
   
@@ -24,8 +41,25 @@ final class AuthenticationService {
       let result = try await Auth.auth().signIn(withEmail: entity.email, password: entity.password)
       print("로그인 성공 reuslt: \(result)")
     } catch {
-      print("Firebase Authentication login() 오류: \(error.localizedDescription)")
-      throw error.toFMError
+      let authError = error as NSError
+      guard let errorCode = AuthErrorCode(rawValue: authError.code) else {
+        print("login() Error: \(error.localizedDescription)")
+        throw error.toFMError
+      }
+      
+      print("signup() Error: \(errorCode): \(error.localizedDescription)")
+      switch errorCode {
+      case .operationNotAllowed:
+        throw FMError.login(.operationNotAllowed)
+      case .userDisabled:
+        throw FMError.login(.userDisabled)
+      case .wrongPassword:
+        throw FMError.login(.wrongPassword)
+      case .invalidEmail:
+        throw FMError.login(.invalidEmail)
+      default:
+        throw error.toFMError
+      }
     }
   }
   
