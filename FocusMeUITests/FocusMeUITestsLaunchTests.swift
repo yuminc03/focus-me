@@ -1,13 +1,6 @@
-//
-//  MySelfUITestsLaunchTests.swift
-//  MySelfUITests
-//
-//  Created by Yumin Chu on 2/18/24.
-//
-
 import XCTest
 
-final class MySelfUITestsLaunchTests: XCTestCase {
+final class FocusMeUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
