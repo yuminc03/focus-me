@@ -30,26 +30,19 @@ final class AuthenticationService {
   }
   
   /// 현재 로그인한 사용자 가져오기
-  func getCurrentUser() throws {
-    Task {
-      do {
-        return try await withCheckedThrowingContinuation { continuation in
-          _ = Auth.auth().addStateDidChangeListener { auth, user in
-            if let user {
-              print("현재 로그인한 사용자 발견!")
-              UserInfo.shared.email = user.email
-              UserInfo.shared.name = user.displayName
-              continuation.resume(with: .success(()))
-            } else {
-              print("로그아웃 됨!")
-              UserInfo.shared.logout()
-              continuation.resume(with: .failure(FMError.login(.notFoundCurrentUser)))
-            }
-          }
+  func getCurrentUser() async throws {
+    return try await withCheckedThrowingContinuation { continuation in
+      _ = Auth.auth().addStateDidChangeListener { auth, user in
+        if let user {
+          print("현재 로그인한 사용자 발견!")
+          UserInfo.shared.email = user.email
+          UserInfo.shared.name = user.displayName
+          continuation.resume(with: .success(()))
+        } else {
+          print("로그아웃 됨!")
+          UserInfo.shared.logout()
+          continuation.resume(with: .failure(FMError.login(.notFoundCurrentUser)))
         }
-      } catch {
-        print("Firebase Authentication getCurrentUser() 오류: \(error.localizedDescription)")
-        throw error.toFMError
       }
     }
   }

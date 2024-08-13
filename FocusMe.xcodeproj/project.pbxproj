@@ -188,6 +188,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		05B7D6F52C69DBAB00E36771 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		05BD4A7A2C64A9CF00F5ED99 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +383,7 @@
 		8DA40F002BB05BE600A7D271 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				05B7D6F52C69DBAB00E36771 /* Repository */,
 				055022872C65DB170031330E /* Coordinator */,
 				05E983E82C63385F00393D08 /* Extension */,
 				8DA40F012BB05BEF00A7D271 /* Entity */,
