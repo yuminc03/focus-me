@@ -7,6 +7,7 @@ struct LoginView: View {
   }
   
   @EnvironmentObject private var coordinator: Coordinator
+  @EnvironmentObject private var appVM: AppVM
   
   @StateObject private var vm = LoginVM()
   
@@ -42,6 +43,11 @@ struct LoginView: View {
         endEditing()
       }
     }
+    .onReceive(vm.$isCompleteLogin) {
+      guard $0 else { return }
+      appVM.setAppState(.home)
+    }
+    .loadingView(isLoading: $vm.isLoading)
     .fmAlert(isPresented: $vm.isLoginErrorPresented) {
       FMAlertContainer {
         FMDefaultAlert(message: vm.loginError ?? "")

@@ -47,7 +47,7 @@ final class AuthenticationService {
         throw error.toFMError
       }
       
-      print("signup() Error: \(errorCode): \(error.localizedDescription)")
+      print("login() Error: \(errorCode): \(error.localizedDescription)")
       switch errorCode {
       case .operationNotAllowed:
         throw FMError.login(.operationNotAllowed)

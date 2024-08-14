@@ -17,9 +17,6 @@ struct AppView: View {
         Home
       }
     }
-    .onAppear {
-      vm.getLoginUser()
-    }
   }
 }
 
@@ -52,6 +49,7 @@ private extension AppView {
           case .login:
             LoginView()
               .environmentObject(coordinator)
+              .environmentObject(vm)
             
           case .signup:
             SignUpView()

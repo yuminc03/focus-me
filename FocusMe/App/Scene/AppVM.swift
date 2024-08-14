@@ -11,7 +11,11 @@ final class AppVM: ObservableObject {
 
   @Published private(set) var appState: AppState = .splash
   
-  func getLoginUser() {
+  init() {
+    self.getLoginUser()
+  }
+  
+  private func getLoginUser() {
     Task {
       do {
         try await AuthenticationService.shared.getCurrentUser()
@@ -20,5 +24,9 @@ final class AppVM: ObservableObject {
         appState = .login
       }
     }
+  }
+  
+  func setAppState(_ appState: AppState) {
+    self.appState = appState
   }
 }

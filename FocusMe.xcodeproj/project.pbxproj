@@ -23,6 +23,7 @@
 		05A708DB2C6C4FE000AE1172 /* FMAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708DA2C6C4FE000AE1172 /* FMAlert.swift */; };
 		05A708E02C6C64F000AE1172 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708DF2C6C64F000AE1172 /* View+.swift */; };
 		05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */; };
+		05A708E72C6C748C00AE1172 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708E62C6C748C00AE1172 /* LoadingView.swift */; };
 		05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */; };
 		05BD4A792C64A7B500F5ED99 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A782C64A7B500F5ED99 /* LoginVM.swift */; };
 		05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */; };
@@ -90,6 +91,7 @@
 		05A708DA2C6C4FE000AE1172 /* FMAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMAlert.swift; sourceTree = "<group>"; };
 		05A708DF2C6C64F000AE1172 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMDefaultAlert.swift; sourceTree = "<group>"; };
+		05A708E62C6C748C00AE1172 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+.swift"; sourceTree = "<group>"; };
 		05BD4A782C64A7B500F5ED99 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
@@ -217,6 +219,14 @@
 			path = ViewModifier;
 			sourceTree = "<group>";
 		};
+		05A708E52C6C747B00AE1172 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				05A708E62C6C748C00AE1172 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		05B7D6F52C69DBAB00E36771 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +245,7 @@
 		05DC6A772C59F740005BE3BB /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				05A708E52C6C747B00AE1172 /* LoadingView */,
 				05A708DD2C6C64E400AE1172 /* ViewModifier */,
 				053B702C2C6B3C6A001DBF90 /* Alert */,
 				051ABA202C61C1480090F466 /* Button */,
@@ -625,6 +636,7 @@
 				05BD4A792C64A7B500F5ED99 /* LoginVM.swift in Sources */,
 				05E983ED2C634ADF00393D08 /* SignUpEntity.swift in Sources */,
 				051ABA272C61FB380090F466 /* SignUpVM.swift in Sources */,
+				05A708E72C6C748C00AE1172 /* LoadingView.swift in Sources */,
 				055022962C65E9A80031330E /* FMError.swift in Sources */,
 				055022892C65DB2B0031330E /* Coordinator.swift in Sources */,
 				05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */,
@@ -795,7 +807,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusMe/Info.plist;
@@ -831,7 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 54V3G99LL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusMe/Info.plist;
