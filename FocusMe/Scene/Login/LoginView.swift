@@ -42,6 +42,14 @@ struct LoginView: View {
         endEditing()
       }
     }
+    .fmAlert(isPresented: $vm.isLoginErrorPresented) {
+      FMAlertContainer {
+        FMDefaultAlert(message: vm.loginError ?? "")
+      }
+      .addButton(type: .confirm, buttonStyle: .primary(title: "확인")) {
+        vm.isLoginErrorPresented = false
+      }
+    }
   }
 }
 
@@ -85,6 +93,7 @@ private extension LoginView {
   
   var LoginButton: some View {
     FMButton(title: "로그인") {
+      endEditing()
       vm.login(email: email, password: password)
     }
     .disabled(email.isEmpty || password.isEmpty)

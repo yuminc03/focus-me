@@ -12,12 +12,11 @@ struct FMAlertContainer<Content: View>: View {
     VStack(spacing: 30) {
       content()
       
-      HStack(spacing: 0) {
+      HStack(spacing: 10) {
         if let leftButton {
           FMButton(title: leftButton.title) {
             leftButtonAction?()
           }
-          .cornerRadius(0)
           .foregroundColor(leftButton.foregroundColor)
           .backgroundColor(leftButton.backgroundColor)
           .disabledBgColor(leftButton.disabledBgColor)
@@ -28,7 +27,6 @@ struct FMAlertContainer<Content: View>: View {
           FMButton(title: rightButton.title) {
             rightButtonAction?()
           }
-          .cornerRadius(0)
           .foregroundColor(rightButton.foregroundColor)
           .backgroundColor(rightButton.backgroundColor)
           .disabledBgColor(rightButton.disabledBgColor)

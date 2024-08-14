@@ -20,6 +20,9 @@
 		0564D9442C63124F00102A44 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0564D9432C63124F00102A44 /* FirebaseAnalytics */; };
 		0564D9462C63126400102A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564D9452C63126400102A44 /* AppDelegate.swift */; };
 		0564D9492C6314D900102A44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0564D9482C6314D900102A44 /* GoogleService-Info.plist */; };
+		05A708DB2C6C4FE000AE1172 /* FMAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708DA2C6C4FE000AE1172 /* FMAlert.swift */; };
+		05A708E02C6C64F000AE1172 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708DF2C6C64F000AE1172 /* View+.swift */; };
+		05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */; };
 		05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */; };
 		05BD4A792C64A7B500F5ED99 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A782C64A7B500F5ED99 /* LoginVM.swift */; };
 		05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */; };
@@ -84,6 +87,9 @@
 		055022952C65E9A80031330E /* FMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMError.swift; sourceTree = "<group>"; };
 		0564D9452C63126400102A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0564D9482C6314D900102A44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05A708DA2C6C4FE000AE1172 /* FMAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMAlert.swift; sourceTree = "<group>"; };
+		05A708DF2C6C64F000AE1172 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMDefaultAlert.swift; sourceTree = "<group>"; };
 		05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+.swift"; sourceTree = "<group>"; };
 		05BD4A782C64A7B500F5ED99 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 			children = (
 				053B702D2C6B3F76001DBF90 /* FMAlertContainer.swift */,
 				053B70302C6B40C9001DBF90 /* FMAlertButton.swift */,
+				05A708DA2C6C4FE000AE1172 /* FMAlert.swift */,
+				05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -201,6 +209,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		05A708DD2C6C64E400AE1172 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				05A708DF2C6C64F000AE1172 /* View+.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		05B7D6F52C69DBAB00E36771 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +235,7 @@
 		05DC6A772C59F740005BE3BB /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				05A708DD2C6C64E400AE1172 /* ViewModifier */,
 				053B702C2C6B3C6A001DBF90 /* Alert */,
 				051ABA202C61C1480090F466 /* Button */,
 				05DC6A832C5A06DF005BE3BB /* TextField */,
@@ -587,7 +604,9 @@
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				05E983EA2C63386800393D08 /* Encodable+.swift in Sources */,
+				05A708E02C6C64F000AE1172 /* View+.swift in Sources */,
 				0550228D2C65E2050031330E /* AppVM.swift in Sources */,
+				05A708DB2C6C4FE000AE1172 /* FMAlert.swift in Sources */,
 				05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */,
 				055022942C65E5860031330E /* UserInfo.swift in Sources */,
 				053B702E2C6B3F76001DBF90 /* FMAlertContainer.swift in Sources */,
@@ -608,6 +627,7 @@
 				051ABA272C61FB380090F466 /* SignUpVM.swift in Sources */,
 				055022962C65E9A80031330E /* FMError.swift in Sources */,
 				055022892C65DB2B0031330E /* Coordinator.swift in Sources */,
+				05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
