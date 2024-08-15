@@ -8,7 +8,13 @@ struct HomeView: View {
       
       VStack(spacing: 20) {
         UserNameView
+          .padding(.vertical, 20)
+        
         StartTestView
+        SeeAllTypesView
+        GettingOfficialTest
+        
+        Spacer()
       }
       .padding(.horizontal, 20)
     }
@@ -18,38 +24,41 @@ struct HomeView: View {
 private extension HomeView {
   var UserNameView: some View {
     Text("\(UserInfo.shared.name ?? "noname")님 안녕하세요! 🙂")
-      .customFont(.notoSansKRSemiBold, size: 30)
+      .customFont(.notoSansKRSemiBold, size: 28)
       .foregroundColor(.textPrimary1)
       .frame(maxWidth: .infinity, alignment: .leading)
   }
   
   var StartTestView: some View {
-    Button {
+    RoundedContainerButton(
+      title: "MBTI 검사하기",
+      iconName: .systemImage(.arrowRight),
+      description: "간단하게 MBTI를 검사하고 나의 성향을\n알아보세요. 🙂"
+    ) {
       
-    } label: {
-      VStack(spacing: 10) {
-        HStack(spacing: 0) {
-          Text("MBTI 검사하기")
-            .customFont(.notoSansKRSemiBold, size: 20)
-          
-          Spacer()
-          
-          Image(systemName: .systemImage(.arrowRight))
-            .size(20)
-        }
-        
-        Text("간단하게 MBTI를 검사하고 나의 성향을\n알아보세요. 🙂")
-          .customFont(size: 14)
-          .multilineTextAlignment(.leading)
-          .frame(maxWidth: .infinity, alignment: .leading)
-      }
-      .foregroundColor(.white)
-      .padding(20)
-      .background(
-        RoundedRectangle(cornerRadius: 20)
-          .fill(.blueLemonAde)
-      )
     }
+  }
+  
+  var SeeAllTypesView: some View {
+    RoundedContainerButton(
+      title: "MBTI의 모든 유형 살펴보기",
+      iconName: .systemImage(.arrowRight),
+      description: "MBTI의 16가지 유형을 알아보세요. 🌈"
+    ) {
+      
+    }
+    .backgroundColor(.lovelyPink)
+  }
+  
+  var GettingOfficialTest : some View {
+    RoundedContainerButton(
+      title: "MBTI 정식 검사 받아보기",
+      iconName: .systemImage(.arrowRight),
+      description: "내 MBTI를 정식으로 검사해보고\n나를 탐색해보세요! 📑"
+    ) {
+      
+    }
+    .backgroundColor(.lavender)
   }
 }
 

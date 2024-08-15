@@ -29,8 +29,8 @@ extension FMAlertButton {
       title: title,
       foregroundColor: .white,
       backgroundColor: .textPrimary4,
-      pressedBgColor: .darkGray,
-      disabledBgColor: .lightGray
+      pressedBgColor: .systemDarkGray,
+      disabledBgColor: .systemLightGray
     )
   }
 }

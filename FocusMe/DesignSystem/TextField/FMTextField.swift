@@ -62,7 +62,7 @@ struct FMTextField: View {
       .padding(.vertical, 14)
       .background(
         RoundedRectangle(cornerRadius: cornerRadius)
-          .fill(Color.lightGray)
+          .fill(.white)
       )
       
       if let errorMessage, errorMessage.wrappedValue.isEmpty == false {
