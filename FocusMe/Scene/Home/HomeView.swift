@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
+  @EnvironmentObject private var coordinator: Coordinator
+  
   var body: some View {
     ZStack {
       Color.bg
@@ -45,7 +47,7 @@ private extension HomeView {
       iconName: .systemImage(.arrowRight),
       description: "MBTI의 16가지 유형을 알아보세요. 🌈"
     ) {
-      
+      coordinator.push(destination: .typeList)
     }
     .backgroundColor(.lovelyPink)
   }

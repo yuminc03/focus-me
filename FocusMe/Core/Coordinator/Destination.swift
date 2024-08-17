@@ -5,6 +5,8 @@ enum Destination {
   case login
   case signup
   
+  case typeList
+  
   @ViewBuilder
   var view: some View {
     switch self {
@@ -13,6 +15,9 @@ enum Destination {
       
     case .signup:
       SignUpView()
+      
+    case .typeList:
+      TypeListView()
     }
   }
 }

@@ -38,6 +38,7 @@
 		05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E983F62C6365A500393D08 /* AuthenticationService.swift */; };
 		05E983F92C63689E00393D08 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 05E983F82C63689E00393D08 /* FirebaseAuth */; };
 		05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F65A6F2C5B7C960075E7D6 /* LoginView.swift */; };
+		8D1365922C70DAD900284DA7 /* TypeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1365912C70DAD900284DA7 /* TypeListView.swift */; };
 		8D1E1C1E2BCBFACF0047E618 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1E1C1D2BCBFACF0047E618 /* RswiftLibrary */; };
 		8D2FB6FD2C6E44010086513D /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB6FC2C6E44010086513D /* SystemImage.swift */; };
 		8D2FB7002C6E44820086513D /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB6FF2C6E44820086513D /* Image+.swift */; };
@@ -108,6 +109,7 @@
 		05E983F22C634E9A00393D08 /* CollectionTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTarget.swift; sourceTree = "<group>"; };
 		05E983F62C6365A500393D08 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		05F65A6F2C5B7C960075E7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8D1365912C70DAD900284DA7 /* TypeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListView.swift; sourceTree = "<group>"; };
 		8D2FB6FC2C6E44010086513D /* SystemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		8D2FB6FF2C6E44820086513D /* Image+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedContainerButton.swift; sourceTree = "<group>"; };
@@ -337,6 +339,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		8D1365902C70DAA300284DA7 /* MBTITypes */ = {
+			isa = PBXGroup;
+			children = (
+				8D1365912C70DAD900284DA7 /* TypeListView.swift */,
+			);
+			path = MBTITypes;
+			sourceTree = "<group>";
+		};
 		8D2FB6F92C6E43F50086513D /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +453,7 @@
 		8D7BFD742B823382001CA0EE /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D1365902C70DAA300284DA7 /* MBTITypes */,
 				05A708EA2C6CA10200AE1172 /* Home */,
 				05F65A6D2C5B7C890075E7D6 /* Login */,
 				051ABA1B2C61B53E0090F466 /* SignUp */,
@@ -643,6 +654,7 @@
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */,
+				8D1365922C70DAD900284DA7 /* TypeListView.swift in Sources */,
 				05E983EA2C63386800393D08 /* Encodable+.swift in Sources */,
 				05A708E02C6C64F000AE1172 /* View+.swift in Sources */,
 				0550228D2C65E2050031330E /* AppVM.swift in Sources */,
@@ -839,7 +851,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
-				DEVELOPMENT_TEAM = 54V3G99LL8;
+				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusMe/Info.plist;
@@ -875,7 +887,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
-				DEVELOPMENT_TEAM = 54V3G99LL8;
+				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusMe/Info.plist;

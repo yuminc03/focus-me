@@ -30,13 +30,10 @@ private extension AppView {
   
   var Home: some View {
     NavigationStack(path: $coordinator.route) {
-      ZStack {
-        Color.blue
-          .ignoresSafeArea()
-      }
-      .navigationDestination(for: Destination.self) { _ in
-        
-      }
+      HomeView()
+        .navigationDestination(for: Destination.self) { screen in
+          screen.view
+        }
     }
     .environmentObject(coordinator)
   }
@@ -45,16 +42,8 @@ private extension AppView {
     NavigationStack(path: $coordinator.route) {
       LoginView()
         .navigationDestination(for: Destination.self) { screen in
-          switch screen {
-          case .login:
-            LoginView()
-              .environmentObject(coordinator)
-              .environmentObject(vm)
-            
-          case .signup:
-            SignUpView()
-              .environmentObject(coordinator)
-          }
+          screen.view
+            .environmentObject(vm)
         }
     }
     .environmentObject(coordinator)
