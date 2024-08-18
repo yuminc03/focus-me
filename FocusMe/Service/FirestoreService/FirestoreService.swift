@@ -1,4 +1,5 @@
 import FirebaseFirestore
+import ComposableArchitecture
 
 final class FirestoreService {
   static let shared = FirestoreService()
@@ -24,5 +25,17 @@ final class FirestoreService {
         continuation.resume(with: .failure(error))
       }
     }
+  }
+}
+
+struct FirestoreServiceKey: DependencyKey {
+  static let liveValue = FirestoreService.shared
+  static let previewValue = FirestoreService.shared
+}
+
+extension DependencyValues {
+  var firestoreService: FirestoreService {
+    get { self[FirestoreServiceKey.self] }
+    set { self[FirestoreServiceKey.self] = newValue }
   }
 }

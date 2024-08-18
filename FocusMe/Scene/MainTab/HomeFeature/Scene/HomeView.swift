@@ -1,24 +1,54 @@
 import SwiftUI
 
+import ComposableArchitecture
+
+@Reducer
+struct HomeCore {
+  @ObservableState
+  struct State: Equatable {
+    let id = UUID()
+  }
+  
+  enum Action {
+    case delegate(Delegate)
+    
+    enum Delegate {
+      case typeList
+    }
+  }
+  
+  var body: some ReducerOf<Self> {
+    Reduce { state, action in
+      return .none
+    }
+  }
+}
+
 struct HomeView: View {
-  @EnvironmentObject private var coordinator: Coordinator
+  @Perception.Bindable private var store: StoreOf<HomeCore>
+  
+  init(store: StoreOf<HomeCore>) {
+    self.store = store
+  }
   
   var body: some View {
-    ZStack {
-      Color.bg
-        .ignoresSafeArea()
-      
-      VStack(spacing: 20) {
-        UserNameView
-          .padding(.vertical, 20)
+    WithPerceptionTracking {
+      ZStack {
+        Color.bg
+          .ignoresSafeArea()
         
-        StartTestView
-        SeeAllTypesView
-        GettingOfficialTest
-        
-        Spacer()
+        VStack(spacing: 20) {
+          UserNameView
+            .padding(.vertical, 20)
+          
+          StartTestView
+          SeeAllTypesView
+          GettingOfficialTest
+          
+          Spacer()
+        }
+        .padding(.horizontal, 20)
       }
-      .padding(.horizontal, 20)
     }
   }
 }
@@ -47,7 +77,7 @@ private extension HomeView {
       iconName: .systemImage(.arrowRight),
       description: "MBTI의 16가지 유형을 알아보세요. 🌈"
     ) {
-      coordinator.push(destination: .typeList)
+      store.send(.delegate(.typeList))
     }
     .backgroundColor(.lovelyPink)
   }
@@ -65,5 +95,7 @@ private extension HomeView {
 }
 
 #Preview {  
-  HomeView()
+  HomeView(store: .init(initialState: HomeCore.State()) {
+    HomeCore()
+  })
 }

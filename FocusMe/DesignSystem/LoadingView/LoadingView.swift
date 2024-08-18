@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension View {
-  func loadingView(isLoading: Binding<Bool>) -> some View {
+  func loadingView(isLoading: Bool) -> some View {
     ZStack {
       self
       LoadingView(isLoading: isLoading)
@@ -10,7 +10,7 @@ extension View {
 }
 
 struct LoadingView: View {
-  @Binding var isLoading: Bool
+  let isLoading: Bool
   
   var body: some View {
     ZStack {
@@ -30,5 +30,5 @@ struct LoadingView: View {
 }
 
 #Preview {
-  LoadingView(isLoading: .constant(true))
+  LoadingView(isLoading: true)
 }

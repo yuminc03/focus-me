@@ -6,7 +6,9 @@ struct MySelfApp: App {
   
   var body: some Scene {
     WindowGroup {
-      AppView()
+      AppView(store: .init(initialState: .initialState) {
+        AppCore()
+      })
     }
   }
 }

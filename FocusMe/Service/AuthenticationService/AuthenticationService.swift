@@ -1,4 +1,5 @@
 import FirebaseAuth
+import ComposableArchitecture
 
 /// Firebase Authentication Service
 final class AuthenticationService {
@@ -79,5 +80,17 @@ final class AuthenticationService {
         }
       }
     }
+  }
+}
+
+struct AuthenticationServiceKey: DependencyKey {
+  static let liveValue = AuthenticationService.shared
+  static let previewValue = AuthenticationService.shared
+}
+
+extension DependencyValues {
+  var authenticationService: AuthenticationService {
+    get { self[AuthenticationServiceKey.self] }
+    set { self[AuthenticationServiceKey.self] = newValue }
   }
 }
