@@ -16,6 +16,16 @@ struct LoginCoordinator {
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
+      switch action {
+      case .router(.routeAction(id: _, action: .login(.delegate(.signup)))):
+        state.routes.push(.signup(.init()))
+        
+      case .router(.routeAction(id: _, action: .signup(.delegate(.login)))):
+        state.routes.pop()
+        
+      default: break
+      }
+      
       return .none
     }
     .forEachRoute(\.routes, action: \.router) {

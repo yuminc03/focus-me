@@ -22,12 +22,13 @@ struct AppCore {
   enum AppState {
     case splash
     case login
-    case home
+    case main
   }
   
   enum Action {
     case main(MainTabCoordinator.Action)
     case login(LoginCoordinator.Action)
+    
     case _onAppear
     case _getCurrentUser
     case _changeAppState(AppState)
@@ -43,20 +44,29 @@ struct AppCore {
     Reduce { state, action in
       switch action {
       case .main: break
-      case .login: break
+      case .login(.router(.routeAction(id: _, action: .login(.delegate(.main))))):
+        state.appState = .main
+        state.main = .initialState
+        
+      case .login(.router(.routeAction(id: _, action: .signup(.delegate(.main))))):
+        state.appState = .main
+        state.main = .initialState
+        
       case ._onAppear:
         return .send(._getCurrentUser)
         
       case ._getCurrentUser:
         return .run { send in
           try await AuthenticationService.shared.getCurrentUser()
-          await send(._changeAppState(.home))
+          await send(._changeAppState(.main))
         } catch: { error, send in
           await send(._changeAppState(.login))
         }
         
       case let ._changeAppState(appState):
         state.appState = appState
+        
+      default: break
       }
       
       return .none
@@ -79,10 +89,10 @@ struct AppView: View {
           Splash
           
         case .login:
-          Login
+          LoginCoordinatorView(store: store.scope(state: \.login, action: \.login))
           
-        case .home:
-          Home
+        case .main:
+          MainTabCoordinatorView(store: store.scope(state: \.main, action: \.main))
         }
       }
     }
@@ -95,14 +105,6 @@ private extension AppView {
       Color.bg
         .ignoresSafeArea()
     }
-  }
-  
-  var Home: some View {
-    MainTabCoordinatorView(store: store.scope(state: \.main, action: \.main))
-  }
-  
-  var Login: some View {
-    LoginCoordinatorView(store: store.scope(state: \.login, action: \.login))
   }
 }
 

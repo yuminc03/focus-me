@@ -2,105 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct SignUpCore {
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-    
-    var focusedField: Field?
-    var email = ""
-    var password = ""
-    var confirmPassword = ""
-    var confirmPasswordError = ""
-    var name = ""
-    var isConfirmButtonDisabled = false
-    
-    enum Field: String, Hashable {
-      case email
-      case password
-      case confirmPassword
-      case name
-    }
-  }
-  
-  @Dependency(\.authenticationService) var authenticationService
-  @Dependency(\.firestoreService) var firestoreService
-  
-  enum Action: BindableAction {
-    case binding(BindingAction<State>)
-    
-    case tapSignUpButton
-    case tapExistAccountButton
-    case didChangeConfirmPassword(String)
-    case onSubmit(State.Field)
-    case didChangeText
-    
-    case _requestSignUp
-    case _signUpResponse(Result<Int, FMError>)
-  }
-  
-  var body: some ReducerOf<Self> {
-    BindingReducer()
-    
-    Reduce { state, action in
-      switch action {
-      case .binding: break
-      case .tapSignUpButton: break
-      case .tapExistAccountButton: break
-      case let .didChangeConfirmPassword(text):
-        state.confirmPasswordError = state.password == text ? "" : "입력한 비밀번호와 같게 입력해주세요"
-        
-      case let .onSubmit(field):
-        switch field {
-        case .email:
-          state.focusedField = .password
-          
-        case .password:
-          state.focusedField = .confirmPassword
-          
-        case .confirmPassword:
-          state.focusedField = .name
-          
-        case .name: break
-        }
-        
-      case .didChangeText:
-        state.isConfirmButtonDisabled = state.email.isEmpty ||
-        state.password.isEmpty ||
-        state.confirmPassword.isEmpty ||
-        state.name.isEmpty ||
-        state.confirmPasswordError.isEmpty == false
-        
-      case ._requestSignUp:
-        let entity = SignUpEntity(email: state.email, password: state.password, name: state.name)
-        return .run { [state] send in
-          guard let uid = try await authenticationService.signup(entity: entity) else {
-            print("회원가입에 실패함")
-            return
-          }
-          
-          let userEntity = SignUpEntity(
-            id: uid,
-            email: state.email,
-            password: state.password,
-            name: state.name
-          )
-          try await firestoreService.save(target: .signup(userEntity))
-          await send(._signUpResponse(.success(0)))
-        } catch: { error, send in
-          await send(._signUpResponse(.failure(error.toFMError)))
-        }
-        
-      case ._signUpResponse(.success): break
-      case let ._signUpResponse(.failure(error)): break
-      }
-      
-      return .none
-    }
-  }
-}
-
 struct SignUpView: View {
   @Perception.Bindable private var store: StoreOf<SignUpCore>
   
@@ -137,6 +38,15 @@ struct SignUpView: View {
           Spacer()
         }
         .padding(.horizontal, 20)
+      }
+      .loadingView(isLoading: store.isLoading)
+      .fmAlert(isPresented: $store.isSignupErrorPresented) {
+        FMAlertContainer {
+          FMDefaultAlert(message: store.signupError ?? "")
+        }
+        .addButton(type: .confirm, buttonStyle: .primary(title: "확인")) {
+          store.send(._setIsSignupErrorPresented(false))
+        }
       }
       .bind($store.focusedField, to: $focusedField)
       .contentShape(Rectangle())

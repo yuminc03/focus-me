@@ -5,8 +5,8 @@ import ComposableArchitecture
 @Reducer
 struct LoginScreen {
   enum State: Equatable, Identifiable {
-    case login(LoginCore.State)
-    case signup(SignUpCore.State)
+    case login(LoginCore.State) // 로그인
+    case signup(SignUpCore.State) // 회원가입
     
     var id: UUID {
       switch self {

@@ -23,6 +23,7 @@
 		05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708EB2C6CA10C00AE1172 /* HomeView.swift */; };
 		05B7DBF82C73247C00E43519 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DBF72C73247C00E43519 /* LoginCoordinator.swift */; };
 		05B7DBFB2C7324E400E43519 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DBFA2C7324E400E43519 /* LoginScreen.swift */; };
+		05B7DC002C733A9C00E43519 /* SignUpCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DBFF2C733A9C00E43519 /* SignUpCore.swift */; };
 		05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */; };
 		05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */; };
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
@@ -102,6 +103,7 @@
 		05A708EB2C6CA10C00AE1172 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		05B7DBF72C73247C00E43519 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = FocusMe/Scene/LoginCoordinator.swift; sourceTree = SOURCE_ROOT; };
 		05B7DBFA2C7324E400E43519 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginScreen.swift; path = FocusMe/Scene/LoginScreen.swift; sourceTree = SOURCE_ROOT; };
+		05B7DBFF2C733A9C00E43519 /* SignUpCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCore.swift; sourceTree = "<group>"; };
 		05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+.swift"; sourceTree = "<group>"; };
 		05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				05E983EB2C634ACF00393D08 /* Entity */,
+				05B7DBFF2C733A9C00E43519 /* SignUpCore.swift */,
 				051ABA1C2C61B55D0090F466 /* SignUpView.swift */,
 			);
 			path = SignUp;
@@ -735,6 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B7DC002C733A9C00E43519 /* SignUpCore.swift in Sources */,
 				0564D9462C63126400102A44 /* AppDelegate.swift in Sources */,
 				8D1365A92C72106300284DA7 /* MyInfoView.swift in Sources */,
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,

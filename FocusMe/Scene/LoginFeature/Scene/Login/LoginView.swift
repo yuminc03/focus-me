@@ -28,6 +28,7 @@ struct LoginCore {
     case binding(BindingAction<State>)
     case delegate(Delegate)
     
+    case tapSignupButton
     case didChangeEmail(String)
     case didChangePassword(String)
     case onSubmit(State.Field)
@@ -38,8 +39,8 @@ struct LoginCore {
     case _loginResponse(Result<Int, FMError>)
     
     enum Delegate {
-      case home
-      case signUp
+      case main
+      case signup
     }
   }
   
@@ -50,6 +51,9 @@ struct LoginCore {
       switch action {
       case .binding: break
       case .delegate: break
+      case .tapSignupButton:
+        return .send(.delegate(.signup))
+        
       case let .didChangeEmail(value):
         state.email = value
         return .send(._setConfirmButtonState)
@@ -81,6 +85,7 @@ struct LoginCore {
       case ._loginResponse(.success):
         state.loginError = nil
         state.isLoading = false
+        return .send(.delegate(.main))
         
       case let ._loginResponse(.failure(error)):
         state.isLoading = false
@@ -102,8 +107,7 @@ struct LoginCore {
 struct LoginView: View {
   @Perception.Bindable private var store: StoreOf<LoginCore>
   
-  @FocusState private var focusField: LoginCore
-    .State.Field?
+  @FocusState private var focusField: LoginCore.State.Field?
   
   init(store: StoreOf<LoginCore>) {
     self.store = store
@@ -199,7 +203,7 @@ private extension LoginView {
   
   var SignupButton: some View {
     Button {
-      store.send(.delegate(.signUp))
+      store.send(.tapSignupButton)
     } label: {
       Text("회원가입 하러가기")
         .customFont(size: 16)
