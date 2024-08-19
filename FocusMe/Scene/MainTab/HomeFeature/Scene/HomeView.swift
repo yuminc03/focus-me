@@ -2,28 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct HomeCore {
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-  }
-  
-  enum Action {
-    case delegate(Delegate)
-    
-    enum Delegate {
-      case typeList
-    }
-  }
-  
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      return .none
-    }
-  }
-}
-
 struct HomeView: View {
   @Perception.Bindable private var store: StoreOf<HomeCore>
   
@@ -43,7 +21,7 @@ struct HomeView: View {
           
           StartTestView
           SeeAllTypesView
-          GettingOfficialTest
+          GettingOfficialTestView
           
           Spacer()
         }
@@ -67,7 +45,7 @@ private extension HomeView {
       iconName: .systemImage(.arrowRight),
       description: "간단하게 MBTI를 검사하고 나의 성향을\n알아보세요. 🙂"
     ) {
-      
+      store.send(.tapStartTest)
     }
   }
   
@@ -77,18 +55,18 @@ private extension HomeView {
       iconName: .systemImage(.arrowRight),
       description: "MBTI의 16가지 유형을 알아보세요. 🌈"
     ) {
-      store.send(.delegate(.typeList))
+      store.send(.tapSeeAllTypes)
     }
     .backgroundColor(.lovelyPink)
   }
   
-  var GettingOfficialTest : some View {
+  var GettingOfficialTestView : some View {
     RoundedContainerButton(
       title: "MBTI 정식 검사 받아보기",
       iconName: .systemImage(.arrowRight),
       description: "내 MBTI를 정식으로 검사해보고\n나를 탐색해보세요! 📑"
     ) {
-      
+      store.send(.tapGettingOfficialTest)
     }
     .backgroundColor(.lavender)
   }

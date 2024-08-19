@@ -25,6 +25,8 @@
 		05B7DC042C733B7800E43519 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DC022C733B7800E43519 /* LoginCoordinator.swift */; };
 		05B7DC052C733B7800E43519 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DC032C733B7800E43519 /* LoginScreen.swift */; };
 		05B7DC082C733BA400E43519 /* LoginCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DC072C733BA400E43519 /* LoginCore.swift */; };
+		05B7DC0B2C733CA700E43519 /* HomeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DC0A2C733CA700E43519 /* HomeCore.swift */; };
+		05B7DC0E2C733ED700E43519 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DC0D2C733ED700E43519 /* AppCore.swift */; };
 		05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */; };
 		05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */; };
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
@@ -106,6 +108,8 @@
 		05B7DC022C733B7800E43519 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		05B7DC032C733B7800E43519 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		05B7DC072C733BA400E43519 /* LoginCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCore.swift; sourceTree = "<group>"; };
+		05B7DC0A2C733CA700E43519 /* HomeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCore.swift; sourceTree = "<group>"; };
+		05B7DC0D2C733ED700E43519 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+.swift"; sourceTree = "<group>"; };
 		05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */,
+				05B7DC0D2C733ED700E43519 /* AppCore.swift */,
 				8D7BFD422B8229E2001CA0EE /* AppView.swift */,
 			);
 			path = Scene;
@@ -242,7 +247,6 @@
 			children = (
 				8D1365AA2C72115300284DA7 /* Coordinator */,
 				8D1365AB2C72116000284DA7 /* Scene */,
-				8D2FB7022C6E462E0086513D /* Component */,
 			);
 			path = HomeFeature;
 			sourceTree = "<group>";
@@ -393,7 +397,9 @@
 		8D1365AB2C72116000284DA7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				05B7DC0A2C733CA700E43519 /* HomeCore.swift */,
 				05A708EB2C6CA10C00AE1172 /* HomeView.swift */,
+				8D2FB7022C6E462E0086513D /* Component */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -762,12 +768,14 @@
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
 				05E983F12C634DF300393D08 /* FirestoreService.swift in Sources */,
 				8D1365AD2C72117200284DA7 /* HomeCoordinator.swift in Sources */,
+				05B7DC0E2C733ED700E43519 /* AppCore.swift in Sources */,
 				05B7DC082C733BA400E43519 /* LoginCore.swift in Sources */,
 				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
 				8D2FB6FD2C6E44010086513D /* SystemImage.swift in Sources */,
 				05E983F32C634E9A00393D08 /* CollectionTarget.swift in Sources */,
 				05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */,
 				8D2FB7002C6E44820086513D /* Image+.swift in Sources */,
+				05B7DC0B2C733CA700E43519 /* HomeCore.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				05B7DC052C733B7800E43519 /* LoginScreen.swift in Sources */,
 				053B70312C6B40C9001DBF90 /* FMAlertButton.swift in Sources */,
