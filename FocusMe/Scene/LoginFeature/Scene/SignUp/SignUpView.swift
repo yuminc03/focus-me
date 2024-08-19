@@ -14,6 +14,7 @@ struct SignUpCore {
     var confirmPassword = ""
     var confirmPasswordError = ""
     var name = ""
+    var isConfirmButtonDisabled = false
     
     enum Field: String, Hashable {
       case email
@@ -32,6 +33,8 @@ struct SignUpCore {
     case tapSignUpButton
     case tapExistAccountButton
     case didChangeConfirmPassword(String)
+    case onSubmit(State.Field)
+    case didChangeText
     
     case _requestSignUp
     case _signUpResponse(Result<Int, FMError>)
@@ -45,7 +48,29 @@ struct SignUpCore {
       case .binding: break
       case .tapSignUpButton: break
       case .tapExistAccountButton: break
-      case .didChangeConfirmPassword: break
+      case let .didChangeConfirmPassword(text):
+        state.confirmPasswordError = state.password == text ? "" : "입력한 비밀번호와 같게 입력해주세요"
+        
+      case let .onSubmit(field):
+        switch field {
+        case .email:
+          state.focusedField = .password
+          
+        case .password:
+          state.focusedField = .confirmPassword
+          
+        case .confirmPassword:
+          state.focusedField = .name
+          
+        case .name: break
+        }
+        
+      case .didChangeText:
+        state.isConfirmButtonDisabled = state.email.isEmpty ||
+        state.password.isEmpty ||
+        state.confirmPassword.isEmpty ||
+        state.name.isEmpty ||
+        state.confirmPasswordError.isEmpty == false
         
       case ._requestSignUp:
         let entity = SignUpEntity(email: state.email, password: state.password, name: state.name)
@@ -68,7 +93,6 @@ struct SignUpCore {
         }
         
       case ._signUpResponse(.success): break
-        
       case let ._signUpResponse(.failure(error)): break
       }
       
@@ -144,7 +168,7 @@ private extension SignUpView {
       .keyboardType(.emailAddress)
       .focused($focusedField, equals: .email)
       .onSubmit {
-//        focusField = .password
+        store.send(.onSubmit(.name))
       }
     }
   }
@@ -161,7 +185,7 @@ private extension SignUpView {
       )
       .focused($focusedField, equals: .password)
       .onSubmit {
-//        focusField = .confirmPassword
+        store.send(.onSubmit(.password))
       }
     }
   }
@@ -182,7 +206,7 @@ private extension SignUpView {
         store.send(.didChangeConfirmPassword(value))
       }
       .onSubmit {
-//        focusField = .name
+        store.send(.onSubmit(.confirmPassword))
       }
     }
   }
@@ -204,13 +228,7 @@ private extension SignUpView {
     FMButton(title: "회원가입") {
       store.send(.tapSignUpButton)
     }
-//    .disabled(
-//      email.isEmpty ||
-//      password.isEmpty ||
-//      confirmPassword.isEmpty ||
-//      name.isEmpty ||
-//      vm.confirmPasswordError.isEmpty == false
-//    )
+    .disabled(store.isConfirmButtonDisabled)
   }
   
   var ExistAccountButton: some View {
@@ -224,21 +242,6 @@ private extension SignUpView {
       }
     }
   }
-}
-
-// MARK: - Function
-
-private extension SignUpView {
-//  private func changeConfirmPassword() {
-//    confirmPasswordError = vm.changeConfirmPassword(
-//      password: password,
-//      confirmPassword: confirmPassword
-//    )
-//  }
-//  
-//  private func tapExistAccountButton() {
-//    coordinator.pop()
-//  }
 }
 
 #Preview {
