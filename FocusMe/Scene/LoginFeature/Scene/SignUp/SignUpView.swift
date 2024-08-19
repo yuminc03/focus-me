@@ -55,10 +55,15 @@ struct SignUpCore {
             return
           }
           
-          let userEntity = SignUpEntity(id: uid, email: state.email, password: state.password, name: state.name)
+          let userEntity = SignUpEntity(
+            id: uid,
+            email: state.email,
+            password: state.password,
+            name: state.name
+          )
           try await firestoreService.save(target: .signup(userEntity))
           await send(._signUpResponse(.success(0)))
-        } catch: { send, error in
+        } catch: { error, send in
           await send(._signUpResponse(.failure(error.toFMError)))
         }
         

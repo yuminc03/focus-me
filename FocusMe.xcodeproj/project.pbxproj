@@ -358,6 +358,7 @@
 		8D1365A62C720F7100284DA7 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
+				8D1365A02C720AFE00284DA7 /* Coordinator */,
 				05A708EA2C6CA10200AE1172 /* HomeFeature */,
 				8D1365902C70DAA300284DA7 /* MBTITypes */,
 				8D1365A72C720FAB00284DA7 /* MyInfoFeature */,
@@ -523,7 +524,6 @@
 			isa = PBXGroup;
 			children = (
 				0564D9452C63126400102A44 /* AppDelegate.swift */,
-				8D1365A02C720AFE00284DA7 /* Coordinator */,
 				0550228E2C65E2080031330E /* Scene */,
 			);
 			path = App;

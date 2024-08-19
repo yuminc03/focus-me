@@ -74,7 +74,7 @@ struct LoginCore {
         return .run { [state] send in
           try await authenticationService.login(entity: .init(email: state.email, password: state.password))
           await send(._loginResponse(.success(0)))
-        } catch: { send, error in
+        } catch: { error, send in
           await send(._loginResponse(.failure(error.toFMError)))
         }
         
@@ -84,13 +84,8 @@ struct LoginCore {
         
       case let ._loginResponse(.failure(error)):
         state.isLoading = false
-        guard let authError = error as? FMError else {
-          print("알 수 없는 오류")
-          return
-        }
-        
         state.isLoginErrorPresented = true
-        switch authError {
+        switch error {
         case let .login(reason):
           state.loginError = reason.message
           
