@@ -21,6 +21,8 @@
 		05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */; };
 		05A708E72C6C748C00AE1172 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708E62C6C748C00AE1172 /* LoadingView.swift */; };
 		05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708EB2C6CA10C00AE1172 /* HomeView.swift */; };
+		05B7DBF82C73247C00E43519 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DBF72C73247C00E43519 /* LoginCoordinator.swift */; };
+		05B7DBFB2C7324E400E43519 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7DBFA2C7324E400E43519 /* LoginScreen.swift */; };
 		05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */; };
 		05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */; };
 		05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC6A7F2C59F75A005BE3BB /* Font+.swift */; };
@@ -98,6 +100,8 @@
 		05A708E12C6C686700AE1172 /* FMDefaultAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMDefaultAlert.swift; sourceTree = "<group>"; };
 		05A708E62C6C748C00AE1172 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		05A708EB2C6CA10C00AE1172 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		05B7DBF72C73247C00E43519 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCoordinator.swift; path = FocusMe/Scene/LoginCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		05B7DBFA2C7324E400E43519 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginScreen.swift; path = FocusMe/Scene/LoginScreen.swift; sourceTree = SOURCE_ROOT; };
 		05BD4A732C64A0B200F5ED99 /* Keyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+.swift"; sourceTree = "<group>"; };
 		05BD4A7B2C64A9DB00F5ED99 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		05DC6A7F2C59F75A005BE3BB /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
@@ -401,6 +405,8 @@
 		8D1365B82C722A9700284DA7 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				05B7DBF72C73247C00E43519 /* LoginCoordinator.swift */,
+				05B7DBFA2C7324E400E43519 /* LoginScreen.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -735,6 +741,7 @@
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */,
 				8D1365922C70DAD900284DA7 /* TypeListView.swift in Sources */,
+				05B7DBF82C73247C00E43519 /* LoginCoordinator.swift in Sources */,
 				05E983EA2C63386800393D08 /* Encodable+.swift in Sources */,
 				05A708E02C6C64F000AE1172 /* View+.swift in Sources */,
 				8D1365A32C720B1D00284DA7 /* MainTabCoordinator.swift in Sources */,
@@ -754,6 +761,7 @@
 				05E983F32C634E9A00393D08 /* CollectionTarget.swift in Sources */,
 				05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */,
 				8D2FB7002C6E44820086513D /* Image+.swift in Sources */,
+				05B7DBFB2C7324E400E43519 /* LoginScreen.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
 				053B70312C6B40C9001DBF90 /* FMAlertButton.swift in Sources */,
 				8D1365AF2C7211C000284DA7 /* HomeScreen.swift in Sources */,

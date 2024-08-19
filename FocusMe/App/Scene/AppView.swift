@@ -9,12 +9,14 @@ struct AppCore {
   struct State: Equatable {
     static let initialState = State(
       appState: .splash,
-      main: .initialState
+      main: .initialState,
+      login: .initialState
     )
     
     var appState: AppState
     
     var main: MainTabCoordinator.State
+    var login: LoginCoordinator.State
   }
   
   enum AppState {
@@ -25,6 +27,7 @@ struct AppCore {
   
   enum Action {
     case main(MainTabCoordinator.Action)
+    case login(LoginCoordinator.Action)
     case _onAppear
     case _getCurrentUser
     case _changeAppState(AppState)
@@ -34,9 +37,13 @@ struct AppCore {
     Scope(state: \.main, action: \.main) {
       MainTabCoordinator()
     }
+    Scope(state: \.login, action: \.login) {
+      LoginCoordinator()
+    }
     Reduce { state, action in
       switch action {
       case .main: break
+      case .login: break
       case ._onAppear:
         return .send(._getCurrentUser)
         
@@ -95,15 +102,7 @@ private extension AppView {
   }
   
   var Login: some View {
-//    NavigationStack(path: $coordinator.route) {
-//      LoginView()
-//        .navigationDestination(for: Destination.self) { screen in
-//          screen.view
-//            .environmentObject(vm)
-//        }
-//    }
-//    .environmentObject(coordinator)
-    Text("")
+    LoginCoordinatorView(store: store.scope(state: \.login, action: \.login))
   }
 }
 
