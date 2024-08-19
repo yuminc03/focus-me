@@ -4,6 +4,8 @@ import Foundation
 enum SystemImage: String {
   case xmark
   case arrowRight = "arrow.right"
+  case house
+  case person
 }
 
 extension String {

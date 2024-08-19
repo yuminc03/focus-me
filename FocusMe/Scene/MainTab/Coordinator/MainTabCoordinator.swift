@@ -38,6 +38,13 @@ struct MainTabCoordinator {
       MyInfoCoordinator()
     }
     Reduce { state, action in
+      switch action {
+      case .home: break
+      case .myInfo: break
+      case let .selectTab(tab):
+        state.selectedTab = tab
+      }
+      
       return .none
     }
   }
@@ -52,7 +59,17 @@ struct MainTabCoordinatorView: View {
         get: { $0 },
         send: MainTabCoordinator.Action.selectTab)
       ) {
+        HomeCoordinatorView(store: store.scope(state: \.home, action: \.home))
+          .tag(MainTabCoordinator.Tab.home)
+          .tabItem {
+            Label("홈", systemImage: .systemImage(.house))
+          }
         
+        MyInfoCoordinatorView(store: store.scope(state: \.myInfo, action: \.myInfo))
+          .tag(MainTabCoordinator.Tab.myInfo)
+          .tabItem {
+            Label("나의 정보", systemImage: .systemImage(.person))
+          }
       }
     }
   }
