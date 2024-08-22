@@ -11,22 +11,18 @@ struct HomeView: View {
   
   var body: some View {
     WithPerceptionTracking {
-      ZStack {
-        Color.bg
-          .ignoresSafeArea()
+      VStack(spacing: 20) {
+        UserNameView
+          .padding(.vertical, 20)
         
-        VStack(spacing: 20) {
-          UserNameView
-            .padding(.vertical, 20)
-          
-          StartTestView
-          SeeAllTypesView
-          GettingOfficialTestView
-          
-          Spacer()
-        }
-        .padding(.horizontal, 20)
+        StartTestView
+        SeeAllTypesView
+        GettingOfficialTestView
+        
+        Spacer()
       }
+      .padding(.horizontal, 20)
+      .backgroundColor()
     }
   }
 }
