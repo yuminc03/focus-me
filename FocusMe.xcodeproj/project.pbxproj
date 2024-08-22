@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0518467C2C76DC9300547E8E /* TypesGridRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518467B2C76DC9300547E8E /* TypesGridRow.swift */; };
+		0518467F2C76DD4000547E8E /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0518467E2C76DD4000547E8E /* Icon.xcassets */; };
+		051846862C76F6EF00547E8E /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051846852C76F6EF00547E8E /* MBTI.swift */; };
 		051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA1C2C61B55D0090F466 /* SignUpView.swift */; };
 		051ABA232C61C1500090F466 /* FMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA222C61C1500090F466 /* FMButton.swift */; };
 		053B702E2C6B3F76001DBF90 /* FMAlertContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B702D2C6B3F76001DBF90 /* FMAlertContainer.swift */; };
@@ -39,7 +42,7 @@
 		05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E983F62C6365A500393D08 /* AuthenticationService.swift */; };
 		05E983F92C63689E00393D08 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 05E983F82C63689E00393D08 /* FirebaseAuth */; };
 		05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F65A6F2C5B7C960075E7D6 /* LoginView.swift */; };
-		8D1365922C70DAD900284DA7 /* TypeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1365912C70DAD900284DA7 /* TypeListView.swift */; };
+		8D1365922C70DAD900284DA7 /* AllTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1365912C70DAD900284DA7 /* AllTypesView.swift */; };
 		8D1365972C71F28400284DA7 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1365962C71F28400284DA7 /* TCACoordinators */; };
 		8D13659A2C71F89200284DA7 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1365992C71F89200284DA7 /* ComposableArchitecture */; };
 		8D13659F2C72089200284DA7 /* FlowStacks in Frameworks */ = {isa = PBXBuildFile; productRef = 8D13659E2C72089200284DA7 /* FlowStacks */; };
@@ -91,6 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0518467B2C76DC9300547E8E /* TypesGridRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesGridRow.swift; sourceTree = "<group>"; };
+		0518467E2C76DD4000547E8E /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
+		051846852C76F6EF00547E8E /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
 		051ABA1C2C61B55D0090F466 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		051ABA222C61C1500090F466 /* FMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMButton.swift; sourceTree = "<group>"; };
 		053B702D2C6B3F76001DBF90 /* FMAlertContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMAlertContainer.swift; sourceTree = "<group>"; };
@@ -120,7 +126,7 @@
 		05E983F22C634E9A00393D08 /* CollectionTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTarget.swift; sourceTree = "<group>"; };
 		05E983F62C6365A500393D08 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		05F65A6F2C5B7C960075E7D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		8D1365912C70DAD900284DA7 /* TypeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListView.swift; sourceTree = "<group>"; };
+		8D1365912C70DAD900284DA7 /* AllTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTypesView.swift; sourceTree = "<group>"; };
 		8D1365A22C720B1D00284DA7 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		8D1365A82C72106300284DA7 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
 		8D1365AC2C72117200284DA7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -186,6 +192,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051846782C76DC3500547E8E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0518467B2C76DC9300547E8E /* TypesGridRow.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		051846822C76F6E100547E8E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				051846852C76F6EF00547E8E /* MBTI.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		051ABA1B2C61B53E0090F466 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,12 +371,14 @@
 			path = LoginFeature;
 			sourceTree = "<group>";
 		};
-		8D1365902C70DAA300284DA7 /* MBTITypes */ = {
+		8D1365902C70DAA300284DA7 /* AllTypes */ = {
 			isa = PBXGroup;
 			children = (
-				8D1365912C70DAD900284DA7 /* TypeListView.swift */,
+				8D1365912C70DAD900284DA7 /* AllTypesView.swift */,
+				051846822C76F6E100547E8E /* Entity */,
+				051846782C76DC3500547E8E /* Component */,
 			);
-			path = MBTITypes;
+			path = AllTypes;
 			sourceTree = "<group>";
 		};
 		8D1365A02C720AFE00284DA7 /* Coordinator */ = {
@@ -370,7 +394,7 @@
 			children = (
 				8D1365A02C720AFE00284DA7 /* Coordinator */,
 				05A708EA2C6CA10200AE1172 /* HomeFeature */,
-				8D1365902C70DAA300284DA7 /* MBTITypes */,
+				8D1365902C70DAA300284DA7 /* AllTypes */,
 				8D1365A72C720FAB00284DA7 /* MyInfoFeature */,
 			);
 			path = MainTab;
@@ -463,6 +487,7 @@
 				8DDC07CA2BCD6D150019D478 /* Fonts */,
 				8D3C6BDC2BA5E11F00F44AB7 /* Common */,
 				8D7BFD442B8229E3001CA0EE /* Assets.xcassets */,
+				0518467E2C76DD4000547E8E /* Icon.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -717,6 +742,7 @@
 				8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */,
 				8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */,
 				0564D9492C6314D900102A44 /* GoogleService-Info.plist in Resources */,
+				0518467F2C76DD4000547E8E /* Icon.xcassets in Resources */,
 				8DDC07D62BCD6D260019D478 /* NotoSansKR-Black.ttf in Resources */,
 				8DDC07D82BCD6D260019D478 /* NotoSansKR-Light.ttf in Resources */,
 				8DDC07DB2BCD6D260019D478 /* NotoSansKR-Medium.ttf in Resources */,
@@ -753,7 +779,8 @@
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */,
-				8D1365922C70DAD900284DA7 /* TypeListView.swift in Sources */,
+				8D1365922C70DAD900284DA7 /* AllTypesView.swift in Sources */,
+				051846862C76F6EF00547E8E /* MBTI.swift in Sources */,
 				05E983EA2C63386800393D08 /* Encodable+.swift in Sources */,
 				05A708E02C6C64F000AE1172 /* View+.swift in Sources */,
 				8D1365A32C720B1D00284DA7 /* MainTabCoordinator.swift in Sources */,
@@ -763,6 +790,7 @@
 				055022942C65E5860031330E /* UserInfo.swift in Sources */,
 				053B702E2C6B3F76001DBF90 /* FMAlertContainer.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,
+				0518467C2C76DC9300547E8E /* TypesGridRow.swift in Sources */,
 				051ABA232C61C1500090F466 /* FMButton.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
