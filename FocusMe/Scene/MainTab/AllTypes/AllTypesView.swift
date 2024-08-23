@@ -59,6 +59,9 @@ struct AllTypesView: View {
       .fmNavigation(title: "MBTI 유형들") {
         store.send(.tapBackButton)
       }
+      .onAppear {
+        NotiManager.post(key: .hideTab)
+      }
     }
   }
 }

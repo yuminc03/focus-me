@@ -23,6 +23,9 @@ struct HomeView: View {
       }
       .padding(.horizontal, 20)
       .backgroundColor()
+      .onAppear {
+        NotiManager.post(key: .showTab)
+      }
     }
   }
 }

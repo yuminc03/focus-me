@@ -30,6 +30,9 @@ struct MyInfoView: View {
   var body: some View {
     WithPerceptionTracking {
       Text("Hello, World!")
+        .onAppear {
+          NotiManager.post(key: .showTab)
+        }
     }
   }
 }

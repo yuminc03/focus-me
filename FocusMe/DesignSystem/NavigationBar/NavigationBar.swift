@@ -45,7 +45,7 @@ struct NavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R: V
       
       content
       
-      Spacer()
+      Spacer(minLength: 0)
     }
     .navigationBarHidden(true)
   }

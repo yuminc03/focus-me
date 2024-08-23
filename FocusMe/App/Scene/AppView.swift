@@ -5,6 +5,8 @@ import ComposableArchitecture
 struct AppView: View {
   @Perception.Bindable private var store: StoreOf<AppCore>
   
+  @StateObject private var stateManager = StateManager()
+  
   init(store: StoreOf<AppCore>) {
     self.store = store
   }
@@ -18,9 +20,11 @@ struct AppView: View {
           
         case .login:
           LoginCoordinatorView(store: store.scope(state: \.login, action: \.login))
+            .environmentObject(stateManager)
           
         case .main:
           MainTabCoordinatorView(store: store.scope(state: \.main, action: \.main))
+            .environmentObject(stateManager)
         }
       }
       .onAppear {

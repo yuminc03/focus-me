@@ -51,6 +51,8 @@ struct MainTabCoordinator {
 }
 
 struct MainTabCoordinatorView: View {
+  @EnvironmentObject private var stateManager: StateManager
+
   let store: StoreOf<MainTabCoordinator>
   
   var body: some View {
@@ -65,16 +67,19 @@ struct MainTabCoordinatorView: View {
             .tabItem {
               Label("홈", systemImage: .systemImage(.house))
             }
+            .toolbar(.hidden, for: .tabBar)
           
           MyInfoCoordinatorView(store: store.scope(state: \.myInfo, action: \.myInfo))
             .tag(MainTabCoordinator.Tab.myInfo)
             .tabItem {
               Label("나의 정보", systemImage: .systemImage(.person))
             }
+            .toolbar(.hidden, for: .tabBar)
         }
-        .toolbar(.hidden, for: .tabBar)
         
-        CustomTabBar
+        if stateManager.isTabBarPresented {
+          CustomTabBar
+        }
       }
     }
   }
