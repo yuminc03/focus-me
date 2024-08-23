@@ -17,7 +17,7 @@ struct HomeCore {
     case tapGettingOfficialTest
     
     enum Delegate {
-      case typeList
+      case allTypes
     }
   }
   
@@ -27,7 +27,7 @@ struct HomeCore {
       case .delegate: break
       case .tapStartTest: break
       case .tapSeeAllTypes:
-        return .send(.delegate(.typeList))
+        return .send(.delegate(.allTypes))
         
       case .tapGettingOfficialTest: break
       }

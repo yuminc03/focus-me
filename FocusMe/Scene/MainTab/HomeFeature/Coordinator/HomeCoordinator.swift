@@ -16,6 +16,18 @@ struct HomeCoordinator {
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
+      switch action {
+        // home
+      case .router(.routeAction(id: _, action: .home(.delegate(.allTypes)))):
+        state.routes.push(.allTypes(.init()))
+        
+        // allTypes
+      case .router(.routeAction(id: _, action: .allTypes(.delegate(.back)))):
+        state.routes.goBack()
+        
+      default: break
+      }
+      
       return .none
     }
     .forEachRoute(\.routes, action: \.router) {
@@ -36,6 +48,13 @@ struct HomeCoordinatorView: View {
             \HomeScreen.State.home,
              action: HomeScreen.Action.home,
              then: HomeView.init
+          )
+          
+          case .allTypes:
+          CaseLet(
+            \HomeScreen.State.allTypes,
+             action: HomeScreen.Action.allTypes,
+             then: AllTypesView.init
           )
         }
       }

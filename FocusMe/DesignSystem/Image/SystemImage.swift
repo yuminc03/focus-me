@@ -6,6 +6,7 @@ enum SystemImage: String {
   case arrowRight = "arrow.right"
   case house
   case person
+  case backArrow = "chevron.backward"
 }
 
 extension String {

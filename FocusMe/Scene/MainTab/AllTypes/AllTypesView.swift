@@ -11,11 +11,22 @@ struct AllTypesCore {
   }
   
   enum Action {
+    case delegate(Delegate)
+    case tapBackButton
     
+    enum Delegate {
+      case back
+    }
   }
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
+      switch action {
+      case .delegate: break
+      case .tapBackButton:
+        return .send(.delegate(.back))
+      }
+      
       return .none
     }
   }
@@ -26,8 +37,8 @@ struct AllTypesView: View {
   @Perception.Bindable private var store: StoreOf<AllTypesCore>
   
   private let columns = [
-    GridItem(.adaptive(minimum: 150, maximum: 180), spacing: 10, alignment: .center),
-    GridItem(.adaptive(minimum: 150, maximum: 180), spacing: 10, alignment: .center)
+    GridItem(.flexible(), spacing: 10, alignment: .center),
+    GridItem(.flexible(), spacing: 10, alignment: .center)
   ]
   
   init(store: StoreOf<AllTypesCore>) {
@@ -45,15 +56,15 @@ struct AllTypesView: View {
         .padding(.top, 20)
       }
       .backgroundColor()
-      .navigationTitle("MBTI 유형들")
+      .fmNavigation(title: "MBTI 유형들") {
+        store.send(.tapBackButton)
+      }
     }
   }
 }
 
 #Preview {
-  NavigationStack {
-    AllTypesView(store: .init(initialState: AllTypesCore.State()) {
-      AllTypesCore()
-    })
-  }
+  AllTypesView(store: .init(initialState: AllTypesCore.State()) {
+    AllTypesCore()
+  })
 }
