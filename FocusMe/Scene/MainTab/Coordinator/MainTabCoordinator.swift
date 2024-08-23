@@ -55,22 +55,70 @@ struct MainTabCoordinatorView: View {
   
   var body: some View {
     WithViewStore(store, observe: \.selectedTab) { viewStore in
-      TabView(selection: viewStore.binding(
-        get: { $0 },
-        send: MainTabCoordinator.Action.selectTab)
-      ) {
-        HomeCoordinatorView(store: store.scope(state: \.home, action: \.home))
-          .tag(MainTabCoordinator.Tab.home)
-          .tabItem {
-            Label("홈", systemImage: .systemImage(.house))
-          }
+      ZStack(alignment: .bottom) {
+        TabView(selection: viewStore.binding(
+          get: { $0 },
+          send: MainTabCoordinator.Action.selectTab)
+        ) {
+          HomeCoordinatorView(store: store.scope(state: \.home, action: \.home))
+            .tag(MainTabCoordinator.Tab.home)
+            .tabItem {
+              Label("홈", systemImage: .systemImage(.house))
+            }
+          
+          MyInfoCoordinatorView(store: store.scope(state: \.myInfo, action: \.myInfo))
+            .tag(MainTabCoordinator.Tab.myInfo)
+            .tabItem {
+              Label("나의 정보", systemImage: .systemImage(.person))
+            }
+        }
+        .toolbar(.hidden, for: .tabBar)
         
-        MyInfoCoordinatorView(store: store.scope(state: \.myInfo, action: \.myInfo))
-          .tag(MainTabCoordinator.Tab.myInfo)
-          .tabItem {
-            Label("나의 정보", systemImage: .systemImage(.person))
-          }
+        CustomTabBar
       }
+    }
+  }
+  
+  var CustomTabBar: some View {
+    WithViewStore(store, observe: { $0 }) { viewStore in
+      HStack {
+        Spacer()
+
+        Button {
+          store.send(.selectTab(.home))
+        } label: {
+          VStack(spacing: 5) {
+            Image(systemName: .systemImage(.house))
+              .size(30)
+            Text("홈")
+              .customFont(size: 10)
+          }
+          .foregroundColor(viewStore.selectedTab == .home ? .deepPurple : .lavender)
+        }
+        
+        Spacer()
+        
+        Button {
+          store.send(.selectTab(.myInfo))
+        } label: {
+          VStack(spacing: 5) {
+            Image(systemName: .systemImage(.person))
+              .size(30)
+            Text("내 정보")
+              .customFont(size: 10)
+          }
+          .foregroundColor(viewStore.selectedTab == .myInfo ? .deepPurple : .lavender)
+        }
+        
+        Spacer()
+      }
+      .padding(.vertical, 20)
+      .background(
+        RoundedRectangle(cornerRadius: 20)
+          .fill(.thinMaterial)
+          .shadow(color: .black.opacity(0.3), radius: 10)
+      )
+      .padding(.horizontal, 20)
     }
   }
 }
