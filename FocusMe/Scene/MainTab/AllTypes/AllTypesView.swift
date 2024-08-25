@@ -37,8 +37,8 @@ struct AllTypesView: View {
   @Perception.Bindable private var store: StoreOf<AllTypesCore>
   
   private let columns = [
-    GridItem(.flexible(), spacing: 10, alignment: .center),
-    GridItem(.flexible(), spacing: 10, alignment: .center)
+    GridItem(.flexible(), spacing: 20, alignment: .center),
+    GridItem(.flexible(), spacing: 20, alignment: .center)
   ]
   
   init(store: StoreOf<AllTypesCore>) {
@@ -53,7 +53,7 @@ struct AllTypesView: View {
             TypesGridRow(type: $0)
           }
         }
-        .padding(.top, 20)
+        .padding([.top, .horizontal], 20)
       }
       .backgroundColor()
       .fmNavigation(title: "MBTI 유형들") {
