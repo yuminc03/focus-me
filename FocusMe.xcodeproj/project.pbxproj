@@ -397,6 +397,15 @@
 			path = NotificationManager;
 			sourceTree = "<group>";
 		};
+		05F3448C2C7BF85300103D88 /* HomeMain */ = {
+			isa = PBXGroup;
+			children = (
+				05B7DC0A2C733CA700E43519 /* HomeCore.swift */,
+				05A708EB2C6CA10C00AE1172 /* HomeView.swift */,
+			);
+			path = HomeMain;
+			sourceTree = "<group>";
+		};
 		05F65A6D2C5B7C890075E7D6 /* LoginFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,7 +438,6 @@
 			children = (
 				8D1365A02C720AFE00284DA7 /* Coordinator */,
 				05A708EA2C6CA10200AE1172 /* HomeFeature */,
-				8D1365902C70DAA300284DA7 /* AllTypesFeature */,
 				8D1365A72C720FAB00284DA7 /* MyInfoFeature */,
 			);
 			path = MainTab;
@@ -457,8 +465,8 @@
 			isa = PBXGroup;
 			children = (
 				8D2FB7022C6E462E0086513D /* Component */,
-				05B7DC0A2C733CA700E43519 /* HomeCore.swift */,
-				05A708EB2C6CA10C00AE1172 /* HomeView.swift */,
+				05F3448C2C7BF85300103D88 /* HomeMain */,
+				8D1365902C70DAA300284DA7 /* AllTypesFeature */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1267,8 +1275,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.3;
+				kind = exactVersion;
+				version = 1.9.3;
 			};
 		};
 		8D13659D2C72089200284DA7 /* XCRemoteSwiftPackageReference "FlowStacks" */ = {
