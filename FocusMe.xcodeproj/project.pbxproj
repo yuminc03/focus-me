@@ -60,6 +60,7 @@
 		8D2FB7002C6E44820086513D /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB6FF2C6E44820086513D /* Image+.swift */; };
 		8D2FB7062C6E46580086513D /* RoundedContainerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
+		8D612F112C7B113600A565AB /* AllTypesCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F102C7B113600A565AB /* AllTypesCore.swift */; };
 		8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */; };
 		8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD422B8229E2001CA0EE /* AppView.swift */; };
 		8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFD442B8229E3001CA0EE /* Assets.xcassets */; };
@@ -142,6 +143,7 @@
 		8D2FB6FC2C6E44010086513D /* SystemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		8D2FB6FF2C6E44820086513D /* Image+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedContainerButton.swift; sourceTree = "<group>"; };
+		8D612F102C7B113600A565AB /* AllTypesCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTypesCore.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* FocusMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
 		8D7BFD422B8229E2001CA0EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -396,14 +398,13 @@
 			path = LoginFeature;
 			sourceTree = "<group>";
 		};
-		8D1365902C70DAA300284DA7 /* AllTypes */ = {
+		8D1365902C70DAA300284DA7 /* AllTypesFeature */ = {
 			isa = PBXGroup;
 			children = (
-				8D1365912C70DAD900284DA7 /* AllTypesView.swift */,
+				8D612F142C7B115900A565AB /* Scene */,
 				051846822C76F6E100547E8E /* Entity */,
-				051846782C76DC3500547E8E /* Component */,
 			);
-			path = AllTypes;
+			path = AllTypesFeature;
 			sourceTree = "<group>";
 		};
 		8D1365A02C720AFE00284DA7 /* Coordinator */ = {
@@ -419,7 +420,7 @@
 			children = (
 				8D1365A02C720AFE00284DA7 /* Coordinator */,
 				05A708EA2C6CA10200AE1172 /* HomeFeature */,
-				8D1365902C70DAA300284DA7 /* AllTypes */,
+				8D1365902C70DAA300284DA7 /* AllTypesFeature */,
 				8D1365A72C720FAB00284DA7 /* MyInfoFeature */,
 			);
 			path = MainTab;
@@ -523,6 +524,24 @@
 				8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		8D612F142C7B115900A565AB /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8D612F162C7B117B00A565AB /* AllTypesMain */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		8D612F162C7B117B00A565AB /* AllTypesMain */ = {
+			isa = PBXGroup;
+			children = (
+				051846782C76DC3500547E8E /* Component */,
+				8D612F102C7B113600A565AB /* AllTypesCore.swift */,
+				8D1365912C70DAD900284DA7 /* AllTypesView.swift */,
+			);
+			path = AllTypesMain;
 			sourceTree = "<group>";
 		};
 		8D7BFD342B8229E2001CA0EE = {
@@ -821,6 +840,7 @@
 				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
 				05E983F12C634DF300393D08 /* FirestoreService.swift in Sources */,
+				8D612F112C7B113600A565AB /* AllTypesCore.swift in Sources */,
 				8D1365AD2C72117200284DA7 /* HomeCoordinator.swift in Sources */,
 				05B7DC0E2C733ED700E43519 /* AppCore.swift in Sources */,
 				05B7DC082C733BA400E43519 /* LoginCore.swift in Sources */,
