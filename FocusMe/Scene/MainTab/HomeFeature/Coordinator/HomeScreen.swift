@@ -6,7 +6,7 @@ import ComposableArchitecture
 struct HomeScreen {
   enum State: Equatable, Identifiable {
     case home(HomeCore.State)
-    case allTypes(AllTypesCore.State)
+    case allTypes(AllTypesCoordinator.State)
     
     var id: UUID {
       switch self {
@@ -21,7 +21,7 @@ struct HomeScreen {
   
   enum Action {
     case home(HomeCore.Action)
-    case allTypes(AllTypesCore.Action)
+    case allTypes(AllTypesCoordinator.Action)
   }
   
   var body: some ReducerOf<Self> {
@@ -29,7 +29,7 @@ struct HomeScreen {
       HomeCore()
     }
     Scope(state: \.allTypes, action: \.allTypes) {
-      AllTypesCore()
+      AllTypesCoordinator()
     }
   }
 }
