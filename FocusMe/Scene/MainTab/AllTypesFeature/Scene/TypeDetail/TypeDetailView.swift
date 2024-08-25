@@ -2,36 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct TypeDetailCore {
-  @ObservableState
-  struct State {
-    let type: MBTI
-    let id = UUID()
-  }
-  
-  enum Action {
-    case delegate(Delegate)
-    case tapBackButton
-    
-    enum Delegate {
-      case back
-    }
-  }
-  
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      switch action {
-      case .delegate: break
-      case .tapBackButton:
-        return .send(.delegate(.back))
-      }
-      
-      return .none
-    }
-  }
-}
-
 /// MBTI 유형 상세 설명 화면
 struct TypeDetailView: View {
   @Perception.Bindable private var store: StoreOf<TypeDetailCore>

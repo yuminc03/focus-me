@@ -21,7 +21,7 @@ struct AllTypesCoordinator {
       switch action {
         // allTypesMain
       case let .router(.routeAction(id: _, action: .allTypesMain(.delegate(.detail(type))))):
-        break
+        state.routes.push(.typeDetail(.init(type: type)))
         
       default: break
       }
@@ -46,6 +46,13 @@ struct AllTypesCoordinatorView: View {
             \AllTypesScreen.State.allTypesMain,
              action: AllTypesScreen.Action.allTypesMain,
              then: AllTypesView.init
+          )
+          
+        case .typeDetail:
+          CaseLet(
+            \AllTypesScreen.State.typeDetail,
+             action: AllTypesScreen.Action.typeDetail,
+             then: TypeDetailView.init
           )
         }
       }
