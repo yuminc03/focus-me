@@ -6,7 +6,7 @@ struct TypesGridRow: View {
   var body: some View {
     VStack(spacing: 5) {
       VStack(spacing: 20) {
-        Text(type.title)
+        Text(type.name)
           .customFont(.notoSansKRSemiBold, size: 30)
         
         Text(type.description)
