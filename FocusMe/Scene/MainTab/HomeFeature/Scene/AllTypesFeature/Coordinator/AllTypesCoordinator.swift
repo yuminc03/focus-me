@@ -6,9 +6,8 @@ import TCACoordinators
 @Reducer
 struct AllTypesCoordinator {
   struct State: Equatable {
-    let id = UUID()
     static let initialState = State(routes: [.root(.allTypesMain(.init()), embedInNavigationView: false)])
-
+    let id = UUID()
     var routes: IdentifiedArrayOf<Route<AllTypesScreen.State>>
   }
   

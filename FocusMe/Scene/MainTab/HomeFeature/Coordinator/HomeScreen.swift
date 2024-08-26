@@ -6,7 +6,7 @@ import ComposableArchitecture
 struct HomeScreen {
   enum State: Equatable, Identifiable {
     case home(HomeCore.State)
-    case allTypes(AllTypesCoordinator.State)
+    case allTypes(AllTypesCoordinator.State = .initialState)
     
     var id: UUID {
       switch self {

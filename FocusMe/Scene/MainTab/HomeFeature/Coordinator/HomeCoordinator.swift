@@ -18,12 +18,12 @@ struct HomeCoordinator {
     Reduce { state, action in
       switch action {
         // home
-//      case .router(.routeAction(id: _, action: .home(.delegate(.allTypes)))):
-//        state.routes.push(.allTypes(.initialState))
+      case .router(.routeAction(id: _, action: .home(.delegate(.allTypes)))):
+        state.routes.push(.allTypes(.initialState))
         
         // allTypes
-//      case .router(.routeAction(id: _, action: .allTypes(.allTypesMain(.delegate(.back))))):
-//        state.routes.pop()
+      case .router(.routeAction(id: _, action: .allTypes(.router(.routeAction(_, action: .allTypesMain(.delegate(.back))))))):
+        state.routes.pop()
         
       default: break
       }
