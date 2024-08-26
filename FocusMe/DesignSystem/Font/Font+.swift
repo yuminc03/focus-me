@@ -37,7 +37,7 @@ enum NotoSans {
   }
 }
 
-extension Text {
+extension View {
   /**
    Custom Font 적용
    ```
@@ -48,7 +48,7 @@ extension Text {
   func customFont(
     _ name: NotoSans = .notoSansKRRegular,
     size: CGFloat = 16
-  ) -> Text {
+  ) -> some View {
     self
       .font(.custom(name.resource, size: size))
   }
