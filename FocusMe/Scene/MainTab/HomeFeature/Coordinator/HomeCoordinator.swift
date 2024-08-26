@@ -21,6 +21,9 @@ struct HomeCoordinator {
       case .router(.routeAction(id: _, action: .home(.delegate(.allTypes)))):
         state.routes.push(.allTypes(.initialState))
         
+      case .router(.routeAction(id: _, action: .home(.delegate(.mbtiTest)))):
+        state.routes.push(.mbtiTest(.initialState))
+        
         // allTypes
       case .router(.routeAction(id: _, action: .allTypes(.router(.routeAction(_, action: .allTypesMain(.delegate(.back))))))):
         state.routes.pop()
@@ -48,6 +51,13 @@ struct HomeCoordinatorView: View {
             \HomeScreen.State.home,
              action: HomeScreen.Action.home,
              then: HomeView.init
+          )
+          
+        case .mbtiTest:
+          CaseLet(
+            \HomeScreen.State.mbtiTest,
+             action: HomeScreen.Action.mbtiTest,
+             then: MBTITestCoordinatorView.init
           )
           
           case .allTypes:

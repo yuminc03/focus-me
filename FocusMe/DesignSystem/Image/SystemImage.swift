@@ -7,6 +7,7 @@ enum SystemImage: String {
   case house
   case person
   case backArrow = "chevron.backward"
+  case textBookClosed = "text.book.closed"
 }
 
 extension String {

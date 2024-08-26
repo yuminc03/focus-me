@@ -17,6 +17,7 @@ struct HomeCore {
     case tapGettingOfficialTest
     
     enum Delegate {
+      case mbtiTest
       case allTypes
     }
   }
