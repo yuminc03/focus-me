@@ -68,7 +68,7 @@
 		8D612F1E2C7B12AC00A565AB /* AllTypesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F1D2C7B12AC00A565AB /* AllTypesCoordinator.swift */; };
 		8D612F232C7B21B100A565AB /* TypeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F222C7B21B100A565AB /* TypeDetailView.swift */; };
 		8D612F262C7B65C300A565AB /* TypeDetailCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F252C7B65C300A565AB /* TypeDetailCore.swift */; };
-		8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */; };
+		8D7BFD412B8229E2001CA0EE /* FocusMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* FocusMeApp.swift */; };
 		8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD422B8229E2001CA0EE /* AppView.swift */; };
 		8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFD442B8229E3001CA0EE /* Assets.xcassets */; };
 		8D7BFD482B8229E3001CA0EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFD472B8229E3001CA0EE /* Preview Assets.xcassets */; };
@@ -159,7 +159,7 @@
 		8D612F222C7B21B100A565AB /* TypeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailView.swift; sourceTree = "<group>"; };
 		8D612F252C7B65C300A565AB /* TypeDetailCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailCore.swift; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* FocusMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelfApp.swift; sourceTree = "<group>"; };
+		8D7BFD402B8229E2001CA0EE /* FocusMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeApp.swift; sourceTree = "<group>"; };
 		8D7BFD422B8229E2001CA0EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8D7BFD442B8229E3001CA0EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D7BFD472B8229E3001CA0EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		0550228E2C65E2080031330E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8D7BFD402B8229E2001CA0EE /* MySelfApp.swift */,
+				8D7BFD402B8229E2001CA0EE /* FocusMeApp.swift */,
 				05B7DC0D2C733ED700E43519 /* AppCore.swift */,
 				8D7BFD422B8229E2001CA0EE /* AppView.swift */,
 				05F0AFC92C785C0700C3507C /* StateManager.swift */,
@@ -916,7 +916,7 @@
 				0518467C2C76DC9300547E8E /* TypesGridRow.swift in Sources */,
 				05F0AFCA2C785C0700C3507C /* StateManager.swift in Sources */,
 				051ABA232C61C1500090F466 /* FMButton.swift in Sources */,
-				8D7BFD412B8229E2001CA0EE /* MySelfApp.swift in Sources */,
+				8D7BFD412B8229E2001CA0EE /* FocusMeApp.swift in Sources */,
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
 				05E983F12C634DF300393D08 /* FirestoreService.swift in Sources */,
 				8D612F112C7B113600A565AB /* AllTypesCore.swift in Sources */,
