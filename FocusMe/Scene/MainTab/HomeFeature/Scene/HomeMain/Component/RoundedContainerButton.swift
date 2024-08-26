@@ -21,27 +21,30 @@ struct RoundedContainerButton: View {
     Button {
       action()
     } label: {
-      VStack(spacing: 10) {
-        HStack(spacing: 0) {
+      HStack(spacing: 0) {
+        VStack(spacing: 10) {
           Text(title)
             .customFont(.notoSansKRSemiBold, size: 20)
+            .frame(maxWidth: .infinity, alignment: .leading)
           
-          Spacer()
-          
-          Image(systemName: iconName)
-            .size(20)
+          Text(description)
+            .customFont(size: 14)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         
-        Text(description)
-          .customFont(size: 14)
-          .multilineTextAlignment(.leading)
-          .frame(maxWidth: .infinity, alignment: .leading)
+        Spacer()
+        
+        Image(systemName: iconName)
+          .size(20)
       }
       .foregroundColor(.white)
       .padding(20)
       .background(
         RoundedRectangle(cornerRadius: 20)
           .fill(backgrounColor)
+          .frame(height: 120)
+          .shadow(color: backgrounColor.opacity(0.6), radius: 10)
       )
     }
   }

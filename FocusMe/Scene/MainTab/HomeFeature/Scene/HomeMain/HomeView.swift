@@ -13,7 +13,7 @@ struct HomeView: View {
     WithPerceptionTracking {
       VStack(spacing: 20) {
         UserNameView
-          .padding(.vertical, 20)
+          .padding(.vertical, 10)
         
         StartTestView
         SeeAllTypesView
@@ -32,8 +32,8 @@ struct HomeView: View {
 
 private extension HomeView {
   var UserNameView: some View {
-    Text("\(UserInfo.shared.name ?? "noname")님 안녕하세요! 🙂")
-      .customFont(.notoSansKRSemiBold, size: 28)
+    Text("\(UserInfo.shared.name ?? "사용자")님 안녕하세요!🙂")
+      .customFont(.notoSansKRSemiBold, size: 24)
       .foregroundColor(.textPrimary1)
       .frame(maxWidth: .infinity, alignment: .leading)
   }
@@ -42,7 +42,7 @@ private extension HomeView {
     RoundedContainerButton(
       title: "MBTI 검사하기",
       iconName: .systemImage(.arrowRight),
-      description: "간단하게 MBTI를 검사하고 나의 성향을\n알아보세요. 🙂"
+      description: "간단하게 MBTI를 검사하고 나의 성향을\n알아보세요.🙂"
     ) {
       store.send(.tapStartTest)
     }
@@ -52,7 +52,7 @@ private extension HomeView {
     RoundedContainerButton(
       title: "MBTI의 모든 유형 살펴보기",
       iconName: .systemImage(.arrowRight),
-      description: "MBTI의 16가지 유형을 알아보세요. 🌈"
+      description: "MBTI의 16가지 유형의 특징을\n알아보세요.🌈"
     ) {
       store.send(.tapSeeAllTypes)
     }
@@ -63,7 +63,7 @@ private extension HomeView {
     RoundedContainerButton(
       title: "MBTI 정식 검사 받아보기",
       iconName: .systemImage(.arrowRight),
-      description: "내 MBTI를 정식으로 검사해보고\n나를 탐색해보세요! 📑"
+      description: "내 MBTI를 정식으로 검사해보고\n나를 탐색해보세요!📑"
     ) {
       store.send(.tapGettingOfficialTest)
     }
