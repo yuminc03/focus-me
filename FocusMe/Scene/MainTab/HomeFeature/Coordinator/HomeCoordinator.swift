@@ -24,6 +24,10 @@ struct HomeCoordinator {
       case .router(.routeAction(id: _, action: .home(.delegate(.mbtiTest)))):
         state.routes.push(.mbtiTest(.initialState))
         
+        // mbtiTest
+      case .router(.routeAction(id: _, action: .mbtiTest(.router(.routeAction(id: _, action: .testMain(.delegate(.back))))))):
+        state.routes.pop()
+        
         // allTypes
       case .router(.routeAction(id: _, action: .allTypes(.router(.routeAction(_, action: .allTypesMain(.delegate(.back))))))):
         state.routes.pop()
