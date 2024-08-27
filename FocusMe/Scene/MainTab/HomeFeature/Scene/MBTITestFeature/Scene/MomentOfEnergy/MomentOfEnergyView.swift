@@ -2,35 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct MomentOfEnergyCore {
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-  }
-  
-  enum Action {
-    case delegate(Delegate)
-    
-    case tapBackButton
-    
-    enum Delegate {
-      case back
-    }
-  }
-  
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      switch action {
-      case .delegate: break
-      case .tapBackButton:
-        return .send(.delegate(.back))
-      }
-      return .none
-    }
-  }
-}
-
 /// 에너지를 얻는 순간은 언제인가요? 질문
 struct MomentOfEnergyView: View {
   @Perception.Bindable private var store: StoreOf<MomentOfEnergyCore>
@@ -43,7 +14,13 @@ struct MomentOfEnergyView: View {
     WithPerceptionTracking {
       VStack(spacing: 20) {
         ProgressBar
+          .padding(.top, 30)
+        
         TitleSection
+        
+        Spacer()
+        
+        ContentsSection
       }
       .padding(.horizontal, 20)
       .backgroundColor()
@@ -64,6 +41,18 @@ private extension MomentOfEnergyView {
       .customFont(.notoSansKRSemiBold, size: 24)
       .foregroundColor(.textPrimary1)
       .frame(maxWidth: .infinity, alignment: .leading)
+  }
+  
+  var ContentsSection: some View {
+    VStack(spacing: 20) {
+      SelectionButton(title: "사람들과 함께 시간을 보낼 때") {
+        store.send(.tapTogetherButton)
+      }
+      
+      SelectionButton(title: "혼자만의 시간을 보낼 때") {
+        store.send(.tapAloneButton)
+      }
+    }
   }
 }
 
