@@ -9,6 +9,8 @@ struct MomentOfEnergyCore {
     let id = UUID()
   }
   
+  @Dependency(\.testAnswerEntity) var testAnswerEntity
+
   enum Action {
     case delegate(Delegate)
     
@@ -18,6 +20,7 @@ struct MomentOfEnergyCore {
     
     enum Delegate {
       case back
+      case next
     }
   }
   
@@ -28,9 +31,15 @@ struct MomentOfEnergyCore {
       case .tapBackButton:
         return .send(.delegate(.back))
         
-      case .tapTogetherButton: break
-      case .tapAloneButton: break
+      case .tapTogetherButton:
+        testAnswerEntity.extraversion += 1
+        return .send(.delegate(.next))
+
+      case .tapAloneButton:
+        testAnswerEntity.introversion += 1
+        return .send(.delegate(.next))
       }
+      
       return .none
     }
   }

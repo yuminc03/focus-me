@@ -37,7 +37,7 @@ private extension MomentOfEnergyView {
   }
   
   var TitleSection: some View {
-    Text("당신이 에너지를 얻는 순간은 언제인가요?")
+    Text("에너지를 얻는 순간이 언제인가요?")
       .customFont(.notoSansKRSemiBold, size: 24)
       .foregroundColor(.textPrimary1)
       .frame(maxWidth: .infinity, alignment: .leading)
