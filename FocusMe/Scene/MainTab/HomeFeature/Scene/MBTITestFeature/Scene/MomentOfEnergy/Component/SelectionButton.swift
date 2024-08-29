@@ -71,7 +71,9 @@ struct SelectionButtonStyle: ButtonStyle {
       ))
       .padding(20)
       .frame(maxWidth: .infinity)
-      .background(configuration.isPressed ? pressedBgColor : backgroundColor)
+      .background(isSelected ? pressedBgColor : (
+        configuration.isPressed ? .lavenderTheme : backgroundColor
+      ))
       .clipShape(Capsule())
       .overlay {
         Capsule()

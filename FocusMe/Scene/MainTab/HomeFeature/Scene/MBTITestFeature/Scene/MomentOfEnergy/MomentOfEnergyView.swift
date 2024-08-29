@@ -27,6 +27,9 @@ struct MomentOfEnergyView: View {
       .fmNavigation(title: "MBTI 검사하기") {
         store.send(.tapBackButton)
       }
+      .onAppear {
+        NotiManager.post(key: .hideTab)
+      }
     }
   }
 }
@@ -44,13 +47,11 @@ private extension MomentOfEnergyView {
   }
   
   var ContentsSection: some View {
-    VStack(spacing: 20) {
-      SelectionButton(title: "사람들과 함께 시간을 보낼 때") {
-        store.send(.tapTogetherButton)
-      }
-      
-      SelectionButton(title: "혼자만의 시간을 보낼 때") {
-        store.send(.tapAloneButton)
+    LazyVStack(spacing: 20) {
+      ForEach(store.pastMoments) { moment in
+        SelectionButton(title: moment.title, isSelected: moment.isSelected) {
+          store.send(.tapMomentButton(moment))
+        }
       }
     }
   }
