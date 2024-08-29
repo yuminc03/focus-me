@@ -28,15 +28,17 @@ extension SelectionButton {
 /// 질문의 답변 버튼
 struct SelectionButton: View {
   private let title: String
+  private let isSelected: Bool
   private let action: () -> Void
   
-  private var foregroundColor: Color = .deepPurple
+  private var foregroundColor: Color = .blueLemonAde
   private var backgroundColor: Color = .white
   private var pressedBgColor: Color = .skyBlueTheme
-  private var strokeColor: Color = .lavender
+  private var strokeColor: Color = .blueLemonAde
   
-  init(title: String, action: @escaping () -> Void) {
+  init(title: String, isSelected: Bool, action: @escaping () -> Void) {
     self.title = title
+    self.isSelected = isSelected
     self.action = action
   }
   
@@ -46,6 +48,7 @@ struct SelectionButton: View {
         .customFont(.notoSansKRMedium, size: 14)
      }
     .buttonStyle(SelectionButtonStyle(
+      isSelected: isSelected,
       foregroundColor: foregroundColor,
       backgroundColor: backgroundColor,
       pressedBgColor: pressedBgColor,
@@ -55,6 +58,7 @@ struct SelectionButton: View {
 }
 
 struct SelectionButtonStyle: ButtonStyle {
+  let isSelected: Bool
   let foregroundColor: Color
   let backgroundColor: Color
   let pressedBgColor: Color
@@ -62,20 +66,28 @@ struct SelectionButtonStyle: ButtonStyle {
   
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
-      .foregroundColor(foregroundColor)
+      .foregroundColor(isSelected ? .deepPurple : (
+        configuration.isPressed ? .lavender : foregroundColor
+      ))
       .padding(20)
       .frame(maxWidth: .infinity)
       .background(configuration.isPressed ? pressedBgColor : backgroundColor)
       .clipShape(Capsule())
       .overlay {
         Capsule()
-          .strokeBorder(strokeColor, lineWidth: 1)
+          .strokeBorder(
+            isSelected ? .deepPurple : (
+              configuration.isPressed ? .lavender : strokeColor
+            ),
+            lineWidth: 1
+          )
       }
+      .animation(.easeInOut, value: isSelected)
   }
 }
 
 #Preview {
-  SelectionButton(title: "버튼 제목") {
+  SelectionButton(title: "버튼 제목", isSelected: true) {
     print("click")
   }
 }
