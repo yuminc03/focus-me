@@ -31,6 +31,9 @@ struct TestMainView: View {
       .fmNavigation(title: "") {
         store.send(.tapBackButton)
       }
+      .onAppear {
+        NotiManager.post(key: .hideTab)
+      }
     }
   }
 }

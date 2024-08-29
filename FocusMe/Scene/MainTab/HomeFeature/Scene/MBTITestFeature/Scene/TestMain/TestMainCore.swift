@@ -16,6 +16,7 @@ struct TestMainCore {
     
     enum Delegate {
       case back
+      case momentOfEnergy
     }
   }
   
@@ -26,7 +27,8 @@ struct TestMainCore {
       case .tapBackButton:
         return .send(.delegate(.back))
         
-      case .tapNextButton: break
+      case .tapNextButton:
+        return .send(.delegate(.momentOfEnergy))
       }
       
       return .none

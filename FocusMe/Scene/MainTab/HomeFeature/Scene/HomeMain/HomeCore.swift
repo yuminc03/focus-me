@@ -26,7 +26,9 @@ struct HomeCore {
     Reduce { state, action in
       switch action {
       case .delegate: break
-      case .tapStartTest: break
+      case .tapStartTest:
+        return .send(.delegate(.mbtiTest))
+        
       case .tapSeeAllTypes:
         return .send(.delegate(.allTypes))
         

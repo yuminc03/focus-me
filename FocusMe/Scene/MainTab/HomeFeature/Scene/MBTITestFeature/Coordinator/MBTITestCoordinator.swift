@@ -18,6 +18,8 @@ struct MBTITestCoordinator {
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
+      case .router(.routeAction(id: _, action: .testMain(.delegate(.momentOfEnergy)))):
+        state.routes.push(.momentOfEnergy(.init()))
         
       default: break
       }
@@ -42,6 +44,13 @@ struct MBTITestCoordinatorView: View {
             \MBTITestScreen.State.testMain,
              action: MBTITestScreen.Action.testMain,
              then: TestMainView.init
+          )
+          
+        case .momentOfEnergy:
+          CaseLet(
+            \MBTITestScreen.State.momentOfEnergy,
+             action: MBTITestScreen.Action.momentOfEnergy,
+             then: MomentOfEnergyView.init
           )
         }
       }
