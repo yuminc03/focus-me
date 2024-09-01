@@ -3,10 +3,10 @@ import SwiftUI
 import ComposableArchitecture
 
 /// 에너지를 얻는 순간은 언제인가요? 질문
-struct MomentOfEnergyView: View {
-  @Perception.Bindable private var store: StoreOf<MomentOfEnergyCore>
+struct MBTITestQestionView: View {
+  @Perception.Bindable private var store: StoreOf<MBTITestQestionCore>
   
-  init(store: StoreOf<MomentOfEnergyCore>) {
+  init(store: StoreOf<MBTITestQestionCore>) {
     self.store = store
   }
   
@@ -34,7 +34,7 @@ struct MomentOfEnergyView: View {
   }
 }
 
-private extension MomentOfEnergyView {
+private extension MBTITestQestionView {
   var ProgressBar: some View {
     MBTITestProgressView(progressValue: 1)
   }
@@ -58,10 +58,10 @@ private extension MomentOfEnergyView {
 }
 
 #Preview {
-  MomentOfEnergyView(store: .init(initialState: MomentOfEnergyCore.State(
+  MBTITestQestionView(store: .init(initialState: MBTITestQestionCore.State(
     question: .momentOfEnergy,
     pastAnswers: MBTIAnswer.momentOfEnergy.selection
   )) {
-    MomentOfEnergyCore()
+    MBTITestQestionCore()
   })
 }
