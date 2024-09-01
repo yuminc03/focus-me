@@ -60,7 +60,7 @@ private extension MBTITestQestionView {
 #Preview {
   MBTITestQestionView(store: .init(initialState: MBTITestQestionCore.State(
     question: .momentOfEnergy,
-    pastAnswers: MBTIAnswer.momentOfEnergy.selection
+    pastAnswers: MBTIQuestion.momentOfEnergy.selection
   )) {
     MBTITestQestionCore()
   })

@@ -112,6 +112,7 @@
 		8DEB890A2C8464DB001AB88A /* DescriptionCloserToMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89092C8464DB001AB88A /* DescriptionCloserToMe.swift */; };
 		8DEB890C2C84651A001AB88A /* NextAfterMakePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */; };
 		8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB890D2C846558001AB88A /* MyWayPartying.swift */; };
+		8DEB89162C84975F001AB88A /* MBTITestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89152C84975F001AB88A /* MBTITestStep.swift */; };
 		8DF5DD302C81A7C9007E8EF0 /* MBTIAnswerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -235,6 +236,7 @@
 		8DEB89092C8464DB001AB88A /* DescriptionCloserToMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCloserToMe.swift; sourceTree = "<group>"; };
 		8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextAfterMakePromise.swift; sourceTree = "<group>"; };
 		8DEB890D2C846558001AB88A /* MyWayPartying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWayPartying.swift; sourceTree = "<group>"; };
+		8DEB89152C84975F001AB88A /* MBTITestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestStep.swift; sourceTree = "<group>"; };
 		8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIAnswerEntity.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -670,6 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4A71422C7F619700AA9DD4 /* TestAnswerInfo.swift */,
+				8DEB89152C84975F001AB88A /* MBTITestStep.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1041,6 +1044,7 @@
 				8DEB88F42C846168001AB88A /* HowToCook.swift in Sources */,
 				8D612F1C2C7B124700A565AB /* AllTypesScreen.swift in Sources */,
 				05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */,
+				8DEB89162C84975F001AB88A /* MBTITestStep.swift in Sources */,
 				055022942C65E5860031330E /* UserInfo.swift in Sources */,
 				053B702E2C6B3F76001DBF90 /* FMAlertContainer.swift in Sources */,
 				8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */,

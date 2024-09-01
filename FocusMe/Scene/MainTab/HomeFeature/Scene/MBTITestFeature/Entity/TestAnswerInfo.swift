@@ -6,6 +6,44 @@ import ComposableArchitecture
 final class TestAnswerInfo {
   /// 에너지를 얻는 순간
   var momentOfEnergy: MomentOfEnergy?
+  /// 휴일을 보내는 방법
+  var takeHoliday: TakeHoliday?
+  /// 사람이 많은 곳에 왔을 때 기분
+  var feelWhenCrowded: FeelWhenCrowded?
+  /// 더 좋아하는 여행
+  var favoriteTrip: FavoriteTrip?
+  /// 여행을 왔을 때 더 좋아하는 숙소
+  var favoriteHotel: FavoriteHotel?
+  /// 친구를 만나러 갈 때 드는 생각
+  var thinkWhenVisitFriend: ThinkWhenVisitFriend?
+  /// 털 색깔이 특이하고 신기한 고양이를 본다면 드는 생각
+  var thinkWhenInterestingCat: ThinkWhenInterestingCat?
+  /// 요리를 하는 방법
+  var howToCook: HowToCook?
+  /// 레트로 감성 카메라 찾았다면 드는 생각
+  var thinkWhenFindRetroCamera: ThinkWhenFindRetroCamera?
+  /// 열린 결말 영화를 봤을 때 생각
+  var thinkWhenWatchingOpenEndedMovie: ThinkWhenWatchingOpenEndedMovie?
+  /// 더 기분 좋은 칭찬
+  var niceCompliment: NiceCompliment?
+  /// 친구가 나에게 고민을 털어놓았을 때  반응
+  var reactionToWorry: ReactionToWorry?
+  /// 친구와 싸우게 되었을 때 기분이 풀리는 말
+  var howToFeelBetter: HowToFeelBetter?
+  /// 염색을 했는데 안 어울린다면 해주는 말
+  var whenDontLinkHairColor: WhenDontLinkHairColor?
+  /// 친구가 회사에서 혼났다고 털어놓으면 해줄 말
+  var howListenFriendProblem: HowListenFriendProblem?
+  /// 더 끌리는 장소
+  var placeMoreAttract: PlaceMoreAttract?
+  /// 자신을 더 설레게 하는 상황
+  var situationMoreExcited: SituationMoreExcited?
+  /// 일상 속에서 자신과 더 가까운 설명
+  var descriptionCloserToMe: DescriptionCloserToMe?
+  /// 친구들과 약속을 잡았을 때 다음으로 하는 것
+  var nextAfterMakePromise: NextAfterMakePromise?
+  /// 파티 준비
+  var myWayPartying: MyWayPartying?
   
   static let shared = TestAnswerInfo()
   

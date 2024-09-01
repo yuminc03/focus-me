@@ -15,14 +15,31 @@ struct MBTITestCoordinator {
     case router(IdentifiedRouterActionOf<MBTITestScreen>)
   }
   
+  @Dependency(\.mbtiTestStep) var mbtiTestStep
+  
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
+        // testMain
       case .router(.routeAction(id: _, action: .testMain(.delegate(.momentOfEnergy)))):
-        state.routes.push(.momentOfEnergy(.init(
-          question: .momentOfEnergy,
-          pastAnswers: MBTIAnswer.momentOfEnergy.selection
+        state.routes.push(.mbtiTestQuestion(.init(
+          question: mbtiTestStep.currentStep,
+          pastAnswers: mbtiTestStep.currentStep.selection
         )))
+        
+        // mbtiTestQuestion
+      case .router(.routeAction(id: _, action: .mbtiTestQuestion(.delegate(.back)))):
+        mbtiTestStep.backStep()
+        state.routes.pop()
+        
+      case let .router(.routeAction(id: _, action: .mbtiTestQuestion(.delegate(.next(entity))))):
+        guard let question = mbtiTestStep.nextStep() else { return .none }
+        if mbtiTestStep.currentStep == .myWayPartying {
+          // 현재 마지막 테스트 단계 -> 테스트 완료 페이지
+        } else {
+          // 테스트 진행 단계 -> 다음 단계 페이지
+          state.routes.push(.mbtiTestQuestion(.init(question: question, pastAnswers: question.selection)))
+        }
         
       default: break
       }
@@ -49,11 +66,11 @@ struct MBTITestCoordinatorView: View {
              then: TestMainView.init
           )
           
-        case .momentOfEnergy:
+        case .mbtiTestQuestion:
           CaseLet(
-            \MBTITestScreen.State.momentOfEnergy,
-             action: MBTITestScreen.Action.momentOfEnergy,
-             then: MomentOfEnergyView.init
+            \MBTITestScreen.State.mbtiTestQuestion,
+             action: MBTITestScreen.Action.mbtiTestQuestion,
+             then: MBTITestQestionView.init
           )
         }
       }

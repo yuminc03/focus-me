@@ -1,7 +1,7 @@
 import Foundation
 
 /// MBTI 테스트 질문
-enum MBTIQuestion {
+enum MBTIQuestion: CaseIterable {
   case momentOfEnergy
   case takeHoliday
   case feelWhenCrowded
@@ -65,6 +65,130 @@ enum MBTIQuestion {
       return "친구들과 약속을 잡았을 때 다음으로 하는 것은 무엇인가요?"
     case .myWayPartying:
       return "파티를 할 때 어떻게 하는 편인가요?"
+    }
+  }
+  
+  var selection: [MBTIAnswerEntity] {
+    switch self {
+    case .momentOfEnergy:
+      return [
+        .init(type: MomentOfEnergy.together),
+        .init(type: MomentOfEnergy.alone),
+      ]
+      
+    case .takeHoliday:
+      return [
+        .init(type: TakeHoliday.rest),
+        .init(type: TakeHoliday.meeting),
+      ]
+      
+    case .feelWhenCrowded:
+      return [
+        .init(type: FeelWhenCrowded.excited),
+        .init(type: FeelWhenCrowded.energized),
+      ]
+      
+    case .favoriteTrip:
+      return [
+        .init(type: FavoriteTrip.together),
+        .init(type: FavoriteTrip.alone),
+      ]
+      
+    case .favoriteHotel:
+      return [
+        .init(type: FavoriteHotel.friends),
+        .init(type: FavoriteHotel.group),
+      ]
+      
+    case .thinkWhenVisitFriend:
+      return [
+        .init(type: ThinkWhenVisitFriend.imagine),
+        .init(type: ThinkWhenVisitFriend.calculateTime),
+      ]
+      
+    case .thinkWhenInterestingCat:
+      return [
+        .init(type: ThinkWhenInterestingCat.curiosity),
+        .init(type: ThinkWhenInterestingCat.feelingLucky),
+      ]
+      
+    case .howToCook:
+      return [
+        .init(type: HowToCook.checkRecipe),
+        .init(type: HowToCook.intuition),
+      ]
+      
+    case .thinkWhenFindRetroCamera:
+      return [
+        .init(type: ThinkWhenFindRetroCamera.verifying),
+        .init(type: ThinkWhenFindRetroCamera.imagining),
+      ]
+      
+    case .thinkWhenWatchingOpenEndedMovie:
+      return [
+        .init(type: ThinkWhenWatchingOpenEndedMovie.imagineStory),
+        .init(type: ThinkWhenWatchingOpenEndedMovie.findEnding),
+      ]
+      
+    case .niceCompliment:
+      return [
+        .init(type: NiceCompliment.resolved),
+        .init(type: NiceCompliment.warmPerson),
+      ]
+      
+    case .reactionToWorry:
+      return [
+        .init(type: ReactionToWorry.offeringSolution),
+        .init(type: ReactionToWorry.empathize),
+      ]
+      
+    case .howToFeelBetter:
+      return [
+        .init(type: HowToFeelBetter.sorry),
+        .init(type: HowToFeelBetter.trying),
+      ]
+      
+    case .whenDontLinkHairColor:
+      return  [
+        .init(type: WhenDontLinkHairColor.honest),
+        .init(type: WhenDontLinkHairColor.reflecting),
+      ]
+      
+    case .howListenFriendProblem:
+      return [
+        .init(type: HowListenFriendProblem.reason),
+        .init(type: HowListenFriendProblem.consolation),
+      ]
+      
+    case .placeMoreAttract:
+      return [
+        .init(type: PlaceMoreAttract.serendipity),
+        .init(type: PlaceMoreAttract.scheduled),
+      ]
+      
+    case .situationMoreExcited:
+      return [
+        .init(type: SituationMoreExcited.unfamiliar),
+        .init(type: SituationMoreExcited.planned),
+      ]
+      
+    case .descriptionCloserToMe:
+      return [
+        .init(type: DescriptionCloserToMe.consistent),
+        .init(type: DescriptionCloserToMe.change),
+      ]
+      
+    case .nextAfterMakePromise:
+      return [
+        .init(type: NextAfterMakePromise.later),
+        .init(type: NextAfterMakePromise.advance),
+      ]
+      
+    case .myWayPartying:
+      return [
+        .init(type: MyWayPartying.now),
+        .init(type: MyWayPartying.later),
+      ]
     }
   }
 }
