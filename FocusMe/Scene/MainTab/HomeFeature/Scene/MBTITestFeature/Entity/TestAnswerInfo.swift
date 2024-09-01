@@ -2,11 +2,6 @@ import Foundation
 
 import ComposableArchitecture
 
-enum MomentOfEnergy {
-  case together
-  case alone
-}
-
 /// MBTI 테스트 점수
 final class TestAnswerInfo {
   /// 에너지를 얻는 순간

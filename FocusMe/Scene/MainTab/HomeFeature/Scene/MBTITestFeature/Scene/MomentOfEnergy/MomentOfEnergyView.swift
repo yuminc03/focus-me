@@ -40,7 +40,7 @@ private extension MomentOfEnergyView {
   }
   
   var TitleSection: some View {
-    Text("에너지를 얻는 순간이 언제인가요?")
+    Text(store.question.title)
       .customFont(.notoSansKRSemiBold, size: 24)
       .foregroundColor(.textPrimary1)
       .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,9 +48,9 @@ private extension MomentOfEnergyView {
   
   var ContentsSection: some View {
     LazyVStack(spacing: 20) {
-      ForEach(store.pastMoments) { moment in
-        SelectionButton(title: moment.title, isSelected: moment.isSelected) {
-          store.send(.tapMomentButton(moment))
+      ForEach(store.pastAnswers) { answer in
+        SelectionButton(title: answer.type.title, isSelected: answer.isSelected) {
+          store.send(.tapMomentButton(answer))
         }
       }
     }
@@ -58,7 +58,10 @@ private extension MomentOfEnergyView {
 }
 
 #Preview {
-  MomentOfEnergyView(store: .init(initialState: MomentOfEnergyCore.State()) {
+  MomentOfEnergyView(store: .init(initialState: MomentOfEnergyCore.State(
+    question: .momentOfEnergy,
+    pastAnswers: MBTIAnswer.momentOfEnergy.selection
+  )) {
     MomentOfEnergyCore()
   })
 }

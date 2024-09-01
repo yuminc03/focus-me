@@ -19,7 +19,10 @@ struct MBTITestCoordinator {
     Reduce { state, action in
       switch action {
       case .router(.routeAction(id: _, action: .testMain(.delegate(.momentOfEnergy)))):
-        state.routes.push(.momentOfEnergy(.init()))
+        state.routes.push(.momentOfEnergy(.init(
+          question: .momentOfEnergy,
+          pastAnswers: MBTIAnswer.momentOfEnergy.selection
+        )))
         
       default: break
       }

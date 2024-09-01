@@ -91,6 +91,29 @@
 		8DDC07DA2BCD6D260019D478 /* NotoSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D12BCD6D250019D478 /* NotoSansKR-SemiBold.ttf */; };
 		8DDC07DB2BCD6D260019D478 /* NotoSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */; };
 		8DDC07DC2BCD6D260019D478 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */; };
+		8DEB88DE2C83501E001AB88A /* MBTIQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88DD2C83501E001AB88A /* MBTIQuestion.swift */; };
+		8DEB88E42C845B19001AB88A /* MomentOfEnergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88E32C845B19001AB88A /* MomentOfEnergy.swift */; };
+		8DEB88E72C845BA3001AB88A /* TakeHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88E62C845BA3001AB88A /* TakeHoliday.swift */; };
+		8DEB88E92C845BBF001AB88A /* FeelWhenCrowded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88E82C845BBF001AB88A /* FeelWhenCrowded.swift */; };
+		8DEB88EB2C845C2A001AB88A /* FavoriteTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88EA2C845C2A001AB88A /* FavoriteTrip.swift */; };
+		8DEB88ED2C845CB9001AB88A /* FavoriteHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88EC2C845CB9001AB88A /* FavoriteHotel.swift */; };
+		8DEB88EF2C8460A0001AB88A /* ThinkWhenVisitFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88EE2C8460A0001AB88A /* ThinkWhenVisitFriend.swift */; };
+		8DEB88F12C846118001AB88A /* ThinkWhenInterestingCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88F02C846118001AB88A /* ThinkWhenInterestingCat.swift */; };
+		8DEB88F42C846168001AB88A /* HowToCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88F32C846168001AB88A /* HowToCook.swift */; };
+		8DEB88F62C84619C001AB88A /* ThinkWhenFindRetroCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88F52C84619C001AB88A /* ThinkWhenFindRetroCamera.swift */; };
+		8DEB88F82C8461F3001AB88A /* ThinkWhenWatchingOpenEndedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88F72C8461F3001AB88A /* ThinkWhenWatchingOpenEndedMovie.swift */; };
+		8DEB88FB2C84623D001AB88A /* NiceCompliment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88FA2C84623D001AB88A /* NiceCompliment.swift */; };
+		8DEB88FE2C84627C001AB88A /* ReactionToWorry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88FD2C84627C001AB88A /* ReactionToWorry.swift */; };
+		8DEB89002C84638B001AB88A /* HowToFeelBetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88FF2C84638B001AB88A /* HowToFeelBetter.swift */; };
+		8DEB89022C8463D3001AB88A /* WhenDontLinkHairColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89012C8463D3001AB88A /* WhenDontLinkHairColor.swift */; };
+		8DEB89042C846411001AB88A /* HowListenFriendProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89032C846411001AB88A /* HowListenFriendProblem.swift */; };
+		8DEB89062C84644D001AB88A /* PlaceMoreAttract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89052C84644D001AB88A /* PlaceMoreAttract.swift */; };
+		8DEB89082C846494001AB88A /* SituationMoreExcited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89072C846494001AB88A /* SituationMoreExcited.swift */; };
+		8DEB890A2C8464DB001AB88A /* DescriptionCloserToMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89092C8464DB001AB88A /* DescriptionCloserToMe.swift */; };
+		8DEB890C2C84651A001AB88A /* NextAfterMakePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */; };
+		8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB890D2C846558001AB88A /* MyWayPartying.swift */; };
+		8DEB89122C8475DA001AB88A /* MBTIAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89112C8475DA001AB88A /* MBTIAnswer.swift */; };
+		8DF5DD302C81A7C9007E8EF0 /* MBTIAnswerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +215,29 @@
 		8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.ttf"; sourceTree = "<group>"; };
 		8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		8DDC07DE2BCD6D700019D478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DEB88DD2C83501E001AB88A /* MBTIQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIQuestion.swift; sourceTree = "<group>"; };
+		8DEB88E32C845B19001AB88A /* MomentOfEnergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentOfEnergy.swift; sourceTree = "<group>"; };
+		8DEB88E62C845BA3001AB88A /* TakeHoliday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHoliday.swift; sourceTree = "<group>"; };
+		8DEB88E82C845BBF001AB88A /* FeelWhenCrowded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelWhenCrowded.swift; sourceTree = "<group>"; };
+		8DEB88EA2C845C2A001AB88A /* FavoriteTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTrip.swift; sourceTree = "<group>"; };
+		8DEB88EC2C845CB9001AB88A /* FavoriteHotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHotel.swift; sourceTree = "<group>"; };
+		8DEB88EE2C8460A0001AB88A /* ThinkWhenVisitFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkWhenVisitFriend.swift; sourceTree = "<group>"; };
+		8DEB88F02C846118001AB88A /* ThinkWhenInterestingCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkWhenInterestingCat.swift; sourceTree = "<group>"; };
+		8DEB88F32C846168001AB88A /* HowToCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToCook.swift; sourceTree = "<group>"; };
+		8DEB88F52C84619C001AB88A /* ThinkWhenFindRetroCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkWhenFindRetroCamera.swift; sourceTree = "<group>"; };
+		8DEB88F72C8461F3001AB88A /* ThinkWhenWatchingOpenEndedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkWhenWatchingOpenEndedMovie.swift; sourceTree = "<group>"; };
+		8DEB88FA2C84623D001AB88A /* NiceCompliment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceCompliment.swift; sourceTree = "<group>"; };
+		8DEB88FD2C84627C001AB88A /* ReactionToWorry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionToWorry.swift; sourceTree = "<group>"; };
+		8DEB88FF2C84638B001AB88A /* HowToFeelBetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToFeelBetter.swift; sourceTree = "<group>"; };
+		8DEB89012C8463D3001AB88A /* WhenDontLinkHairColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenDontLinkHairColor.swift; sourceTree = "<group>"; };
+		8DEB89032C846411001AB88A /* HowListenFriendProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowListenFriendProblem.swift; sourceTree = "<group>"; };
+		8DEB89052C84644D001AB88A /* PlaceMoreAttract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMoreAttract.swift; sourceTree = "<group>"; };
+		8DEB89072C846494001AB88A /* SituationMoreExcited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationMoreExcited.swift; sourceTree = "<group>"; };
+		8DEB89092C8464DB001AB88A /* DescriptionCloserToMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCloserToMe.swift; sourceTree = "<group>"; };
+		8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextAfterMakePromise.swift; sourceTree = "<group>"; };
+		8DEB890D2C846558001AB88A /* MyWayPartying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWayPartying.swift; sourceTree = "<group>"; };
+		8DEB89112C8475DA001AB88A /* MBTIAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIAnswer.swift; sourceTree = "<group>"; };
+		8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIAnswerEntity.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -605,6 +651,7 @@
 		8D4860412C7CC07A00166C87 /* MomentOfEnergy */ = {
 			isa = PBXGroup;
 			children = (
+				8DF5DD2E2C81A6DE007E8EF0 /* Entity */,
 				8D4860422C7CC4A500166C87 /* Component */,
 				8DCF40812C7E135100868241 /* MomentOfEnergyCore.swift */,
 				8D48603F2C7CC07600166C87 /* MomentOfEnergyView.swift */,
@@ -779,6 +826,36 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8DF5DD2E2C81A6DE007E8EF0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8DEB88DD2C83501E001AB88A /* MBTIQuestion.swift */,
+				8DEB89112C8475DA001AB88A /* MBTIAnswer.swift */,
+				8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */,
+				8DEB88E32C845B19001AB88A /* MomentOfEnergy.swift */,
+				8DEB88E62C845BA3001AB88A /* TakeHoliday.swift */,
+				8DEB88E82C845BBF001AB88A /* FeelWhenCrowded.swift */,
+				8DEB88EA2C845C2A001AB88A /* FavoriteTrip.swift */,
+				8DEB88EC2C845CB9001AB88A /* FavoriteHotel.swift */,
+				8DEB88EE2C8460A0001AB88A /* ThinkWhenVisitFriend.swift */,
+				8DEB88F02C846118001AB88A /* ThinkWhenInterestingCat.swift */,
+				8DEB88F32C846168001AB88A /* HowToCook.swift */,
+				8DEB88F52C84619C001AB88A /* ThinkWhenFindRetroCamera.swift */,
+				8DEB88F72C8461F3001AB88A /* ThinkWhenWatchingOpenEndedMovie.swift */,
+				8DEB88FA2C84623D001AB88A /* NiceCompliment.swift */,
+				8DEB88FD2C84627C001AB88A /* ReactionToWorry.swift */,
+				8DEB88FF2C84638B001AB88A /* HowToFeelBetter.swift */,
+				8DEB89012C8463D3001AB88A /* WhenDontLinkHairColor.swift */,
+				8DEB89032C846411001AB88A /* HowListenFriendProblem.swift */,
+				8DEB89052C84644D001AB88A /* PlaceMoreAttract.swift */,
+				8DEB89072C846494001AB88A /* SituationMoreExcited.swift */,
+				8DEB89092C8464DB001AB88A /* DescriptionCloserToMe.swift */,
+				8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */,
+				8DEB890D2C846558001AB88A /* MyWayPartying.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -940,22 +1017,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B7DC002C733A9C00E43519 /* SignUpCore.swift in Sources */,
+				8DEB88E42C845B19001AB88A /* MomentOfEnergy.swift in Sources */,
 				0564D9462C63126400102A44 /* AppDelegate.swift in Sources */,
 				8D1365A92C72106300284DA7 /* MyInfoView.swift in Sources */,
+				8DEB88E72C845BA3001AB88A /* TakeHoliday.swift in Sources */,
 				8D48603C2C7CBE2500166C87 /* TestMainCore.swift in Sources */,
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
 				05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */,
+				8DEB88F82C8461F3001AB88A /* ThinkWhenWatchingOpenEndedMovie.swift in Sources */,
+				8DEB88E92C845BBF001AB88A /* FeelWhenCrowded.swift in Sources */,
+				8DEB890A2C8464DB001AB88A /* DescriptionCloserToMe.swift in Sources */,
 				8D1365922C70DAD900284DA7 /* AllTypesView.swift in Sources */,
 				8D4860382C7CB7B500166C87 /* String+.swift in Sources */,
 				051846862C76F6EF00547E8E /* MBTI.swift in Sources */,
 				05E983EA2C63386800393D08 /* Encodable+.swift in Sources */,
 				05A708E02C6C64F000AE1172 /* View+.swift in Sources */,
 				8D4860402C7CC07600166C87 /* MomentOfEnergyView.swift in Sources */,
+				8DF5DD302C81A7C9007E8EF0 /* MBTIAnswerEntity.swift in Sources */,
+				8DEB88F12C846118001AB88A /* ThinkWhenInterestingCat.swift in Sources */,
 				8D1365A32C720B1D00284DA7 /* MainTabCoordinator.swift in Sources */,
 				8D1365B32C721DC700284DA7 /* MyInfoCoordinator.swift in Sources */,
 				05F3449B2C7C6D7500103D88 /* MBTITestCoordinator.swift in Sources */,
 				05A708DB2C6C4FE000AE1172 /* FMAlert.swift in Sources */,
+				8DEB890C2C84651A001AB88A /* NextAfterMakePromise.swift in Sources */,
+				8DEB88F42C846168001AB88A /* HowToCook.swift in Sources */,
 				8D612F1C2C7B124700A565AB /* AllTypesScreen.swift in Sources */,
 				05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */,
 				055022942C65E5860031330E /* UserInfo.swift in Sources */,
@@ -974,7 +1060,9 @@
 				05B7DC082C733BA400E43519 /* LoginCore.swift in Sources */,
 				05F344A22C7C6F1B00103D88 /* TestMainView.swift in Sources */,
 				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
+				8DEB89022C8463D3001AB88A /* WhenDontLinkHairColor.swift in Sources */,
 				8D2FB6FD2C6E44010086513D /* SystemImage.swift in Sources */,
+				8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */,
 				05F0AFC42C78546900C3507C /* NavigationBar.swift in Sources */,
 				05F0AFCD2C785C6B00C3507C /* NotiManager.swift in Sources */,
 				05E983F32C634E9A00393D08 /* CollectionTarget.swift in Sources */,
@@ -982,24 +1070,36 @@
 				8D2FB7002C6E44820086513D /* Image+.swift in Sources */,
 				05B7DC0B2C733CA700E43519 /* HomeCore.swift in Sources */,
 				8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */,
+				8DEB88EB2C845C2A001AB88A /* FavoriteTrip.swift in Sources */,
+				8DEB89002C84638B001AB88A /* HowToFeelBetter.swift in Sources */,
+				8DEB88DE2C83501E001AB88A /* MBTIQuestion.swift in Sources */,
 				05B7DC052C733B7800E43519 /* LoginScreen.swift in Sources */,
 				053B70312C6B40C9001DBF90 /* FMAlertButton.swift in Sources */,
 				05B7DC042C733B7800E43519 /* LoginCoordinator.swift in Sources */,
 				8D1365AF2C7211C000284DA7 /* HomeScreen.swift in Sources */,
 				8D4860482C7CC92200166C87 /* SelectionButton.swift in Sources */,
 				8D4A71432C7F619700AA9DD4 /* TestAnswerInfo.swift in Sources */,
+				8DEB89042C846411001AB88A /* HowListenFriendProblem.swift in Sources */,
 				05F65A702C5B7C960075E7D6 /* LoginView.swift in Sources */,
 				8D612F1E2C7B12AC00A565AB /* AllTypesCoordinator.swift in Sources */,
+				8DEB88ED2C845CB9001AB88A /* FavoriteHotel.swift in Sources */,
 				05F3449E2C7C6D9400103D88 /* MBTITestScreen.swift in Sources */,
 				8D4860462C7CC4CD00166C87 /* MBTITestProgressView.swift in Sources */,
+				8DEB89082C846494001AB88A /* SituationMoreExcited.swift in Sources */,
 				8D612F262C7B65C300A565AB /* TypeDetailCore.swift in Sources */,
+				8DEB89062C84644D001AB88A /* PlaceMoreAttract.swift in Sources */,
 				8D612F232C7B21B100A565AB /* TypeDetailView.swift in Sources */,
 				05E983ED2C634ADF00393D08 /* SignUpEntity.swift in Sources */,
 				05A708E72C6C748C00AE1172 /* LoadingView.swift in Sources */,
+				8DEB89122C8475DA001AB88A /* MBTIAnswer.swift in Sources */,
+				8DEB88F62C84619C001AB88A /* ThinkWhenFindRetroCamera.swift in Sources */,
 				055022962C65E9A80031330E /* FMError.swift in Sources */,
 				05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */,
+				8DEB88EF2C8460A0001AB88A /* ThinkWhenVisitFriend.swift in Sources */,
 				8D2FB7062C6E46580086513D /* RoundedContainerButton.swift in Sources */,
 				8D1365B62C721E2D00284DA7 /* MyInfoScreen.swift in Sources */,
+				8DEB88FB2C84623D001AB88A /* NiceCompliment.swift in Sources */,
+				8DEB88FE2C84627C001AB88A /* ReactionToWorry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
