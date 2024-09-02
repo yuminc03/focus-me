@@ -7,6 +7,7 @@ struct MBTITestScreen {
   enum State: Equatable, Identifiable {
     case testMain(TestMainCore.State)
     case mbtiTestQuestion(MBTITestQuestionCore.State)
+    case completeTest(CompleteTestCore.State)
     
     var id: UUID {
       switch self {
@@ -15,6 +16,9 @@ struct MBTITestScreen {
         
       case let .mbtiTestQuestion(state):
         return state.id
+        
+      case let .completeTest(state):
+        return state.id
       }
     }
   }
@@ -22,6 +26,7 @@ struct MBTITestScreen {
   enum Action {
     case testMain(TestMainCore.Action)
     case mbtiTestQuestion(MBTITestQuestionCore.Action)
+    case completeTest(CompleteTestCore.Action)
   }
   
   var body: some ReducerOf<Self> {
@@ -30,6 +35,9 @@ struct MBTITestScreen {
     }
     Scope(state: \.mbtiTestQuestion, action: \.mbtiTestQuestion) {
       MBTITestQuestionCore()
+    }
+    Scope(state: \.completeTest, action: \.completeTest) {
+      CompleteTestCore()
     }
   }
 }

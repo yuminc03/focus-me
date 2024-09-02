@@ -72,6 +72,13 @@ struct MBTITestCoordinatorView: View {
              action: MBTITestScreen.Action.mbtiTestQuestion,
              then: MBTITestQuestionView.init
           )
+          
+        case .completeTest:
+          CaseLet(
+            \MBTITestScreen.State.completeTest,
+             action: MBTITestScreen.Action.completeTest,
+             then: CompleteTestView.init
+          )
         }
       }
     }
