@@ -2,7 +2,7 @@ import SwiftUI
 
 import ComposableArchitecture
 
-/// 에너지를 얻는 순간은 언제인가요? 질문
+/// MBTI Test 질문
 struct MBTITestQestionView: View {
   @Perception.Bindable private var store: StoreOf<MBTITestQestionCore>
   
@@ -36,7 +36,10 @@ struct MBTITestQestionView: View {
 
 private extension MBTITestQestionView {
   var ProgressBar: some View {
-    MBTITestProgressView(progressValue: 1)
+    MBTITestProgressView(
+      progressValue: CGFloat(store.question.rawValue) + 1,
+      total: CGFloat(MBTIQuestion.allCases.count)
+    )
   }
   
   var TitleSection: some View {

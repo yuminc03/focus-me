@@ -1,7 +1,7 @@
 import Foundation
 
 /// MBTI 테스트 질문
-enum MBTIQuestion: CaseIterable {
+enum MBTIQuestion: Int, CaseIterable {
   case momentOfEnergy
   case takeHoliday
   case feelWhenCrowded
