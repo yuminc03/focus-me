@@ -3,7 +3,7 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-struct MBTITestQestionCore {
+struct MBTITestQuestionCore {
   @ObservableState
   struct State: Equatable {
     let id = UUID()

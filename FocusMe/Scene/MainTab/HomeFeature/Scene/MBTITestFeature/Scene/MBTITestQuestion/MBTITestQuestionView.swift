@@ -3,10 +3,10 @@ import SwiftUI
 import ComposableArchitecture
 
 /// MBTI Test 질문
-struct MBTITestQestionView: View {
-  @Perception.Bindable private var store: StoreOf<MBTITestQestionCore>
+struct MBTITestQuestionView: View {
+  @Perception.Bindable private var store: StoreOf<MBTITestQuestionCore>
   
-  init(store: StoreOf<MBTITestQestionCore>) {
+  init(store: StoreOf<MBTITestQuestionCore>) {
     self.store = store
   }
   
@@ -34,7 +34,7 @@ struct MBTITestQestionView: View {
   }
 }
 
-private extension MBTITestQestionView {
+private extension MBTITestQuestionView {
   var ProgressBar: some View {
     MBTITestProgressView(
       progressValue: CGFloat(store.question.rawValue) + 1,
@@ -61,10 +61,10 @@ private extension MBTITestQestionView {
 }
 
 #Preview {
-  MBTITestQestionView(store: .init(initialState: MBTITestQestionCore.State(
+  MBTITestQuestionView(store: .init(initialState: MBTITestQuestionCore.State(
     question: .momentOfEnergy,
     pastAnswers: MBTIQuestion.momentOfEnergy.selection
   )) {
-    MBTITestQestionCore()
+    MBTITestQuestionCore()
   })
 }

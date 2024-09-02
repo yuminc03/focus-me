@@ -6,7 +6,7 @@ import ComposableArchitecture
 struct MBTITestScreen {
   enum State: Equatable, Identifiable {
     case testMain(TestMainCore.State)
-    case mbtiTestQuestion(MBTITestQestionCore.State)
+    case mbtiTestQuestion(MBTITestQuestionCore.State)
     
     var id: UUID {
       switch self {
@@ -21,7 +21,7 @@ struct MBTITestScreen {
   
   enum Action {
     case testMain(TestMainCore.Action)
-    case mbtiTestQuestion(MBTITestQestionCore.Action)
+    case mbtiTestQuestion(MBTITestQuestionCore.Action)
   }
   
   var body: some ReducerOf<Self> {
@@ -29,7 +29,7 @@ struct MBTITestScreen {
       TestMainCore()
     }
     Scope(state: \.mbtiTestQuestion, action: \.mbtiTestQuestion) {
-      MBTITestQestionCore()
+      MBTITestQuestionCore()
     }
   }
 }

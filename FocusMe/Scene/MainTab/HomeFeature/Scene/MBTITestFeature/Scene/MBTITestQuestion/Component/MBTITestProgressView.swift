@@ -2,8 +2,8 @@ import SwiftUI
 
 /// MBTI 검사 진행도를 보여주는 ProgressView
 struct MBTITestProgressView: View {
-  private var progressValue: CGFloat
-  private var total: CGFloat
+  private let progressValue: CGFloat
+  private let total: CGFloat
   
   init(progressValue: CGFloat, total: CGFloat) {
     self.progressValue = progressValue

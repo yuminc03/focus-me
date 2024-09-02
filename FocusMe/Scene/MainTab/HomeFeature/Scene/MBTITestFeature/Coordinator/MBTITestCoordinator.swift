@@ -70,7 +70,7 @@ struct MBTITestCoordinatorView: View {
           CaseLet(
             \MBTITestScreen.State.mbtiTestQuestion,
              action: MBTITestScreen.Action.mbtiTestQuestion,
-             then: MBTITestQestionView.init
+             then: MBTITestQuestionView.init
           )
         }
       }
