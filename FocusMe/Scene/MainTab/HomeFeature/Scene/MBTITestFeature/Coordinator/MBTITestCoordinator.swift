@@ -36,6 +36,7 @@ struct MBTITestCoordinator {
         guard let question = mbtiTestStep.nextStep() else { return .none }
         if mbtiTestStep.currentStep == .myWayPartying {
           // 현재 마지막 테스트 단계 -> 테스트 완료 페이지
+          state.routes.push(.completeTest(.init()))
         } else {
           // 테스트 진행 단계 -> 다음 단계 페이지
           state.routes.push(.mbtiTestQuestion(.init(question: question, pastAnswers: question.selection)))

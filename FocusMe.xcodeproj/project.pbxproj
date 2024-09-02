@@ -337,8 +337,8 @@
 		05685A2D2C85A9020034C124 /* CompleteTest */ = {
 			isa = PBXGroup;
 			children = (
-				05685A2E2C85A9180034C124 /* CompleteTestView.swift */,
 				8DCB15742C86007300BADB75 /* CompleteTestCore.swift */,
+				05685A2E2C85A9180034C124 /* CompleteTestView.swift */,
 			);
 			path = CompleteTest;
 			sourceTree = "<group>";
