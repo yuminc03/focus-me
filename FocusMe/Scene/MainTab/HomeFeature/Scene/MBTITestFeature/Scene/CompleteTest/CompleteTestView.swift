@@ -2,24 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct CompleteTestCore {
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-  }
-  
-  enum Action {
-    
-  }
-  
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      return .none
-    }
-  }
-}
-
 /// MBTI Test 완료 화면
 struct CompleteTestView: View {
   @Perception.Bindable private var store: StoreOf<CompleteTestCore>
@@ -32,10 +14,16 @@ struct CompleteTestView: View {
     WithPerceptionTracking {
       VStack(spacing: 20) {
         TitleSection
+          .padding(.top, 56)
         
         Spacer()
         
+        CheckImage
         
+        Spacer()
+        
+        ConfirmButton
+          .padding(.bottom, 20)
       }
       .padding(.horizontal, 20)
       .backgroundColor()
@@ -60,7 +48,17 @@ private extension CompleteTestView {
     .foregroundColor(.deepPurple)
   }
   
+  var CheckImage: some View {
+    Image(systemName: .systemImage(.checkmarkCircle))
+      .size(120)
+      .foregroundColor(.skyblue)
+  }
   
+  var ConfirmButton: some View {
+    FMButton(title: "MBTI 확인하기") {
+      store.send(.tapConfirmButton)
+    }
+  }
 }
 
 #Preview {

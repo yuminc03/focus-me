@@ -82,6 +82,7 @@
 		8D7BFD522B8229E3001CA0EE /* FocusMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD512B8229E3001CA0EE /* FocusMeTests.swift */; };
 		8D7BFD5C2B8229E3001CA0EE /* FocusMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */; };
 		8D7BFD5E2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */; };
+		8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB15742C86007300BADB75 /* CompleteTestCore.swift */; };
 		8DCF40822C7E135100868241 /* MBTITestQuestionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */; };
 		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
 		8DDC07D52BCD6D260019D478 /* NotoSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */; };
@@ -206,6 +207,7 @@
 		8D7BFD572B8229E3001CA0EE /* FocusMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DCB15742C86007300BADB75 /* CompleteTestCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTestCore.swift; sourceTree = "<group>"; };
 		8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestQuestionCore.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
 		8DDC07CC2BCD6D250019D478 /* NotoSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.ttf"; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				05685A2E2C85A9180034C124 /* CompleteTestView.swift */,
+				8DCB15742C86007300BADB75 /* CompleteTestCore.swift */,
 			);
 			path = CompleteTest;
 			sourceTree = "<group>";
@@ -1066,6 +1069,7 @@
 				8D7BFD412B8229E2001CA0EE /* FocusMeApp.swift in Sources */,
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
 				05E983F12C634DF300393D08 /* FirestoreService.swift in Sources */,
+				8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */,
 				8D612F112C7B113600A565AB /* AllTypesCore.swift in Sources */,
 				8D1365AD2C72117200284DA7 /* HomeCoordinator.swift in Sources */,
 				05B7DC0E2C733ED700E43519 /* AppCore.swift in Sources */,

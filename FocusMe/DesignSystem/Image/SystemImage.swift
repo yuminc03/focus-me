@@ -9,6 +9,7 @@ enum SystemImage: String {
   case backArrow = "chevron.backward"
   case textBookClosed = "text.book.closed"
   case exclamationmarkCircleFill = "exclamationmark.circle.fill"
+  case checkmarkCircle = "checkmark.circle"
 }
 
 extension String {
