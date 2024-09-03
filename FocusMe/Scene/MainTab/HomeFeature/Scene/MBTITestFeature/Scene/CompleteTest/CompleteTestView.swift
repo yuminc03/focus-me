@@ -30,6 +30,7 @@ struct CompleteTestView: View {
       .navigationBarHidden(true)
       .onAppear {
         NotiManager.post(key: .hideTab)
+        store.send(._onAppear)
       }
     }
   }
