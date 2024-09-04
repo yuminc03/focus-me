@@ -14,6 +14,7 @@ final class TestAnswerInfo {
   var favoriteTrip: FavoriteTrip?
   /// 여행을 왔을 때 더 좋아하는 숙소
   var favoriteHotel: FavoriteHotel?
+  
   /// 친구를 만나러 갈 때 드는 생각
   var thinkWhenVisitFriend: ThinkWhenVisitFriend?
   /// 털 색깔이 특이하고 신기한 고양이를 본다면 드는 생각
@@ -24,6 +25,7 @@ final class TestAnswerInfo {
   var thinkWhenFindRetroCamera: ThinkWhenFindRetroCamera?
   /// 열린 결말 영화를 봤을 때 생각
   var thinkWhenWatchingOpenEndedMovie: ThinkWhenWatchingOpenEndedMovie?
+  
   /// 더 기분 좋은 칭찬
   var niceCompliment: NiceCompliment?
   /// 친구가 나에게 고민을 털어놓았을 때  반응
@@ -34,6 +36,7 @@ final class TestAnswerInfo {
   var whenDontLinkHairColor: WhenDontLinkHairColor?
   /// 친구가 회사에서 혼났다고 털어놓으면 해줄 말
   var howListenFriendProblem: HowListenFriendProblem?
+  
   /// 더 끌리는 장소
   var placeMoreAttract: PlaceMoreAttract?
   /// 자신을 더 설레게 하는 상황
@@ -44,6 +47,87 @@ final class TestAnswerInfo {
   var nextAfterMakePromise: NextAfterMakePromise?
   /// 파티 준비
   var myWayPartying: MyWayPartying?
+  
+  /// E 점수
+  var extraversionScore: Int {
+    var score = 0
+    
+    if momentOfEnergy == .together {
+      score += 1
+    }
+    
+    if takeHoliday == .meeting {
+      score += 1
+    }
+    
+    if feelWhenCrowded == .excited {
+      score += 1
+    }
+    
+    if favoriteTrip == .together {
+      score += 1
+    }
+    
+    if favoriteHotel == .group {
+      score += 1
+    }
+    
+    return score
+  }
+  
+  /// I 점수
+  var introversionScore: Int {
+    var score = 0
+    
+    if momentOfEnergy == .alone {
+      score += 1
+    }
+    
+    if takeHoliday == .rest {
+      score += 1
+    }
+    
+    if feelWhenCrowded == .energized {
+      score += 1
+    }
+    
+    if favoriteTrip == .alone {
+      score += 1
+    }
+    
+    if favoriteHotel == .friends {
+      score += 1
+    }
+    
+    return score
+  }
+  
+  /// S 점수
+  var sensingScore: Int {
+    var score = 0
+    
+    if thinkWhenVisitFriend == .calculateTime {
+      score += 1
+    }
+    
+    if thinkWhenInterestingCat == .curiosity {
+      score += 1
+    }
+    
+    if howToCook == .checkRecipe {
+      score += 1
+    }
+    
+    if thinkWhenFindRetroCamera == .verifying {
+      score += 1
+    }
+    
+    if thinkWhenWatchingOpenEndedMovie == .findEnding {
+      score += 1
+    }
+    
+    return score
+  }
   
   static let shared = TestAnswerInfo()
   

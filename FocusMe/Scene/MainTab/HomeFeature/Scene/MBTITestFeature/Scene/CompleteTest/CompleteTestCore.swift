@@ -4,6 +4,25 @@ import ComposableArchitecture
 
 @Reducer
 struct CompleteTestCore {
+  final class Score {
+    /// 외향
+    var extraversion = 0
+    /// 내향
+    var introversion = 0
+    /// 감각
+    var sensing = 0
+    /// 직관
+    var intuition = 0
+    /// 사고
+    var thinking = 0
+    /// 감정
+    var feeling = 0
+    /// 판단
+    var judging = 0
+    /// 인식
+    var perceiving = 0
+  }
+  
   @ObservableState
   struct State: Equatable {
     let id = UUID()
