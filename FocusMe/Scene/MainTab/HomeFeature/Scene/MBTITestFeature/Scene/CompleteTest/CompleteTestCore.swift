@@ -4,28 +4,31 @@ import ComposableArchitecture
 
 @Reducer
 struct CompleteTestCore {
-  final class Score {
+  /// MBTI 테스트 점수
+  struct Score: Equatable {
     /// 외향
-    var extraversion = 0
+    let extraversion: Int
     /// 내향
-    var introversion = 0
+    let introversion: Int
     /// 감각
-    var sensing = 0
+    let sensing: Int
     /// 직관
-    var intuition = 0
+    let intuition: Int
     /// 사고
-    var thinking = 0
+    let thinking: Int
     /// 감정
-    var feeling = 0
+    let feeling: Int
     /// 판단
-    var judging = 0
+    let judging: Int
     /// 인식
-    var perceiving = 0
+    let perceiving: Int
   }
   
   @ObservableState
   struct State: Equatable {
     let id = UUID()
+    
+    var score: Score?
   }
   
   @Dependency(\.testAnswerInfo) var testAnswerInfo
@@ -38,7 +41,7 @@ struct CompleteTestCore {
     case _calculateScore
     
     enum Delegate {
-      case myMBTIResult
+      case myMBTIResult(Score)
     }
   }
   
@@ -47,12 +50,24 @@ struct CompleteTestCore {
       switch action {
       case .delegate: break
       case .tapConfirmButton:
-        return .send(.delegate(.myMBTIResult))
+        guard let score = state.score else { break }
+        
+        return .send(.delegate(.myMBTIResult(score)))
         
       case ._onAppear:
         return .send(._calculateScore)
         
-      case ._calculateScore: break
+      case ._calculateScore:
+        state.score = Score(
+          extraversion: testAnswerInfo.extraversionScore,
+          introversion: testAnswerInfo.introversionScore,
+          sensing: testAnswerInfo.sensingScore,
+          intuition: testAnswerInfo.intuitionScore,
+          thinking: testAnswerInfo.thinkingScore, 
+          feeling: testAnswerInfo.feelingScore,
+          judging: testAnswerInfo.judgingScore, 
+          perceiving: testAnswerInfo.perceivingScore
+        )
       }
       
       return .none
