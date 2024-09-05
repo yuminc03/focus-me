@@ -48,6 +48,9 @@ final class TestAnswerInfo {
   /// 파티 준비
   var myWayPartying: MyWayPartying?
   
+  /// 사용자의 MBTI
+  var mbti: MBTI?
+  
   static let shared = TestAnswerInfo()
   
   private init() { }

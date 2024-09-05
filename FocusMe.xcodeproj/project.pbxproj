@@ -12,6 +12,7 @@
 		051846862C76F6EF00547E8E /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051846852C76F6EF00547E8E /* MBTI.swift */; };
 		051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA1C2C61B55D0090F466 /* SignUpView.swift */; };
 		051ABA232C61C1500090F466 /* FMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051ABA222C61C1500090F466 /* FMButton.swift */; };
+		0532E3472C899B50004CF32F /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0532E3462C899B50004CF32F /* TestResultView.swift */; };
 		0532E3492C899D28004CF32F /* MBTITestScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0532E3482C899D28004CF32F /* MBTITestScore.swift */; };
 		053B702E2C6B3F76001DBF90 /* FMAlertContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B702D2C6B3F76001DBF90 /* FMAlertContainer.swift */; };
 		053B70312C6B40C9001DBF90 /* FMAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B70302C6B40C9001DBF90 /* FMAlertButton.swift */; };
@@ -143,6 +144,7 @@
 		051846852C76F6EF00547E8E /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
 		051ABA1C2C61B55D0090F466 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		051ABA222C61C1500090F466 /* FMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMButton.swift; sourceTree = "<group>"; };
+		0532E3462C899B50004CF32F /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 		0532E3482C899D28004CF32F /* MBTITestScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestScore.swift; sourceTree = "<group>"; };
 		053B702D2C6B3F76001DBF90 /* FMAlertContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMAlertContainer.swift; sourceTree = "<group>"; };
 		053B70302C6B40C9001DBF90 /* FMAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMAlertButton.swift; sourceTree = "<group>"; };
@@ -312,6 +314,14 @@
 				051ABA222C61C1500090F466 /* FMButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		0532E3442C899A7E004CF32F /* TestResult */ = {
+			isa = PBXGroup;
+			children = (
+				0532E3462C899B50004CF32F /* TestResultView.swift */,
+			);
+			path = TestResult;
 			sourceTree = "<group>";
 		};
 		053B702C2C6B3C6A001DBF90 /* Alert */ = {
@@ -514,6 +524,7 @@
 				05F344A02C7C6F0A00103D88 /* TestMain */,
 				8D4860412C7CC07A00166C87 /* MBTITestQuestion */,
 				05685A2D2C85A9020034C124 /* CompleteTest */,
+				0532E3442C899A7E004CF32F /* TestResult */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1097,6 +1108,7 @@
 				053B70312C6B40C9001DBF90 /* FMAlertButton.swift in Sources */,
 				0532E3492C899D28004CF32F /* MBTITestScore.swift in Sources */,
 				05B7DC042C733B7800E43519 /* LoginCoordinator.swift in Sources */,
+				0532E3472C899B50004CF32F /* TestResultView.swift in Sources */,
 				8D1365AF2C7211C000284DA7 /* HomeScreen.swift in Sources */,
 				8D4860482C7CC92200166C87 /* SelectionButton.swift in Sources */,
 				8D4A71432C7F619700AA9DD4 /* TestAnswerInfo.swift in Sources */,
