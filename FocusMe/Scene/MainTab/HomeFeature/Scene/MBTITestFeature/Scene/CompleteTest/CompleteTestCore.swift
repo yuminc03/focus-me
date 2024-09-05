@@ -4,31 +4,11 @@ import ComposableArchitecture
 
 @Reducer
 struct CompleteTestCore {
-  /// MBTI 테스트 점수
-  struct Score: Equatable {
-    /// 외향
-    let extraversion: Int
-    /// 내향
-    let introversion: Int
-    /// 감각
-    let sensing: Int
-    /// 직관
-    let intuition: Int
-    /// 사고
-    let thinking: Int
-    /// 감정
-    let feeling: Int
-    /// 판단
-    let judging: Int
-    /// 인식
-    let perceiving: Int
-  }
-  
   @ObservableState
   struct State: Equatable {
     let id = UUID()
     
-    var score: Score?
+    var score: MBTITestScore?
   }
   
   @Dependency(\.testAnswerInfo) var testAnswerInfo
@@ -41,7 +21,7 @@ struct CompleteTestCore {
     case _calculateScore
     
     enum Delegate {
-      case myMBTIResult(Score)
+      case myMBTIResult(MBTITestScore)
     }
   }
   
@@ -58,7 +38,7 @@ struct CompleteTestCore {
         return .send(._calculateScore)
         
       case ._calculateScore:
-        state.score = Score(
+        state.score = MBTITestScore(
           extraversion: testAnswerInfo.extraversionScore,
           introversion: testAnswerInfo.introversionScore,
           sensing: testAnswerInfo.sensingScore,
