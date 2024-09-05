@@ -86,9 +86,11 @@ struct TestResultView: View {
   
   var body: some View {
     WithPerceptionTracking {
-      VStack(spacing: 20) {
+      VStack(spacing: 30) {
         TitleSection
           .padding(.top, 56)
+        
+        ScoreProgressBarSection
       }
       .padding(.horizontal, 20)
       .backgroundColor()
@@ -108,32 +110,53 @@ private extension TestResultView {
         .frame(maxWidth: .infinity, alignment: .leading)
       
       Text(
-        "\(store.mbti)"
+        "\(store.mbti.name)"
           .attributedString(
-            color: .skyBlueTheme,
+            color: .skyblue,
             fontName: .notoSansKRBlack,
             fontSize: 24
           ) +
         "입니다~! 🎉"
       )
       .frame(maxWidth: .infinity, alignment: .leading)
-      .customFont(.notoSansKRSemiBold, size: 24)
     }
+    .customFont(.notoSansKRSemiBold, size: 24)
     .foregroundColor(.deepPurple)
   }
   
   var ScoreProgressBarSection: some View {
     VStack(alignment: .leading, spacing: 20) {
       Text("나의 성향은 얼마나 확실할까?")
-        .customFont(size: 16)
+        .customFont(.notoSansKRMedium, size: 16)
         .frame(maxWidth: .infinity, alignment: .leading)
       
-      ProgressView(
-        "\(store.score.extraversion > store.score.introversion ? "E" : "I")",
-        value: store.energyScore,
-        total: 5
-      )
+      VStack(spacing: 10) {
+        ProgressView(
+          "\(store.score.extraversion > store.score.introversion ? "E" : "I"): \(Int(store.energyScore) * 20)%",
+          value: store.energyScore,
+          total: 5
+        )
+        
+        ProgressView(
+          "\(store.score.sensing > store.score.intuition ? "S" : "N"): \(Int(store.informationScore) * 20)%",
+          value: store.informationScore,
+          total: 5
+        )
+        
+        ProgressView(
+          "\(store.score.thinking > store.score.feeling ? "T" : "F"): \(Int(store.decisionScore) * 20)%",
+          value: store.decisionScore,
+          total: 5
+        )
+        
+        ProgressView(
+          "\(store.score.judging > store.score.perceiving ? "J" : "P"): \(Int(store.lifeStyleScore) * 20)%",
+          value: store.lifeStyleScore,
+          total: 5
+        )
+      }
     }
+    .foregroundColor(.deepPurple)
   }
 }
 
