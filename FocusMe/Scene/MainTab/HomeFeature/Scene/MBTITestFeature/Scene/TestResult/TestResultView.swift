@@ -53,7 +53,23 @@ struct TestResultCore {
           state.energyScore = CGFloat(state.score.introversion)
         }
         
+        if state.score.sensing > state.score.intuition {
+          state.informationScore = CGFloat(state.score.sensing)
+        } else {
+          state.informationScore = CGFloat(state.score.intuition)
+        }
         
+        if state.score.thinking > state.score.feeling {
+          state.decisionScore = CGFloat(state.score.thinking)
+        } else {
+          state.decisionScore = CGFloat(state.score.feeling)
+        }
+        
+        if state.score.judging > state.score.perceiving {
+          state.lifeStyleScore = CGFloat(state.score.judging)
+        } else {
+          state.lifeStyleScore = CGFloat(state.score.perceiving)
+        }
       }
       
       return .none
