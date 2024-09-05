@@ -48,6 +48,12 @@ final class TestAnswerInfo {
   /// 파티 준비
   var myWayPartying: MyWayPartying?
   
+  static let shared = TestAnswerInfo()
+  
+  private init() { }
+}
+
+extension TestAnswerInfo {
   /// E 점수
   var extraversionScore: Int {
     var score = 0
@@ -129,9 +135,140 @@ final class TestAnswerInfo {
     return score
   }
   
-  static let shared = TestAnswerInfo()
+  /// N 점수
+  var intuitionScore: Int {
+    var score = 0
+    
+    if thinkWhenVisitFriend == .imagine {
+      score += 1
+    }
+    
+    if thinkWhenInterestingCat == .feelingLucky {
+      score += 1
+    }
+    
+    if howToCook == .intuition {
+      score += 1
+    }
+    
+    if thinkWhenFindRetroCamera == .imagining {
+      score += 1
+    }
+    
+    if thinkWhenWatchingOpenEndedMovie == .imagineStory {
+      score += 1
+    }
+    
+    return score
+  }
   
-  private init() { }
+  /// T 점수
+  var thinkingScore: Int {
+    var score = 0
+    
+    if niceCompliment == .resolved {
+      score += 1
+    }
+    
+    if reactionToWorry == .offeringSolution {
+      score += 1
+    }
+    
+    if howToFeelBetter == .trying {
+      score += 1
+    }
+    
+    if whenDontLinkHairColor == .honest {
+      score += 1
+    }
+    
+    if howListenFriendProblem == .reason {
+      score += 1
+    }
+    
+    return score
+  }
+  
+  /// F 점수
+  var feelingScore: Int {
+    var score = 0
+    
+    if niceCompliment == .warmPerson {
+      score += 1
+    }
+    
+    if reactionToWorry == .empathize {
+      score += 1
+    }
+    
+    if howToFeelBetter == .sorry {
+      score += 1
+    }
+    
+    if whenDontLinkHairColor == .reflecting {
+      score += 1
+    }
+    
+    if howListenFriendProblem == .consolation {
+      score += 1
+    }
+    
+    return score
+  }
+  
+  /// J 점수
+  var judgingScore: Int {
+    var score = 0
+    
+    if placeMoreAttract == .scheduled {
+      score += 1
+    }
+    
+    if situationMoreExcited == .planned {
+      score += 1
+    }
+    
+    if descriptionCloserToMe == .consistent {
+      score += 1
+    }
+    
+    if nextAfterMakePromise == .advance {
+      score += 1
+    }
+    
+    if myWayPartying == .now {
+      score += 1
+    }
+    
+    return score
+  }
+  
+  /// P 점수
+  var perceivingScore: Int {
+    var score = 0
+    
+    if placeMoreAttract == .serendipity {
+      score += 1
+    }
+    
+    if situationMoreExcited == .unfamiliar {
+      score += 1
+    }
+    
+    if descriptionCloserToMe == .change {
+      score += 1
+    }
+    
+    if nextAfterMakePromise == .later {
+      score += 1
+    }
+    
+    if myWayPartying == .later {
+      score += 1
+    }
+    
+    return score
+  }
 }
 
 struct TestAnswerInfoKey: DependencyKey {
