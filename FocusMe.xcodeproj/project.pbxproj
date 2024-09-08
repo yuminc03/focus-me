@@ -66,6 +66,7 @@
 		8D2FB7002C6E44820086513D /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB6FF2C6E44820086513D /* Image+.swift */; };
 		8D2FB7062C6E46580086513D /* RoundedContainerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
+		8D46DF312C8DD52100FB2AA5 /* TestResultCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46DF302C8DD52100FB2AA5 /* TestResultCore.swift */; };
 		8D4860382C7CB7B500166C87 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4860372C7CB7B500166C87 /* String+.swift */; };
 		8D48603C2C7CBE2500166C87 /* TestMainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48603B2C7CBE2500166C87 /* TestMainCore.swift */; };
 		8D4860402C7CC07600166C87 /* MBTITestQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48603F2C7CC07600166C87 /* MBTITestQuestionView.swift */; };
@@ -190,6 +191,7 @@
 		8D2FB6FC2C6E44010086513D /* SystemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
 		8D2FB6FF2C6E44820086513D /* Image+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedContainerButton.swift; sourceTree = "<group>"; };
+		8D46DF302C8DD52100FB2AA5 /* TestResultCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCore.swift; sourceTree = "<group>"; };
 		8D4860372C7CB7B500166C87 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		8D48603B2C7CBE2500166C87 /* TestMainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainCore.swift; sourceTree = "<group>"; };
 		8D48603F2C7CC07600166C87 /* MBTITestQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestQuestionView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				0532E3462C899B50004CF32F /* TestResultView.swift */,
+				8D46DF302C8DD52100FB2AA5 /* TestResultCore.swift */,
 			);
 			path = TestResult;
 			sourceTree = "<group>";
@@ -1044,6 +1047,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D46DF312C8DD52100FB2AA5 /* TestResultCore.swift in Sources */,
 				05B7DC002C733A9C00E43519 /* SignUpCore.swift in Sources */,
 				8DEB88E42C845B19001AB88A /* MomentOfEnergy.swift in Sources */,
 				0564D9462C63126400102A44 /* AppDelegate.swift in Sources */,

@@ -2,81 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct TestResultCore {
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-    
-    let score: MBTITestScore
-    var mbti: MBTI = .istj
-    
-    /// 에너지의 방향
-    var energyScore: CGFloat = 0
-    /// 인식기능
-    var informationScore: CGFloat = 0
-    /// 판단기능
-    var decisionScore: CGFloat = 0
-    /// 생활양식
-    var lifeStyleScore: CGFloat = 0
-  }
-  
-  @Dependency(\.testAnswerInfo) var testAnswerInfo
-  
-  enum Action {
-    case _onAppear
-    case _getMBTI
-    case _getTestScore
-  }
-  
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      switch action {
-      case ._onAppear:
-        return .run { send in
-          await send(._getMBTI)
-          await send(._getTestScore)
-        }
-        
-      case ._getMBTI:
-        guard let mbti = testAnswerInfo.mbti else { 
-          print("MBTI가 없습니다.")
-          break
-        }
-        
-        state.mbti = mbti
-        
-      case ._getTestScore:
-        if state.score.extraversion > state.score.introversion {
-          state.energyScore = CGFloat(state.score.extraversion)
-        } else {
-          state.energyScore = CGFloat(state.score.introversion)
-        }
-        
-        if state.score.sensing > state.score.intuition {
-          state.informationScore = CGFloat(state.score.sensing)
-        } else {
-          state.informationScore = CGFloat(state.score.intuition)
-        }
-        
-        if state.score.thinking > state.score.feeling {
-          state.decisionScore = CGFloat(state.score.thinking)
-        } else {
-          state.decisionScore = CGFloat(state.score.feeling)
-        }
-        
-        if state.score.judging > state.score.perceiving {
-          state.lifeStyleScore = CGFloat(state.score.judging)
-        } else {
-          state.lifeStyleScore = CGFloat(state.score.perceiving)
-        }
-      }
-      
-      return .none
-    }
-  }
-}
-
 struct TestResultView: View {
   @Perception.Bindable private var store: StoreOf<TestResultCore>
   
@@ -86,13 +11,21 @@ struct TestResultView: View {
   
   var body: some View {
     WithPerceptionTracking {
-      VStack(spacing: 30) {
-        TitleSection
-          .padding(.top, 56)
-        
-        ScoreProgressBarSection
+      ScrollView {
+        VStack(spacing: 30) {
+          TitleSection
+            .padding(.top, 56)
+          
+          ScoreProgressBarSection
+          DispositionSection
+          StrengthSection
+          WeakPointSection
+          AdviceSection
+          ConfirmButton
+            .padding(.vertical, 20)
+        }
+        .padding(.horizontal, 20)
       }
-      .padding(.horizontal, 20)
       .backgroundColor()
       .navigationBarHidden(true)
       .onAppear {
@@ -105,29 +38,28 @@ struct TestResultView: View {
 
 private extension TestResultView {
   var TitleSection: some View {
-    VStack(spacing: 10) {
-      Text("당신의 MBTI는 ...")
+    VStack(spacing: 0) {
+      Text("당신의 MBTI는...")
         .frame(maxWidth: .infinity, alignment: .leading)
       
       Text(
         "\(store.mbti.name)"
           .attributedString(
-            color: .skyblue,
-            fontName: .notoSansKRBlack,
-            fontSize: 24
-          ) +
-        "입니다~! 🎉"
+            color: .white,
+            fontName: .notoSansKRSemiBold,
+            fontSize: 36
+          ) + "입니다~! 🎉"
       )
       .frame(maxWidth: .infinity, alignment: .leading)
     }
-    .customFont(.notoSansKRSemiBold, size: 24)
+    .customFont(.notoSansKRSemiBold, size: 32)
     .foregroundColor(.deepPurple)
   }
   
   var ScoreProgressBarSection: some View {
     VStack(alignment: .leading, spacing: 20) {
       Text("나의 성향은 얼마나 확실할까?")
-        .customFont(.notoSansKRMedium, size: 16)
+        .customFont(.notoSansKRMedium, size: 20)
         .frame(maxWidth: .infinity, alignment: .leading)
       
       VStack(spacing: 10) {
@@ -158,10 +90,85 @@ private extension TestResultView {
     }
     .foregroundColor(.deepPurple)
   }
+  
+  var DispositionSection: some View {
+    VStack(alignment: .leading, spacing: 20) {
+      Text("\(store.mbti.description), \(store.mbti.name)")
+        .customFont(.notoSansKRMedium, size: 20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .foregroundColor(.deepPurple)
+      
+      Text(store.mbti.disposition)
+        .foregroundColor(.textPrimary1)
+        .customFont(size: 16)
+    }
+  }
+  
+  var StrengthSection: some View {
+    VStack(alignment: .leading, spacing: 20) {
+      Text("\(store.mbti.name)의 장점")
+        .customFont(.notoSansKRMedium, size: 20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .foregroundColor(.deepPurple)
+      
+      VStack(alignment: .leading, spacing: 10) {
+        ForEach(0 ..< store.mbti.strengths.count, id: \.self) { index in
+          Text("☀️ \(store.mbti.strengths[index])")
+            .foregroundColor(.textPrimary1)
+            .customFont(size: 16)
+        }
+      }
+    }
+  }
+  
+  var WeakPointSection: some View {
+    VStack(alignment: .leading, spacing: 20) {
+      Text("\(store.mbti.name)의 약점")
+        .customFont(.notoSansKRMedium, size: 20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .foregroundColor(.deepPurple)
+      
+      VStack(alignment: .leading, spacing: 10) {
+        ForEach(0 ..< store.mbti.strengths.count, id: \.self) { index in
+          Text("☁️ \(store.mbti.strengths[index])")
+            .foregroundColor(.textPrimary1)
+            .customFont(size: 16)
+        }
+      }
+    }
+  }
+  
+  var AdviceSection: some View {
+    VStack(alignment: .leading, spacing: 20) {
+      Text("\(store.mbti.name)에게 하는 조언")
+        .customFont(.notoSansKRMedium, size: 20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .foregroundColor(.deepPurple)
+      
+      Text("💡 \(store.mbti.advice)")
+        .foregroundColor(.textPrimary1)
+        .customFont(size: 16)
+    }
+  }
+  
+  var ConfirmButton: some View {
+    FMButton(title: "확인했습니다.") {
+      store.send(.tapConfirmButton)
+    }
+  }
 }
 
 #Preview {
-  TestResultView(store: .init(initialState: .init(score: .init(extraversion: 0, introversion: 0, sensing: 0, intuition: 0, thinking: 0, feeling: 0, judging: 0, perceiving: 0))) {
+  TestResultView(store: .init(initialState: .init(score: .init(
+    extraversion: 0,
+    introversion: 0,
+    sensing: 0,
+    intuition: 0,
+    thinking: 0,
+    feeling: 0,
+    judging: 0,
+    perceiving: 0
+  ))) {
     TestResultCore()
   })
 }

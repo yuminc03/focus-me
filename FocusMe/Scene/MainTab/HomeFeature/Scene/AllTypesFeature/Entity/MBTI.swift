@@ -120,7 +120,7 @@ enum MBTI: String, CaseIterable {
   }
   
   /// 강점
-  var strength: [String] {
+  var strengths: [String] {
     switch self {
     case .istj:
       return [
@@ -237,7 +237,7 @@ enum MBTI: String, CaseIterable {
   }
   
   /// 약점
-  var weakPoint: [String] {
+  var weakPoints: [String] {
     switch self {
     case .istj:
       return [
