@@ -67,6 +67,9 @@
 		8D2FB7062C6E46580086513D /* RoundedContainerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */; };
 		8D3C6BE22BA5E69200F44AB7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3C6BE12BA5E69200F44AB7 /* CombineCocoa */; };
 		8D46DF312C8DD52100FB2AA5 /* TestResultCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46DF302C8DD52100FB2AA5 /* TestResultCore.swift */; };
+		8D46DF342C8DD95900FB2AA5 /* MBTITestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46DF332C8DD95900FB2AA5 /* MBTITestResult.swift */; };
+		8D46DF3B2C8DDC2300FB2AA5 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46DF3A2C8DDC2300FB2AA5 /* SignUpRepository.swift */; };
+		8D46DF3D2C8DDDFE00FB2AA5 /* MBTIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46DF3C2C8DDDFE00FB2AA5 /* MBTIRepository.swift */; };
 		8D4860382C7CB7B500166C87 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4860372C7CB7B500166C87 /* String+.swift */; };
 		8D48603C2C7CBE2500166C87 /* TestMainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48603B2C7CBE2500166C87 /* TestMainCore.swift */; };
 		8D4860402C7CC07600166C87 /* MBTITestQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48603F2C7CC07600166C87 /* MBTITestQuestionView.swift */; };
@@ -192,6 +195,9 @@
 		8D2FB6FF2C6E44820086513D /* Image+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		8D2FB7052C6E46580086513D /* RoundedContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedContainerButton.swift; sourceTree = "<group>"; };
 		8D46DF302C8DD52100FB2AA5 /* TestResultCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCore.swift; sourceTree = "<group>"; };
+		8D46DF332C8DD95900FB2AA5 /* MBTITestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestResult.swift; sourceTree = "<group>"; };
+		8D46DF3A2C8DDC2300FB2AA5 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		8D46DF3C2C8DDDFE00FB2AA5 /* MBTIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIRepository.swift; sourceTree = "<group>"; };
 		8D4860372C7CB7B500166C87 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		8D48603B2C7CBE2500166C87 /* TestMainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainCore.swift; sourceTree = "<group>"; };
 		8D48603F2C7CC07600166C87 /* MBTITestQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestQuestionView.swift; sourceTree = "<group>"; };
@@ -321,8 +327,8 @@
 		0532E3442C899A7E004CF32F /* TestResult */ = {
 			isa = PBXGroup;
 			children = (
-				0532E3462C899B50004CF32F /* TestResultView.swift */,
 				8D46DF302C8DD52100FB2AA5 /* TestResultCore.swift */,
+				0532E3462C899B50004CF32F /* TestResultView.swift */,
 			);
 			path = TestResult;
 			sourceTree = "<group>";
@@ -382,13 +388,6 @@
 				8D1365AB2C72116000284DA7 /* Scene */,
 			);
 			path = HomeFeature;
-			sourceTree = "<group>";
-		};
-		05B7D6F52C69DBAB00E36771 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		05BD4A7A2C64A9CF00F5ED99 /* Entity */ = {
@@ -678,6 +677,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		8D46DF392C8DDC1000FB2AA5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8D46DF3A2C8DDC2300FB2AA5 /* SignUpRepository.swift */,
+				8D46DF3C2C8DDDFE00FB2AA5 /* MBTIRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		8D4860412C7CC07A00166C87 /* MBTITestQuestion */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,6 +712,7 @@
 				8D4A71422C7F619700AA9DD4 /* TestAnswerInfo.swift */,
 				8DEB89152C84975F001AB88A /* MBTITestStep.swift */,
 				0532E3482C899D28004CF32F /* MBTITestScore.swift */,
+				8D46DF332C8DD95900FB2AA5 /* MBTITestResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -826,7 +835,7 @@
 		8DA40F002BB05BE600A7D271 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				05B7D6F52C69DBAB00E36771 /* Repository */,
+				8D46DF392C8DDC1000FB2AA5 /* Repository */,
 				05E983E82C63385F00393D08 /* Extension */,
 				8DA40F012BB05BEF00A7D271 /* Entity */,
 			);
@@ -1050,6 +1059,7 @@
 				8D46DF312C8DD52100FB2AA5 /* TestResultCore.swift in Sources */,
 				05B7DC002C733A9C00E43519 /* SignUpCore.swift in Sources */,
 				8DEB88E42C845B19001AB88A /* MomentOfEnergy.swift in Sources */,
+				8D46DF3B2C8DDC2300FB2AA5 /* SignUpRepository.swift in Sources */,
 				0564D9462C63126400102A44 /* AppDelegate.swift in Sources */,
 				8D1365A92C72106300284DA7 /* MyInfoView.swift in Sources */,
 				8DEB88E72C845BA3001AB88A /* TakeHoliday.swift in Sources */,
@@ -1091,6 +1101,7 @@
 				8D612F112C7B113600A565AB /* AllTypesCore.swift in Sources */,
 				8D1365AD2C72117200284DA7 /* HomeCoordinator.swift in Sources */,
 				05B7DC0E2C733ED700E43519 /* AppCore.swift in Sources */,
+				8D46DF342C8DD95900FB2AA5 /* MBTITestResult.swift in Sources */,
 				05B7DC082C733BA400E43519 /* LoginCore.swift in Sources */,
 				05F344A22C7C6F1B00103D88 /* TestMainView.swift in Sources */,
 				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
@@ -1136,6 +1147,7 @@
 				8D1365B62C721E2D00284DA7 /* MyInfoScreen.swift in Sources */,
 				8DEB88FB2C84623D001AB88A /* NiceCompliment.swift in Sources */,
 				8DEB88FE2C84627C001AB88A /* ReactionToWorry.swift in Sources */,
+				8D46DF3D2C8DDDFE00FB2AA5 /* MBTIRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
