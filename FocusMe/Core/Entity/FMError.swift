@@ -4,6 +4,7 @@ import Foundation
 enum FMError: LocalizedError {
   case login(LoginError)
   case signup(SignUpError)
+  case mbti(MBTIError)
   case unknown(String)
   
   var errorDescription: String? {
@@ -11,6 +12,8 @@ enum FMError: LocalizedError {
     case let .login(error):
       return error.message
     case let .signup(error):
+      return error.message
+    case let .mbti(error):
       return error.message
     case let .unknown(message):
       return message
@@ -71,6 +74,17 @@ enum FMError: LocalizedError {
         return "너무 약한 비밀번호입니다"
       case let .unknown(message):
         return message ?? "알 수 없는 회원가입 오류"
+      }
+    }
+  }
+  
+  enum MBTIError {
+    case unknown(String? = nil)
+    
+    var message: String {
+      switch self {
+      case let .unknown(message):
+        return message ?? "알 수 없는 로그인 오류"
       }
     }
   }

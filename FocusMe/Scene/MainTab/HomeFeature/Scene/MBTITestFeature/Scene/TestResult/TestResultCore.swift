@@ -23,18 +23,24 @@ struct TestResultCore {
   
   @Dependency(\.testAnswerInfo) var testAnswerInfo
   
+  private let mbtiRepo = MBTIRepository()
+  
   enum Action {
     case tapConfirmButton
     
     case _onAppear
     case _getMBTI
     case _getTestScore
+    case _requestSaveMBTI
+    case _saveMBTIResponse(Result<Int, FMError>)
   }
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .tapConfirmButton: break
+      case .tapConfirmButton:
+        return .send(._requestSaveMBTI)
+        
       case ._onAppear:
         return .run { send in
           await send(._getMBTI)
@@ -73,6 +79,31 @@ struct TestResultCore {
         } else {
           state.lifeStyleScore = CGFloat(state.score.perceiving)
         }
+        
+      case ._requestSaveMBTI:
+        guard let uid = UserInfo.shared.uid else {
+          print("로그인한 사용자가 없습니다.")
+          break
+        }
+        
+        let entity = MBTITestResult(
+          id: uid, 
+          mbti: state.mbti.rawValue,
+          energyScore: Int(state.energyScore),
+          informationScore: Int(state.informationScore),
+          decisionScore: Int(state.decisionScore),
+          lifeStyleScore: Int(state.lifeStyleScore)
+        )
+        return .run { send in
+          try await mbtiRepo.saveMBTIResult(target: .saveMBTIResult(entity))
+          await send(._saveMBTIResponse(.success(0)))
+        } catch: { error, send in
+          await send(._saveMBTIResponse(.failure(error.toFMError)))
+        }
+        
+      case ._saveMBTIResponse(.success): break
+      case let ._saveMBTIResponse(.failure(error)):
+        print(error.localizedDescription)
       }
       
       return .none

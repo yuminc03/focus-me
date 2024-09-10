@@ -3,6 +3,7 @@ import Foundation
 final class UserInfo {
   static let shared = UserInfo()
   
+  var uid: String?
   var email: String?
   var name: String?
   
@@ -14,6 +15,7 @@ final class UserInfo {
   }
   
   func logout() {
+    uid = nil
     email = nil
     name = nil
   }

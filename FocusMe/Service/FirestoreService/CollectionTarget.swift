@@ -1,5 +1,7 @@
 import Foundation
 
+import FirebaseFirestore
+
 protocol FirestoreProtocol {
   var collection: CollectionTarget.Collection { get }
   var documentID: String { get }

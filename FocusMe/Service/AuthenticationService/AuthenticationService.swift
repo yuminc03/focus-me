@@ -70,6 +70,7 @@ final class AuthenticationService {
       _ = Auth.auth().addStateDidChangeListener { auth, user in
         if let user {
           print("현재 로그인한 사용자 발견!")
+          UserInfo.shared.uid = user.uid
           UserInfo.shared.email = user.email
           UserInfo.shared.name = user.displayName
           continuation.resume(with: .success(()))
