@@ -29,7 +29,8 @@ struct SignUpCore {
   }
   
   @Dependency(\.authenticationService) var authenticationService
-  @Dependency(\.firestoreService) var firestoreService
+  
+  private let signUpRepo = SignUpRepository()
   
   enum Action: BindableAction {
     case binding(BindingAction<State>)
@@ -103,7 +104,8 @@ struct SignUpCore {
             password: state.password,
             name: state.name
           )
-          try await firestoreService.save(target: .signup(userEntity))
+          
+          try await signUpRepo.signup(target: .signup(userEntity))
           await send(._signUpResponse(.success(0)))
         } catch: { error, send in
           await send(._signUpResponse(.failure(error.toFMError)))

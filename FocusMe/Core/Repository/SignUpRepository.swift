@@ -4,7 +4,9 @@ import FirebaseFirestore
 
 final class SignUpRepository {
   /// 회원가입
-  func signup(target: CollectionTarget, collection: DocumentReference) async throws {
+  func signup(target: CollectionTarget) async throws {
+    let collection = Firestore.firestore().collection(target.collection.rawValue).document(target.documentID)
+    
     return try await withCheckedThrowingContinuation { continuation in
       do {
         try collection.setData(from: target.data) { error in
