@@ -20,18 +20,23 @@ struct MBTITestCoordinator {
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-        // testMain
+        // MARK: - testMain
+        
+        // MBTI 테스트 화면으로 들어옴
       case .router(.routeAction(id: _, action: .testMain(.delegate(.momentOfEnergy)))):
         state.routes.push(.mbtiTestQuestion(.init(
           question: mbtiTestStep.currentStep,
           pastAnswers: mbtiTestStep.currentStep.selection
         )))
         
-        // mbtiTestQuestion
+        // MARK: - mbtiTestQuestion
+        
+        // MBTI 테스트를 하다가 이전 질문으로 돌아갈 때
       case .router(.routeAction(id: _, action: .mbtiTestQuestion(.delegate(.back)))):
         mbtiTestStep.backStep()
         state.routes.pop()
         
+        // MBTI 테스트를 하면서 다음 질문으로 넘어갔을 때
       case let .router(.routeAction(id: _, action: .mbtiTestQuestion(.delegate(.next(entity))))):
         guard let question = mbtiTestStep.nextStep() else { return .none }
         if mbtiTestStep.currentStep == .myWayPartying {
@@ -41,6 +46,18 @@ struct MBTITestCoordinator {
           // 테스트 진행 단계 -> 다음 단계 페이지
           state.routes.push(.mbtiTestQuestion(.init(question: question, pastAnswers: question.selection)))
         }
+        
+        // MARK: - completeTest
+        
+        // MBTI 테스트 완료화면에서 결과화면으로 들어옴
+      case let .router(.routeAction(id: _, action: .completeTest(.delegate(.myMBTIResult(score))))):
+        state.routes.push(.testResult(.init(score: score)))
+        
+        // MARK: - testResult
+        
+        // MBTI 테스트 결과를 본 후 홈 화면으로 돌아옴
+      case .router(.routeAction(id: _, action: .testResult(.delegate(.home)))):
+        state.routes.popToRoot()
         
       default: break
       }
@@ -79,6 +96,13 @@ struct MBTITestCoordinatorView: View {
             \MBTITestScreen.State.completeTest,
              action: MBTITestScreen.Action.completeTest,
              then: CompleteTestView.init
+          )
+          
+        case .testResult:
+          CaseLet(
+            \MBTITestScreen.State.testResult, 
+             action: MBTITestScreen.Action.testResult,
+             then: TestResultView.init
           )
         }
       }

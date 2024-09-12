@@ -8,6 +8,7 @@ struct MBTITestScreen {
     case testMain(TestMainCore.State)
     case mbtiTestQuestion(MBTITestQuestionCore.State)
     case completeTest(CompleteTestCore.State)
+    case testResult(TestResultCore.State)
     
     var id: UUID {
       switch self {
@@ -19,6 +20,9 @@ struct MBTITestScreen {
         
       case let .completeTest(state):
         return state.id
+        
+      case let .testResult(state):
+        return state.id
       }
     }
   }
@@ -27,6 +31,7 @@ struct MBTITestScreen {
     case testMain(TestMainCore.Action)
     case mbtiTestQuestion(MBTITestQuestionCore.Action)
     case completeTest(CompleteTestCore.Action)
+    case testResult(TestResultCore.Action)
   }
   
   var body: some ReducerOf<Self> {
@@ -38,6 +43,9 @@ struct MBTITestScreen {
     }
     Scope(state: \.completeTest, action: \.completeTest) {
       CompleteTestCore()
+    }
+    Scope(state: \.testResult, action: \.testResult) {
+      TestResultCore()
     }
   }
 }
