@@ -26,6 +26,7 @@ struct TestResultCore {
   private let mbtiRepo = MBTIRepository()
   
   enum Action {
+    case delegate(Delegate)
     case tapConfirmButton
     
     case _onAppear
@@ -33,11 +34,16 @@ struct TestResultCore {
     case _getTestScore
     case _requestSaveMBTI
     case _saveMBTIResponse(Result<Int, FMError>)
+    
+    enum Delegate {
+      case home
+    }
   }
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
+      case .delegate: break
       case .tapConfirmButton:
         return .send(._requestSaveMBTI)
         
@@ -88,7 +94,7 @@ struct TestResultCore {
         
         let entity = MBTITestResult(
           id: uid, 
-          mbti: state.mbti.rawValue,
+          mbti: state.mbti.name,
           energyScore: Int(state.energyScore),
           informationScore: Int(state.informationScore),
           decisionScore: Int(state.decisionScore),
@@ -101,7 +107,9 @@ struct TestResultCore {
           await send(._saveMBTIResponse(.failure(error.toFMError)))
         }
         
-      case ._saveMBTIResponse(.success): break
+      case ._saveMBTIResponse(.success):
+        return .send(.delegate(.home))
+        
       case let ._saveMBTIResponse(.failure(error)):
         print(error.localizedDescription)
       }
