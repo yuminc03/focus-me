@@ -53,12 +53,6 @@ struct MBTITestCoordinator {
       case let .router(.routeAction(id: _, action: .completeTest(.delegate(.myMBTIResult(score))))):
         state.routes.push(.testResult(.init(score: score)))
         
-        // MARK: - testResult
-        
-        // MBTI 테스트 결과를 본 후 홈 화면으로 돌아옴
-      case .router(.routeAction(id: _, action: .testResult(.delegate(.home)))):
-        state.routes.popToRoot()
-        
       default: break
       }
       
