@@ -120,6 +120,7 @@
 		8DEB890C2C84651A001AB88A /* NextAfterMakePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */; };
 		8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB890D2C846558001AB88A /* MyWayPartying.swift */; };
 		8DEB89162C84975F001AB88A /* MBTITestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB89152C84975F001AB88A /* MBTITestStep.swift */; };
+		8DF249202C95CE8700E93456 /* OfficialMBTIMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */; };
 		8DF5DD302C81A7C9007E8EF0 /* MBTIAnswerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */; };
 		8DF728BE2BB992AD00F90F1F /* CustomPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -251,6 +252,7 @@
 		8DEB890B2C84651A001AB88A /* NextAfterMakePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextAfterMakePromise.swift; sourceTree = "<group>"; };
 		8DEB890D2C846558001AB88A /* MyWayPartying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWayPartying.swift; sourceTree = "<group>"; };
 		8DEB89152C84975F001AB88A /* MBTITestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestStep.swift; sourceTree = "<group>"; };
+		8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialMBTIMainView.swift; sourceTree = "<group>"; };
 		8DF5DD2F2C81A7C9007E8EF0 /* MBTIAnswerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIAnswerEntity.swift; sourceTree = "<group>"; };
 		8DF728BD2BB992AD00F90F1F /* CustomPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -598,6 +600,7 @@
 				05F3448C2C7BF85300103D88 /* HomeMain */,
 				05F344942C7C6CBE00103D88 /* MBTITestFeature */,
 				8D1365902C70DAA300284DA7 /* AllTypesFeature */,
+				8DF2491B2C95CE1E00E93456 /* OfficialMBTIFeature */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -862,6 +865,23 @@
 				8DDC07D02BCD6D250019D478 /* NotoSansKR-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8DF2491B2C95CE1E00E93456 /* OfficialMBTIFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2491C2C95CE3800E93456 /* Coordinator */,
+				8DF2491D2C95CE5400E93456 /* Scene */,
+			);
+			path = OfficialMBTIFeature;
+			sourceTree = "<group>";
+		};
+		8DF2491D2C95CE5400E93456 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		8DF5DD2E2C81A6DE007E8EF0 /* Entity */ = {
@@ -1139,6 +1159,7 @@
 				055022962C65E9A80031330E /* FMError.swift in Sources */,
 				05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */,
 				8DEB88EF2C8460A0001AB88A /* ThinkWhenVisitFriend.swift in Sources */,
+				8DF249202C95CE8700E93456 /* OfficialMBTIMainView.swift in Sources */,
 				8D2FB7062C6E46580086513D /* RoundedContainerButton.swift in Sources */,
 				8D1365B62C721E2D00284DA7 /* MyInfoScreen.swift in Sources */,
 				8DEB88FB2C84623D001AB88A /* NiceCompliment.swift in Sources */,
