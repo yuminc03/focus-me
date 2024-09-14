@@ -108,6 +108,7 @@ struct TestResultCore {
         }
         
       case ._saveMBTIResponse(.success):
+        testAnswerInfo.clear()
         return .send(.delegate(.home))
         
       case let ._saveMBTIResponse(.failure(error)):

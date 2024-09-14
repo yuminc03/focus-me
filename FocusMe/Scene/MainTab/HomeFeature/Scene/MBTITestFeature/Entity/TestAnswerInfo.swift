@@ -54,6 +54,30 @@ final class TestAnswerInfo {
   static let shared = TestAnswerInfo()
   
   private init() { }
+  
+  func clear() {
+    momentOfEnergy = nil
+    takeHoliday = nil
+    feelWhenCrowded = nil
+    favoriteTrip = nil
+    favoriteHotel = nil
+    thinkWhenVisitFriend = nil
+    thinkWhenInterestingCat = nil
+    howToCook = nil
+    thinkWhenFindRetroCamera = nil
+    thinkWhenWatchingOpenEndedMovie = nil
+    niceCompliment = nil
+    reactionToWorry = nil
+    howToFeelBetter = nil
+    whenDontLinkHairColor = nil
+    howListenFriendProblem = nil
+    placeMoreAttract = nil
+    situationMoreExcited = nil
+    descriptionCloserToMe = nil
+    nextAfterMakePromise = nil
+    myWayPartying = nil
+    mbti = nil
+  }
 }
 
 extension TestAnswerInfo {
