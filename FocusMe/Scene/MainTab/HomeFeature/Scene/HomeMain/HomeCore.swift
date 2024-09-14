@@ -19,6 +19,7 @@ struct HomeCore {
     enum Delegate {
       case mbtiTest
       case allTypes
+      case officialMBTI
     }
   }
   
@@ -32,7 +33,8 @@ struct HomeCore {
       case .tapSeeAllTypes:
         return .send(.delegate(.allTypes))
         
-      case .tapGettingOfficialTest: break
+      case .tapGettingOfficialTest:
+        return .send(.delegate(.officialMBTI))
       }
       
       return .none

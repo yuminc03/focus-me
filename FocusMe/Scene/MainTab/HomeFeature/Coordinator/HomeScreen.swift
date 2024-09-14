@@ -8,6 +8,7 @@ struct HomeScreen {
     case home(HomeCore.State)
     case mbtiTest(MBTITestCoordinator.State = .initialState)
     case allTypes(AllTypesCoordinator.State = .initialState)
+    case officialMBTI(OfficialMBTICoordinator.State = .initialState)
     
     var id: UUID {
       switch self {
@@ -19,6 +20,9 @@ struct HomeScreen {
         
       case let .allTypes(state):
         return state.id
+        
+      case let .officialMBTI(state):
+        return state.id
       }
     }
   }
@@ -27,6 +31,7 @@ struct HomeScreen {
     case home(HomeCore.Action)
     case mbtiTest(MBTITestCoordinator.Action)
     case allTypes(AllTypesCoordinator.Action)
+    case officialMBTI(OfficialMBTICoordinator.Action)
   }
   
   var body: some ReducerOf<Self> {
@@ -38,6 +43,9 @@ struct HomeScreen {
     }
     Scope(state: \.allTypes, action: \.allTypes) {
       AllTypesCoordinator()
+    }
+    Scope(state: \.officialMBTI, action: \.officialMBTI) {
+      OfficialMBTICoordinator()
     }
   }
 }
