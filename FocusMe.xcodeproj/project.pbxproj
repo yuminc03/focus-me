@@ -884,6 +884,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		8DDCEE9C2C985DEE00A47BF4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		8DF2491B2C95CE1E00E93456 /* OfficialMBTIFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -905,8 +913,8 @@
 		8DF2491D2C95CE5400E93456 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */,
 				8DDCEE9B2C985DDA00A47BF4 /* Component */,
+				8DDCEE9C2C985DEE00A47BF4 /* Main */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
