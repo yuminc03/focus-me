@@ -98,6 +98,8 @@
 		8DDC07DA2BCD6D260019D478 /* NotoSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D12BCD6D250019D478 /* NotoSansKR-SemiBold.ttf */; };
 		8DDC07DB2BCD6D260019D478 /* NotoSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */; };
 		8DDC07DC2BCD6D260019D478 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */; };
+		8DDCEE9F2C9866DE00A47BF4 /* RepresentedLinkPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCEE9E2C9866DE00A47BF4 /* RepresentedLinkPreview.swift */; };
+		8DDCEEA32C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCEEA22C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift */; };
 		8DEB88DE2C83501E001AB88A /* MBTIQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88DD2C83501E001AB88A /* MBTIQuestion.swift */; };
 		8DEB88E42C845B19001AB88A /* MomentOfEnergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88E32C845B19001AB88A /* MomentOfEnergy.swift */; };
 		8DEB88E72C845BA3001AB88A /* TakeHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB88E62C845BA3001AB88A /* TakeHoliday.swift */; };
@@ -232,6 +234,8 @@
 		8DDC07D22BCD6D260019D478 /* NotoSansKR-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.ttf"; sourceTree = "<group>"; };
 		8DDC07D32BCD6D260019D478 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		8DDC07DE2BCD6D700019D478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DDCEE9E2C9866DE00A47BF4 /* RepresentedLinkPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentedLinkPreview.swift; sourceTree = "<group>"; };
+		8DDCEEA22C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentedLinkPreviewCore.swift; sourceTree = "<group>"; };
 		8DEB88DD2C83501E001AB88A /* MBTIQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIQuestion.swift; sourceTree = "<group>"; };
 		8DEB88E32C845B19001AB88A /* MomentOfEnergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentOfEnergy.swift; sourceTree = "<group>"; };
 		8DEB88E62C845BA3001AB88A /* TakeHoliday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHoliday.swift; sourceTree = "<group>"; };
@@ -871,6 +875,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8DDCEE9B2C985DDA00A47BF4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCEEA22C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift */,
+				8DDCEE9E2C9866DE00A47BF4 /* RepresentedLinkPreview.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		8DF2491B2C95CE1E00E93456 /* OfficialMBTIFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -893,6 +906,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */,
+				8DDCEE9B2C985DDA00A47BF4 /* Component */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1096,6 +1110,7 @@
 				8D48603C2C7CBE2500166C87 /* TestMainCore.swift in Sources */,
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
+				8DDCEEA32C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift in Sources */,
 				05A708EC2C6CA10C00AE1172 /* HomeView.swift in Sources */,
 				8DEB88F82C8461F3001AB88A /* ThinkWhenWatchingOpenEndedMovie.swift in Sources */,
 				8DEB88E92C845BBF001AB88A /* FeelWhenCrowded.swift in Sources */,
@@ -1137,6 +1152,7 @@
 				051ABA1D2C61B55D0090F466 /* SignUpView.swift in Sources */,
 				8DEB89022C8463D3001AB88A /* WhenDontLinkHairColor.swift in Sources */,
 				8DF249252C95CFA700E93456 /* OfficialMBTIScreen.swift in Sources */,
+				8DDCEE9F2C9866DE00A47BF4 /* RepresentedLinkPreview.swift in Sources */,
 				8D2FB6FD2C6E44010086513D /* SystemImage.swift in Sources */,
 				8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */,
 				05F0AFC42C78546900C3507C /* NavigationBar.swift in Sources */,
