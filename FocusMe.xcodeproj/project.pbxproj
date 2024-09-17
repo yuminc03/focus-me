@@ -89,6 +89,10 @@
 		8D7BFD5E2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */; };
 		8DC783072C99921F00372FD4 /* OfficialMBTIMainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */; };
 		8DC7830B2C9993DA00372FD4 /* LinkPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */; };
+		8DC783132C99A0FB00372FD4 /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783122C99A0FB00372FD4 /* SafariWebView.swift */; };
+		8DC783162C99A2BB00372FD4 /* RepresentedSafariVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783152C99A2BB00372FD4 /* RepresentedSafariVC.swift */; };
+		8DC783182C99A79A00372FD4 /* SafariWebCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783172C99A79A00372FD4 /* SafariWebCore.swift */; };
+		8DC7831E2C99AD8E00372FD4 /* RepresentedSafariCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC7831D2C99AD8E00372FD4 /* RepresentedSafariCore.swift */; };
 		8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB15742C86007300BADB75 /* CompleteTestCore.swift */; };
 		8DCF40822C7E135100868241 /* MBTITestQuestionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */; };
 		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
@@ -226,6 +230,10 @@
 		8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialMBTIMainCore.swift; sourceTree = "<group>"; };
 		8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPreview.swift; sourceTree = "<group>"; };
+		8DC783122C99A0FB00372FD4 /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
+		8DC783152C99A2BB00372FD4 /* RepresentedSafariVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentedSafariVC.swift; sourceTree = "<group>"; };
+		8DC783172C99A79A00372FD4 /* SafariWebCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebCore.swift; sourceTree = "<group>"; };
+		8DC7831D2C99AD8E00372FD4 /* RepresentedSafariCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentedSafariCore.swift; sourceTree = "<group>"; };
 		8DCB15742C86007300BADB75 /* CompleteTestCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTestCore.swift; sourceTree = "<group>"; };
 		8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestQuestionCore.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -863,6 +871,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		8DC7830D2C999DC900372FD4 /* SafariWeb */ = {
+			isa = PBXGroup;
+			children = (
+				8DC783172C99A79A00372FD4 /* SafariWebCore.swift */,
+				8DC783122C99A0FB00372FD4 /* SafariWebView.swift */,
+			);
+			path = SafariWeb;
+			sourceTree = "<group>";
+		};
 		8DDC07CA2BCD6D150019D478 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -885,6 +902,8 @@
 				8DDCEEA22C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift */,
 				8DDCEE9E2C9866DE00A47BF4 /* RepresentedLinkPreview.swift */,
 				8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */,
+				8DC7831D2C99AD8E00372FD4 /* RepresentedSafariCore.swift */,
+				8DC783152C99A2BB00372FD4 /* RepresentedSafariVC.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -921,6 +940,7 @@
 			children = (
 				8DDCEE9B2C985DDA00A47BF4 /* Component */,
 				8DDCEE9C2C985DEE00A47BF4 /* Main */,
+				8DC7830D2C999DC900372FD4 /* SafariWeb */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1158,6 +1178,7 @@
 				8D7BFD412B8229E2001CA0EE /* FocusMeApp.swift in Sources */,
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
 				8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */,
+				8DC783132C99A0FB00372FD4 /* SafariWebView.swift in Sources */,
 				8D612F112C7B113600A565AB /* AllTypesCore.swift in Sources */,
 				8D1365AD2C72117200284DA7 /* HomeCoordinator.swift in Sources */,
 				05B7DC0E2C733ED700E43519 /* AppCore.swift in Sources */,
@@ -1169,6 +1190,8 @@
 				8DF249252C95CFA700E93456 /* OfficialMBTIScreen.swift in Sources */,
 				8DDCEE9F2C9866DE00A47BF4 /* RepresentedLinkPreview.swift in Sources */,
 				8D2FB6FD2C6E44010086513D /* SystemImage.swift in Sources */,
+				8DC783182C99A79A00372FD4 /* SafariWebCore.swift in Sources */,
+				8DC783162C99A2BB00372FD4 /* RepresentedSafariVC.swift in Sources */,
 				8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */,
 				05F0AFC42C78546900C3507C /* NavigationBar.swift in Sources */,
 				05F0AFCD2C785C6B00C3507C /* NotiManager.swift in Sources */,
@@ -1185,6 +1208,7 @@
 				05B7DC052C733B7800E43519 /* LoginScreen.swift in Sources */,
 				053B70312C6B40C9001DBF90 /* FMAlertButton.swift in Sources */,
 				0532E3492C899D28004CF32F /* MBTITestScore.swift in Sources */,
+				8DC7831E2C99AD8E00372FD4 /* RepresentedSafariCore.swift in Sources */,
 				05B7DC042C733B7800E43519 /* LoginCoordinator.swift in Sources */,
 				0532E3472C899B50004CF32F /* TestResultView.swift in Sources */,
 				8D1365AF2C7211C000284DA7 /* HomeScreen.swift in Sources */,

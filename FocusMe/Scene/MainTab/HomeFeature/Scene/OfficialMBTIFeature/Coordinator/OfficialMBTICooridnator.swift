@@ -18,6 +18,9 @@ struct OfficialMBTICoordinator {
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
+      case let .router(.routeAction(id: _, action: .main(.delegate(.web(url: url))))):
+        state.routes.presentSheet(.safariWeb(.init(safariWeb: .init(url: url))))
+        
       default: break
       }
       
@@ -41,6 +44,13 @@ struct OfficialMBTICoordinatorView: View {
             \OfficialMBTIScreen.State.main,
              action: OfficialMBTIScreen.Action.main,
              then: OfficialMBTIMainView.init
+          )
+          
+        case .safariWeb:
+          CaseLet(
+            \OfficialMBTIScreen.State.safariWeb,
+             action: OfficialMBTIScreen.Action.safariWeb, 
+             then: SafariWebView.init
           )
         }
       }
