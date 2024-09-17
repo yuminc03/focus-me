@@ -4,7 +4,6 @@ import ComposableArchitecture
 
 @Reducer
 struct RepresentedLinkPreviewCore {
-  @ObservableState
   struct State: Equatable {
     let url: String
     var metadata = LPLinkMetadata()

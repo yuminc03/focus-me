@@ -6,9 +6,11 @@ import ComposableArchitecture
 /// Contents가 풍부한 URL을 일관된 방식으로 제시함
 struct RepresentedLinkPreview: UIViewRepresentable {
   private let store: StoreOf<RepresentedLinkPreviewCore>
+  private let viewStore: ViewStoreOf<RepresentedLinkPreviewCore>
   
   init(store: StoreOf<RepresentedLinkPreviewCore>) {
     self.store = store
+    self.viewStore = .init(store, observe: { $0 })
   }
   
   func makeUIView(context: Context) -> LPLinkView {
@@ -20,11 +22,11 @@ struct RepresentedLinkPreview: UIViewRepresentable {
   }
   
   func updateUIView(_ uiView: LPLinkView, context: Context) {
-    uiView.metadata = store.metadata
+    uiView.metadata = viewStore.metadata
   }
   
   private func fetchMetadata() {
-    guard let url = URL(string: store.url) else {
+    guard let url = URL(string: viewStore.url) else {
       return
     }
     
@@ -32,7 +34,9 @@ struct RepresentedLinkPreview: UIViewRepresentable {
       do {
         let metadataProvider = LPMetadataProvider()
         let metadata = try await metadataProvider.startFetchingMetadata(for: url)
-        store.send(.setMetadata(metadata))
+        DispatchQueue.main.async {
+          store.send(.setMetadata(metadata))
+        }
       } catch {
         print(error.localizedDescription)
       }
