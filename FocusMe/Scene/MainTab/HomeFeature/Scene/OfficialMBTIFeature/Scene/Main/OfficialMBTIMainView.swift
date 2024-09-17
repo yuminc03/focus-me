@@ -54,6 +54,9 @@ private extension OfficialMBTIMainView {
         state: \.titleLinkPreview,
         action: \.titleLinkPreview
       ))
+      .onTapGesture {
+        store.send(.tapLinkPreview(store.titleLinkPreview.url))
+      }
     }
     .foregroundColor(.textPrimary1)
   }
@@ -64,6 +67,9 @@ private extension OfficialMBTIMainView {
         state: \.inspectionKind,
         action: \.inspectionKind
       ))
+      .onTapGesture {
+        store.send(.tapLinkPreview(store.inspectionKind.url))
+      }
     }
   }
   
@@ -73,6 +79,9 @@ private extension OfficialMBTIMainView {
         state: \.officialTest,
         action: \.officialTest
       ))
+      .onTapGesture {
+        store.send(.tapLinkPreview(store.officialTest.url))
+      }
     }
   }
   
@@ -82,6 +91,9 @@ private extension OfficialMBTIMainView {
         state: \.instagramLink,
         action: \.instagramLink
       ))
+      .onTapGesture {
+        store.send(.tapLinkPreview(store.instagramLink.url))
+      }
     }
   }
   
@@ -91,6 +103,9 @@ private extension OfficialMBTIMainView {
         state: \.youtubeLink,
         action: \.youtubeLink
       ))
+      .onTapGesture {
+        store.send(.tapLinkPreview(store.youtubeLink.url))
+      }
     }
   }
 }

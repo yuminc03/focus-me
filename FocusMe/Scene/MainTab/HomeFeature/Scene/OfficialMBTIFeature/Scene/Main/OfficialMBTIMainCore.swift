@@ -22,10 +22,13 @@ struct OfficialMBTIMainCore {
     case officialTest(RepresentedLinkPreviewCore.Action)
     case instagramLink(RepresentedLinkPreviewCore.Action)
     case youtubeLink(RepresentedLinkPreviewCore.Action)
+    
     case tapBackButton
+    case tapLinkPreview(String)
     
     enum Delegate {
       case back
+      case web(url: String)
     }
   }
   
@@ -56,6 +59,8 @@ struct OfficialMBTIMainCore {
       case .tapBackButton:
         return .send(.delegate(.back))
         
+      case let .tapLinkPreview(urlString):
+        return .send(.delegate(.web(url: urlString)))
       }
       
       return .none
