@@ -2,43 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct OfficialMBTIMainCore {
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-    
-    var titleLinkPreview = RepresentedLinkPreviewCore.State(url: "https://www.assesta.com/Company/Assesta_Info.asp")
-  }
-  
-  enum Action {
-    case delegate(Delegate)
-    case titleLinkPreview(RepresentedLinkPreviewCore.Action)
-    case tapBackButton
-    
-    enum Delegate {
-      case back
-    }
-  }
-  
-  var body: some ReducerOf<Self> {
-    Scope(state: \.titleLinkPreview, action: \.titleLinkPreview) {
-      RepresentedLinkPreviewCore()
-    }
-    Reduce { state, action in
-      switch action {
-      case .delegate: break
-      case .titleLinkPreview: break
-      case .tapBackButton:
-        return .send(.delegate(.back))
-        
-      }
-      
-      return .none
-    }
-  }
-}
-
 /// 정식 MBTI 검사 받기 Main 화면
 struct OfficialMBTIMainView: View {
   @Perception.Bindable private var store: StoreOf<OfficialMBTIMainCore>
@@ -54,6 +17,10 @@ struct OfficialMBTIMainView: View {
           TitleSection
             .padding(.top, 30)
           
+          KindOfMBTISection
+          OfficialTestSection
+          InstagramLinkSection
+          YoutubeLinkSection
         }
         .padding(.horizontal, 20)
       }
@@ -71,7 +38,7 @@ struct OfficialMBTIMainView: View {
 private extension OfficialMBTIMainView {
   var TitleSection: some View {
     VStack(spacing: 10) {
-      Text("어세스타에 대해서..")
+      Text("어세스타")
         .customFont(.notoSansKRSemiBold, size: 28)
         .frame(maxWidth: .infinity, alignment: .leading)
       
@@ -91,11 +58,57 @@ private extension OfficialMBTIMainView {
   }
   
   var KindOfMBTISection: some View {
-    VStack(spacing: 20) {
+    VStack(spacing: 10) {
       Text("MBTI 검사 종류")
         .customFont(.notoSansKRSemiBold, size: 24)
         .frame(maxWidth: .infinity, alignment: .leading)
       
+      RepresentedLinkPreview(store: store.scope(
+        state: \.inspectionKind,
+        action: \.inspectionKind
+      ))
+    }
+    .foregroundColor(.textPrimary1)
+  }
+  
+  var OfficialTestSection: some View {
+    VStack(spacing: 10) {
+      Text("정식 MBTI 검사")
+        .customFont(.notoSansKRSemiBold, size: 24)
+        .frame(maxWidth: .infinity, alignment: .leading)
+      
+      RepresentedLinkPreview(store: store.scope(
+        state: \.officialTest,
+        action: \.officialTest
+      ))
+    }
+    .foregroundColor(.textPrimary1)
+  }
+  
+  var InstagramLinkSection: some View {
+    VStack(spacing: 10) {
+      Text("어세스타 instagram")
+        .customFont(.notoSansKRSemiBold, size: 24)
+        .frame(maxWidth: .infinity, alignment: .leading)
+      
+      RepresentedLinkPreview(store: store.scope(
+        state: \.instagramLink,
+        action: \.instagramLink
+      ))
+    }
+    .foregroundColor(.textPrimary1)
+  }
+  
+  var YoutubeLinkSection: some View {
+    VStack(spacing: 10) {
+      Text("어세스타 youtube")
+        .customFont(.notoSansKRSemiBold, size: 24)
+        .frame(maxWidth: .infinity, alignment: .leading)
+      
+      RepresentedLinkPreview(store: store.scope(
+        state: \.youtubeLink,
+        action: \.youtubeLink
+      ))
     }
     .foregroundColor(.textPrimary1)
   }

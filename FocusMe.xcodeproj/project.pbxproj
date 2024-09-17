@@ -87,6 +87,7 @@
 		8D7BFD522B8229E3001CA0EE /* FocusMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD512B8229E3001CA0EE /* FocusMeTests.swift */; };
 		8D7BFD5C2B8229E3001CA0EE /* FocusMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */; };
 		8D7BFD5E2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */; };
+		8DC783072C99921F00372FD4 /* OfficialMBTIMainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */; };
 		8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB15742C86007300BADB75 /* CompleteTestCore.swift */; };
 		8DCF40822C7E135100868241 /* MBTITestQuestionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */; };
 		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
@@ -222,6 +223,7 @@
 		8D7BFD572B8229E3001CA0EE /* FocusMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialMBTIMainCore.swift; sourceTree = "<group>"; };
 		8DCB15742C86007300BADB75 /* CompleteTestCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTestCore.swift; sourceTree = "<group>"; };
 		8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestQuestionCore.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -887,6 +889,7 @@
 		8DDCEE9C2C985DEE00A47BF4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */,
 				8DF2491F2C95CE8700E93456 /* OfficialMBTIMainView.swift */,
 			);
 			path = Main;
@@ -1115,6 +1118,7 @@
 				0564D9462C63126400102A44 /* AppDelegate.swift in Sources */,
 				8D1365A92C72106300284DA7 /* MyInfoView.swift in Sources */,
 				8DEB88E72C845BA3001AB88A /* TakeHoliday.swift in Sources */,
+				8DC783072C99921F00372FD4 /* OfficialMBTIMainCore.swift in Sources */,
 				8D48603C2C7CBE2500166C87 /* TestMainCore.swift in Sources */,
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,
