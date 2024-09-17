@@ -49,6 +49,7 @@ private extension OfficialMBTIMainView {
       Text("더 자세한 정보 ⬇️")
         .customFont(size: 14)
         .frame(maxWidth: .infinity, alignment: .leading)
+      
       RepresentedLinkPreview(store: store.scope(
         state: \.titleLinkPreview,
         action: \.titleLinkPreview
@@ -58,59 +59,39 @@ private extension OfficialMBTIMainView {
   }
   
   var KindOfMBTISection: some View {
-    VStack(spacing: 10) {
-      Text("MBTI 검사 종류")
-        .customFont(.notoSansKRSemiBold, size: 24)
-        .frame(maxWidth: .infinity, alignment: .leading)
-      
+    LinkPreview(title: "MBTI 검사 종류") {
       RepresentedLinkPreview(store: store.scope(
         state: \.inspectionKind,
         action: \.inspectionKind
       ))
     }
-    .foregroundColor(.textPrimary1)
   }
   
   var OfficialTestSection: some View {
-    VStack(spacing: 10) {
-      Text("정식 MBTI 검사")
-        .customFont(.notoSansKRSemiBold, size: 24)
-        .frame(maxWidth: .infinity, alignment: .leading)
-      
+    LinkPreview(title: "정식 MBTI 검사") {
       RepresentedLinkPreview(store: store.scope(
         state: \.officialTest,
         action: \.officialTest
       ))
     }
-    .foregroundColor(.textPrimary1)
   }
   
   var InstagramLinkSection: some View {
-    VStack(spacing: 10) {
-      Text("어세스타 instagram")
-        .customFont(.notoSansKRSemiBold, size: 24)
-        .frame(maxWidth: .infinity, alignment: .leading)
-      
+    LinkPreview(title: "어세스타 instagram") {
       RepresentedLinkPreview(store: store.scope(
         state: \.instagramLink,
         action: \.instagramLink
       ))
     }
-    .foregroundColor(.textPrimary1)
   }
   
   var YoutubeLinkSection: some View {
-    VStack(spacing: 10) {
-      Text("어세스타 youtube")
-        .customFont(.notoSansKRSemiBold, size: 24)
-        .frame(maxWidth: .infinity, alignment: .leading)
-      
+    LinkPreview(title: "어세스타 youtube") {
       RepresentedLinkPreview(store: store.scope(
         state: \.youtubeLink,
         action: \.youtubeLink
       ))
     }
-    .foregroundColor(.textPrimary1)
   }
 }
 

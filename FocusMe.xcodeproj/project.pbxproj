@@ -88,6 +88,7 @@
 		8D7BFD5C2B8229E3001CA0EE /* FocusMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */; };
 		8D7BFD5E2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */; };
 		8DC783072C99921F00372FD4 /* OfficialMBTIMainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */; };
+		8DC7830B2C9993DA00372FD4 /* LinkPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */; };
 		8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB15742C86007300BADB75 /* CompleteTestCore.swift */; };
 		8DCF40822C7E135100868241 /* MBTITestQuestionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */; };
 		8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */; };
@@ -224,6 +225,7 @@
 		8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialMBTIMainCore.swift; sourceTree = "<group>"; };
+		8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPreview.swift; sourceTree = "<group>"; };
 		8DCB15742C86007300BADB75 /* CompleteTestCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTestCore.swift; sourceTree = "<group>"; };
 		8DCF40812C7E135100868241 /* MBTITestQuestionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTITestQuestionCore.swift; sourceTree = "<group>"; };
 		8DDC07CB2BCD6D250019D478 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -882,6 +884,7 @@
 			children = (
 				8DDCEEA22C9879FF00A47BF4 /* RepresentedLinkPreviewCore.swift */,
 				8DDCEE9E2C9866DE00A47BF4 /* RepresentedLinkPreview.swift */,
+				8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1169,6 +1172,7 @@
 				8DEB890E2C846558001AB88A /* MyWayPartying.swift in Sources */,
 				05F0AFC42C78546900C3507C /* NavigationBar.swift in Sources */,
 				05F0AFCD2C785C6B00C3507C /* NotiManager.swift in Sources */,
+				8DC7830B2C9993DA00372FD4 /* LinkPreview.swift in Sources */,
 				05E983F32C634E9A00393D08 /* CollectionTarget.swift in Sources */,
 				05BD4A742C64A0B200F5ED99 /* Keyboard+.swift in Sources */,
 				8D2FB7002C6E44820086513D /* Image+.swift in Sources */,
