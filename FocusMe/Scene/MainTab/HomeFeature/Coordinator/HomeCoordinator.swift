@@ -47,6 +47,12 @@ struct HomeCoordinator {
       case .router(.routeAction(id: _, action: .allTypes(.router(.routeAction(_, action: .allTypesMain(.delegate(.back))))))):
         state.routes.pop()
         
+        // MARK: - OfficialMBTI
+        
+        // MBTI 정식 검사 받기 Main 화면에서 뒤로 가기 눌렀을 때
+      case .router(.routeAction(id: _, action: .officialMBTI(.router(.routeAction(id: _, action: .main(.delegate(.back))))))):
+        state.routes.pop()
+        
       default: break
       }
       
