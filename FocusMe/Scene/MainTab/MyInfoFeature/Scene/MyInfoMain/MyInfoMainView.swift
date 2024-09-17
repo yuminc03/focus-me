@@ -3,7 +3,7 @@ import SwiftUI
 import ComposableArchitecture
 
 @Reducer
-struct MyInfoCore {
+struct MyInfoMainCore {
   @ObservableState
   struct State: Equatable {
     let id = UUID()
@@ -20,10 +20,10 @@ struct MyInfoCore {
   }
 }
 
-struct MyInfoView: View {
-  @Perception.Bindable private var store: StoreOf<MyInfoCore>
+struct MyInfoMainView: View {
+  @Perception.Bindable private var store: StoreOf<MyInfoMainCore>
   
-  init(store: StoreOf<MyInfoCore>) {
+  init(store: StoreOf<MyInfoMainCore>) {
     self.store = store
   }
   
@@ -37,8 +37,12 @@ struct MyInfoView: View {
   }
 }
 
+private extension MyInfoMainView {
+  
+}
+
 #Preview {
-  MyInfoView(store: .init(initialState: MyInfoCore.State()) {
-    MyInfoCore()
+  MyInfoMainView(store: .init(initialState: MyInfoMainCore.State()) {
+    MyInfoMainCore()
   })
 }

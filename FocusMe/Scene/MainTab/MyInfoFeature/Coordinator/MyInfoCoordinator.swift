@@ -35,7 +35,7 @@ struct MyInfoCoordinatorView: View {
           CaseLet(
             \MyInfoScreen.State.myInfo,
              action: MyInfoScreen.Action.myInfo,
-             then: MyInfoView.init
+             then: MyInfoMainView.init
           )
         }
       }

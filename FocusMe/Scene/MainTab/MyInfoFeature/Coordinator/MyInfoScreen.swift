@@ -5,7 +5,7 @@ import ComposableArchitecture
 @Reducer
 struct MyInfoScreen {
   enum State: Equatable, Identifiable {
-    case myInfo(MyInfoCore.State)
+    case myInfo(MyInfoMainCore.State)
     
     var id: UUID {
       switch self {
@@ -16,12 +16,12 @@ struct MyInfoScreen {
   }
   
   enum Action {
-    case myInfo(MyInfoCore.Action)
+    case myInfo(MyInfoMainCore.Action)
   }
   
   var body: some ReducerOf<Self> {
     Scope(state: \.myInfo, action: \.myInfo) {
-      MyInfoCore()
+      MyInfoMainCore()
     }
   }
 }
