@@ -40,7 +40,7 @@ final class AuthenticationService {
   func login(entity: LoginEntity) async throws {
     do {
       let result = try await Auth.auth().signIn(withEmail: entity.email, password: entity.password)
-      print("로그인 성공 reuslt: \(result)")
+      print("로그인 성공: \(result)")
     } catch {
       let authError = error as NSError
       guard let errorCode = AuthErrorCode(rawValue: authError.code) else {
@@ -49,6 +49,34 @@ final class AuthenticationService {
       }
       
       print("login() Error: \(errorCode): \(error.localizedDescription)")
+      switch errorCode {
+      case .operationNotAllowed:
+        throw FMError.login(.operationNotAllowed)
+      case .userDisabled:
+        throw FMError.login(.userDisabled)
+      case .wrongPassword:
+        throw FMError.login(.wrongPassword)
+      case .invalidEmail:
+        throw FMError.login(.invalidEmail)
+      default:
+        throw error.toFMError
+      }
+    }
+  }
+  
+  /// 로그아웃
+  func logout() throws {
+    do {
+      try Auth.auth().signOut()
+      print("로그아웃 됨")
+    } catch {
+      let authError = error as NSError
+      guard let errorCode = AuthErrorCode(rawValue: authError.code) else {
+        print("logout() Error: \(error.localizedDescription)")
+        throw error.toFMError
+      }
+      
+      print("logout() Error: \(errorCode): \(error.localizedDescription)")
       switch errorCode {
       case .operationNotAllowed:
         throw FMError.login(.operationNotAllowed)
