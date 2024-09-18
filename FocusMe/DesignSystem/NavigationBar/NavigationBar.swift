@@ -70,7 +70,7 @@ extension View {
   ) -> some View {
     modifier(NavigationBarModifier(leftView: {
       Button (action: leftAction) {
-        Image(systemName: .systemImage(.backArrow))
+        Image(systemName: .systemImage(.chevronBackward))
           .size(15)
           .foregroundColor(.black)
       }

@@ -6,10 +6,12 @@ enum SystemImage: String {
   case arrowRight = "arrow.right"
   case house
   case person
-  case backArrow = "chevron.backward"
+  case chevronBackward = "chevron.backward"
+  case chevronRight = "chevron.right"
   case textBookClosed = "text.book.closed"
   case exclamationmarkCircleFill = "exclamationmark.circle.fill"
   case checkmarkCircle = "checkmark.circle"
+  case personCropCircle = "person.crop.circle"
 }
 
 extension String {
