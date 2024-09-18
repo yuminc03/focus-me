@@ -2,35 +2,6 @@ import SwiftUI
 
 import ComposableArchitecture
 
-@Reducer
-struct MyInfoMainCore {
-  struct ListItem: Equatable, Identifiable {
-    let id = UUID()
-    let title: String
-  }
-  
-  @ObservableState
-  struct State: Equatable {
-    let id = UUID()
-    let items: [ListItem] = [
-      .init(title: "공지사항"),
-      .init(title: "개발자 소개"),
-      .init(title: "앱 소스코드"),
-      .init(title: "로그인 설정"),
-    ]
-  }
-  
-  enum Action {
-    
-  }
-  
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-      return .none
-    }
-  }
-}
-
 struct MyInfoMainView: View {
   @Perception.Bindable private var store: StoreOf<MyInfoMainCore>
   
@@ -78,8 +49,12 @@ private extension MyInfoMainView {
   
   var ListSection: some View {
     VStack(spacing: 18) {
-      ForEach(store.items) {
-        ListRow(title: $0.title)
+      ForEach(store.items) { item in
+        ListRow(title: item.type.rawValue)
+          .onTapGesture {
+            store.send(.tapListItem(item.type))
+          }
+        
         Divider()
       }
     }
