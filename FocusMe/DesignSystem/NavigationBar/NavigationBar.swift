@@ -72,11 +72,12 @@ extension View {
       Button (action: leftAction) {
         Image(systemName: .systemImage(.chevronBackward))
           .size(15)
-          .foregroundColor(.black)
+          .foregroundColor(.textPrimary1)
       }
     }, centerView: {
       Text(title)
-        .font(.headline)
+        .customFont(.notoSansKRMedium, size: 16)
+        .foregroundColor(.textPrimary1)
     }, rightView: {
       EmptyView()
     }))
