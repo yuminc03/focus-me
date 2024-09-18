@@ -6,7 +6,11 @@ import ComposableArchitecture
 struct LoginSettingCore {
   struct SettingItem: Equatable, Identifiable {
     let id = UUID()
-    let title: String
+    let type: LoginSetting
+  }
+  
+  enum LoginSetting: String {
+    case logout = "로그아웃"
   }
   
   @ObservableState
@@ -14,16 +18,18 @@ struct LoginSettingCore {
     let id = UUID()
     
     let items: [SettingItem] = [
-      .init(title: "로그아웃")
+      .init(type: .logout)
     ]
   }
   
   enum Action {
     case delegate(Delegate)
     case tapBackButton
+    case tapListRow(LoginSetting)
     
     enum Delegate {
       case back
+      case action(LoginSetting)
     }
   }
   
@@ -33,6 +39,9 @@ struct LoginSettingCore {
       case .delegate: break
       case .tapBackButton:
         return .send(.delegate(.back))
+        
+      case let .tapListRow(type):
+        return .send(.delegate(.action(type)))
       }
       
       return .none

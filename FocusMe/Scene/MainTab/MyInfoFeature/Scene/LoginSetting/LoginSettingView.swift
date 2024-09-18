@@ -12,8 +12,11 @@ struct LoginSettingView: View {
   
   var body: some View {
     WithPerceptionTracking {
-      ScrollView {
+      VStack(spacing: 20) {
         ListSection
+          .padding(.top, 30)
+        
+        Spacer()
       }
       .backgroundColor()
       .fmNavigation(title: "로그인 설정") {
@@ -29,12 +32,17 @@ struct LoginSettingView: View {
 private extension LoginSettingView {
   var ListSection: some View {
     VStack(spacing: 18) {
-      ForEach(store.items) {
-        ListRow(title: $0.title)
+      ForEach(store.items) { item in
+        ListRow(title: item.type.rawValue)
+          .hideArrow()
+          .onTapGesture {
+            store.send(.tapListRow(item.type))
+          }
         
         Divider()
       }
     }
+    .padding(.horizontal, 20)
   }
 }
 

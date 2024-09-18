@@ -1,7 +1,16 @@
 import SwiftUI
 
+extension ListRow {
+  func hideArrow() -> ListRow {
+    var state = self
+    state.isArrowHidden = true
+    return state
+  }
+}
+
 struct ListRow: View {
   let title: String
+  var isArrowHidden = false
   
   var body: some View {
     HStack(spacing: 10) {
@@ -10,8 +19,10 @@ struct ListRow: View {
       
       Spacer()
       
-      Image(systemName: .systemImage(.chevronRight))
-        .size(15)
+      if isArrowHidden == false {
+        Image(systemName: .systemImage(.chevronRight))
+          .size(15)
+      }
     }
     .foregroundColor(.textPrimary1)
     .contentShape(Rectangle())
