@@ -29,6 +29,10 @@ struct MyInfoCoordinator {
       case .router(.routeAction(id: _, action: .loginSetting(.delegate(.back)))):
         state.routes.goBack()
         
+        // 로그인 설정 화면에서 로그아웃 했을 때
+      case .router(.routeAction(id: _, action: .loginSetting(.delegate(.logout)))):
+        state.routes.popToRoot()
+        
       default:
         break
       }

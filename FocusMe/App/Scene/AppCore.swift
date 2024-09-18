@@ -42,7 +42,10 @@ struct AppCore {
     }
     Reduce { state, action in
       switch action {
-      case .main: break
+//      case .main(.router(.routeAction(id: _, action: .myInfo(.loginSetting(.delegate(.logout)))))):
+//        state.appState = .login
+//        state.login = .initialState
+        
       case .login(.router(.routeAction(id: _, action: .login(.delegate(.main))))):
         state.appState = .main
         state.main = .initialState
