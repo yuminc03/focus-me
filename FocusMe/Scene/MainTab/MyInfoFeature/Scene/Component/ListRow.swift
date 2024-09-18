@@ -14,6 +14,7 @@ struct ListRow: View {
         .size(15)
     }
     .foregroundColor(.textPrimary1)
+    .contentShape(Rectangle())
   }
 }
 
