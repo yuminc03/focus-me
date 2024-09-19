@@ -54,12 +54,13 @@ struct AppCore {
         return .send(._getCurrentUser)
         
       case ._getCurrentUser:
-        return .run { send in
-          try await AuthenticationService.shared.getCurrentUser()
-          await send(._setAppState(.main))
-        } catch: { error, send in
-          await send(._setAppState(.login))
-        }
+        return .send(._setAppState(.main))
+//        return .run { send in
+//          try await AuthenticationService.shared.getCurrentUser()
+//          await send(._setAppState(.main))
+//        } catch: { error, send in
+//          await send(._setAppState(.login))
+//        }
         
       case let ._setAppState(appState):
         switch appState {

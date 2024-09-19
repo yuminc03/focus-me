@@ -24,6 +24,8 @@ struct LoginCore {
   
   @Dependency(\.authenticationService) var authenticationService
   
+  private let loginRepo = LoginRepository()
+  
   enum Action: BindableAction {
     case binding(BindingAction<State>)
     case delegate(Delegate)
@@ -81,6 +83,7 @@ struct LoginCore {
         state.isLoading = true
         return .run { [state] send in
           try await authenticationService.login(entity: .init(email: state.email, password: state.password))
+          try await loginRepo.login(target: .getUserInfo(UserInfo.shared.uid ?? ""))
           await send(._loginResponse(.success(0)))
         } catch: { error, send in
           await send(._loginResponse(.failure(error.toFMError)))

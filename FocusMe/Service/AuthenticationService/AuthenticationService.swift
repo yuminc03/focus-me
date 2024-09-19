@@ -41,6 +41,7 @@ final class AuthenticationService {
     do {
       let result = try await Auth.auth().signIn(withEmail: entity.email, password: entity.password)
       print("로그인 성공: \(result)")
+      UserInfo.shared.uid = result.user.uid
     } catch {
       let authError = error as NSError
       guard let errorCode = AuthErrorCode(rawValue: authError.code) else {

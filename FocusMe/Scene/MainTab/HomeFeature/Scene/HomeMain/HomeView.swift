@@ -32,7 +32,7 @@ struct HomeView: View {
 
 private extension HomeView {
   var UserNameView: some View {
-    Text("\(UserInfo.shared.name ?? "사용자")님 안녕하세요!🙂")
+    Text("\(UDStorage.name ?? "사용자")님 안녕하세요!🙂")
       .customFont(.notoSansKRSemiBold, size: 24)
       .foregroundColor(.textPrimary1)
       .frame(maxWidth: .infinity, alignment: .leading)

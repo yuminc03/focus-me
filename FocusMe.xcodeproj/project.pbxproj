@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		050DED602C9C0744001C7901 /* FMToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DED5E2C9C0744001C7901 /* FMToast.swift */; };
+		050DED652C9C1408001C7901 /* UDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DED642C9C1408001C7901 /* UDStorage.swift */; };
+		050DED682C9C149E001C7901 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DED672C9C149E001C7901 /* LoginRepository.swift */; };
+		050DED6E2C9C1858001C7901 /* UserInfoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DED6D2C9C1858001C7901 /* UserInfoResponseDTO.swift */; };
 		0518467C2C76DC9300547E8E /* TypesGridRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518467B2C76DC9300547E8E /* TypesGridRow.swift */; };
 		0518467F2C76DD4000547E8E /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0518467E2C76DD4000547E8E /* Icon.xcassets */; };
 		051846862C76F6EF00547E8E /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051846852C76F6EF00547E8E /* MBTI.swift */; };
@@ -159,6 +162,9 @@
 
 /* Begin PBXFileReference section */
 		050DED5E2C9C0744001C7901 /* FMToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMToast.swift; sourceTree = "<group>"; };
+		050DED642C9C1408001C7901 /* UDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDStorage.swift; sourceTree = "<group>"; };
+		050DED672C9C149E001C7901 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		050DED6D2C9C1858001C7901 /* UserInfoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponseDTO.swift; sourceTree = "<group>"; };
 		0518467B2C76DC9300547E8E /* TypesGridRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesGridRow.swift; sourceTree = "<group>"; };
 		0518467E2C76DD4000547E8E /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		051846852C76F6EF00547E8E /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
@@ -328,6 +334,38 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		050DED632C9C13F9001C7901 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				050DED642C9C1408001C7901 /* UDStorage.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		050DED692C9C181B001C7901 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				050DED6B2C9C1830001C7901 /* DTO */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		050DED6B2C9C1830001C7901 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				050DED6C2C9C183D001C7901 /* Response */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		050DED6C2C9C183D001C7901 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				050DED6D2C9C1858001C7901 /* UserInfoResponseDTO.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		051846782C76DC3500547E8E /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +528,7 @@
 		05E983EE2C634DCC00393D08 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				050DED632C9C13F9001C7901 /* UserDefaults */,
 				05F0AFCB2C785C6000C3507C /* NotificationManager */,
 				05E983F52C63659400393D08 /* AuthenticationService */,
 				05E983EF2C634DD800393D08 /* FirestoreService */,
@@ -738,6 +777,7 @@
 			children = (
 				8D46DF3A2C8DDC2300FB2AA5 /* SignUpRepository.swift */,
 				8D46DF3C2C8DDDFE00FB2AA5 /* MBTIRepository.swift */,
+				050DED672C9C149E001C7901 /* LoginRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -891,6 +931,7 @@
 		8DA40F002BB05BE600A7D271 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				050DED692C9C181B001C7901 /* Network */,
 				8D46DF392C8DDC1000FB2AA5 /* Repository */,
 				05E983E82C63385F00393D08 /* Extension */,
 				8DA40F012BB05BEF00A7D271 /* Entity */,
@@ -1224,6 +1265,7 @@
 				8D17EEB32C9AF98000F5AE40 /* MyInfoMainCore.swift in Sources */,
 				05BD4A7C2C64A9DB00F5ED99 /* LoginEntity.swift in Sources */,
 				8DEB89162C84975F001AB88A /* MBTITestStep.swift in Sources */,
+				050DED682C9C149E001C7901 /* LoginRepository.swift in Sources */,
 				055022942C65E5860031330E /* UserInfo.swift in Sources */,
 				8DF249232C95CF4E00E93456 /* OfficialMBTICooridnator.swift in Sources */,
 				053B702E2C6B3F76001DBF90 /* FMAlertContainer.swift in Sources */,
@@ -1233,6 +1275,7 @@
 				05F0AFCA2C785C0700C3507C /* StateManager.swift in Sources */,
 				051ABA232C61C1500090F466 /* FMButton.swift in Sources */,
 				8D7BFD412B8229E2001CA0EE /* FocusMeApp.swift in Sources */,
+				050DED652C9C1408001C7901 /* UDStorage.swift in Sources */,
 				05E983F72C6365A500393D08 /* AuthenticationService.swift in Sources */,
 				8DCB15752C86007300BADB75 /* CompleteTestCore.swift in Sources */,
 				8D17EEB12C9AEC5B00F5AE40 /* ListRow.swift in Sources */,
@@ -1286,6 +1329,7 @@
 				8D612F232C7B21B100A565AB /* TypeDetailView.swift in Sources */,
 				05E983ED2C634ADF00393D08 /* SignUpEntity.swift in Sources */,
 				05A708E72C6C748C00AE1172 /* LoadingView.swift in Sources */,
+				050DED6E2C9C1858001C7901 /* UserInfoResponseDTO.swift in Sources */,
 				8DEB88F62C84619C001AB88A /* ThinkWhenFindRetroCamera.swift in Sources */,
 				055022962C65E9A80031330E /* FMError.swift in Sources */,
 				05A708E22C6C686700AE1172 /* FMDefaultAlert.swift in Sources */,

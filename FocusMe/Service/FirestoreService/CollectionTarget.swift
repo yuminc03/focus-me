@@ -13,6 +13,8 @@ enum CollectionTarget: FirestoreProtocol {
   case signup(SignUpEntity)
   /// MBTI 검사결과 저장
   case saveMBTIResult(MBTITestResult)
+  /// 사용자 정보 가져오기
+  case getUserInfo(String)
 }
 
 extension CollectionTarget {
@@ -28,6 +30,9 @@ extension CollectionTarget {
       
     case .saveMBTIResult:
       return .mbtis
+      
+    case .getUserInfo:
+      return .users
     }
   }
   
@@ -38,6 +43,9 @@ extension CollectionTarget {
       
     case let .saveMBTIResult(entity):
       return entity.id
+      
+    case let .getUserInfo(id):
+      return id
     }
   }
   
@@ -48,6 +56,9 @@ extension CollectionTarget {
       
     case let .saveMBTIResult(entity):
       return entity
+      
+    case .getUserInfo:
+      return LoginEntity(email: "", password: "")
     }
   }
 }

@@ -39,10 +39,10 @@ private extension MyInfoMainView {
         .foregroundColor(.deepPurple)
       
       VStack(spacing: 5) {
-        Text("사용자 계정")
+        Text(UDStorage.email ?? "사용자 계정 없음")
           .customFont(size: 16)
           .frame(maxWidth: .infinity, alignment: .leading)
-        Text("사용자 이름")
+        Text(UDStorage.name ?? "사용자 이름 없음")
           .customFont(size: 14)
           .frame(maxWidth: .infinity, alignment: .leading)
       }
