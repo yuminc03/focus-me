@@ -104,7 +104,7 @@ final class AuthenticationService {
           continuation.resume(with: .success(()))
         } else {
           print("로그아웃 됨!")
-          UserInfo.shared.logout()
+          UserInfo.shared.clear()
           continuation.resume(with: .failure(FMError.login(.notFoundCurrentUser)))
         }
       }

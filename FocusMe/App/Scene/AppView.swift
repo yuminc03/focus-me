@@ -27,6 +27,10 @@ struct AppView: View {
             .environmentObject(stateManager)
         }
       }
+      .onReceive(NotiManager.publisher(key: .logout)) { _ in
+        UserInfo.shared.clear()
+        store.send(._setAppState(.login))
+      }
       .onAppear {
         store.send(._onAppear)
       }

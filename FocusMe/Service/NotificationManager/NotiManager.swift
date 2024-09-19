@@ -4,6 +4,7 @@ import Combine
 enum NotificationKey: String {
   case hideTab
   case showTab
+  case logout
   
   var name: Notification.Name {
     return .init(self.rawValue)

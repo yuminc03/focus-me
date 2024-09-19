@@ -14,7 +14,7 @@ final class UserInfo {
     self.name = name
   }
   
-  func logout() {
+  func clear() {
     uid = nil
     email = nil
     name = nil

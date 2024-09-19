@@ -30,7 +30,7 @@ struct AppCore {
     
     case _onAppear
     case _getCurrentUser
-    case _changeAppState(AppState)
+    case _setAppState(AppState)
   }
   
   var body: some ReducerOf<Self> {
@@ -42,10 +42,6 @@ struct AppCore {
     }
     Reduce { state, action in
       switch action {
-//      case .main(.router(.routeAction(id: _, action: .myInfo(.loginSetting(.delegate(.logout)))))):
-//        state.appState = .login
-//        state.login = .initialState
-        
       case .login(.router(.routeAction(id: _, action: .login(.delegate(.main))))):
         state.appState = .main
         state.main = .initialState
@@ -60,13 +56,22 @@ struct AppCore {
       case ._getCurrentUser:
         return .run { send in
           try await AuthenticationService.shared.getCurrentUser()
-          await send(._changeAppState(.main))
+          await send(._setAppState(.main))
         } catch: { error, send in
-          await send(._changeAppState(.login))
+          await send(._setAppState(.login))
         }
         
-      case let ._changeAppState(appState):
-        state.appState = appState
+      case let ._setAppState(appState):
+        switch appState {
+        case .splash: break
+        case .login:
+          state.appState = .login
+          state.login = .initialState
+         
+        case .main:
+          state.appState = .main
+          state.main = .initialState
+        }
         
       default: break
       }
