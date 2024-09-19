@@ -20,15 +20,21 @@ struct LoginSettingCore {
     let items: [SettingItem] = [
       .init(type: .logout)
     ]
+    
+    var isLogoutPresent = false
   }
   
   @Dependency(\.authenticationService) var authenticationService
   
-  enum Action {
+  enum Action: BindableAction {
+    case binding(BindingAction<State>)
     case delegate(Delegate)
+    
     case tapBackButton
     case tapListRow(LoginSetting)
+    case alert(FMAlertButtonType)
     
+    case _setIsLogoutPresent(Bool)
     case _requestLogout
     case _logoutResponse(Result<Int, FMError>)
     
@@ -39,8 +45,10 @@ struct LoginSettingCore {
   }
   
   var body: some ReducerOf<Self> {
+    BindingReducer()
     Reduce { state, action in
       switch action {
+      case .binding: break
       case .delegate: break
       case .tapBackButton:
         return .send(.delegate(.back))
@@ -48,8 +56,23 @@ struct LoginSettingCore {
       case let .tapListRow(type):
         switch type {
         case .logout:
-          return .send(._requestLogout)
+          return .send(._setIsLogoutPresent(true))
         }
+        
+      case let .alert(type):
+        switch type {
+        case .cancel:
+          return .send(._setIsLogoutPresent(false))
+          
+        case .confirm:
+          return .run { send in
+            await send(._setIsLogoutPresent(false))
+            await send(._requestLogout)
+          }
+        }
+        
+      case let ._setIsLogoutPresent(isPresent):
+        state.isLogoutPresent = isPresent
         
       case ._requestLogout:
         return .run { send in

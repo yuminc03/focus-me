@@ -22,6 +22,17 @@ struct LoginSettingView: View {
       .fmNavigation(title: "로그인 설정") {
         store.send(.tapBackButton)
       }
+      .fmAlert(isPresented: $store.isLogoutPresent) {
+        FMAlertContainer {
+          FMDefaultAlert(message: "로그아웃 하시겠습니까?")
+        }
+        .addButton(type: .cancel, buttonStyle: .cancel(title: "취소")) {
+          store.send(.alert(.cancel))
+        }
+        .addButton(type: .confirm, buttonStyle: .primary(title: "확인")) {
+          store.send(.alert(.confirm))
+        }
+      }
       .onAppear {
         NotiManager.post(key: .hideTab)
       }
