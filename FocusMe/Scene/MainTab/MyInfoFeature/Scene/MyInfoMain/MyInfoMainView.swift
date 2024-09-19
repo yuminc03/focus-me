@@ -5,6 +5,8 @@ import ComposableArchitecture
 struct MyInfoMainView: View {
   @Perception.Bindable private var store: StoreOf<MyInfoMainCore>
   
+  @Environment(\.openURL) var openURL
+  
   init(store: StoreOf<MyInfoMainCore>) {
     self.store = store
   }
@@ -24,6 +26,7 @@ struct MyInfoMainView: View {
       .onAppear {
         NotiManager.post(key: .showTab)
       }
+      .toast(isPresented: $store.isToastPresent, message: "소스코드 URL을 열 수 없습니다. 잠시 후 시도해주세요.")
     }
   }
 }
@@ -52,7 +55,15 @@ private extension MyInfoMainView {
       ForEach(store.items) { item in
         ListRow(title: item.type.rawValue)
           .onTapGesture {
-            store.send(.tapListItem(item.type))
+            if item.type == .sourceCode {
+              if let url = URL(string: store.sourceURL) {
+                openURL(url)
+              } else {
+                store.send(._setToastPresent(true))
+              }
+            } else {
+              store.send(.tapListItem(item.type))
+            }
           }
         
         Divider()

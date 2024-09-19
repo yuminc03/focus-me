@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050DED602C9C0744001C7901 /* FMToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DED5E2C9C0744001C7901 /* FMToast.swift */; };
 		0518467C2C76DC9300547E8E /* TypesGridRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518467B2C76DC9300547E8E /* TypesGridRow.swift */; };
 		0518467F2C76DD4000547E8E /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0518467E2C76DD4000547E8E /* Icon.xcassets */; };
 		051846862C76F6EF00547E8E /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051846852C76F6EF00547E8E /* MBTI.swift */; };
@@ -157,6 +158,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050DED5E2C9C0744001C7901 /* FMToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMToast.swift; sourceTree = "<group>"; };
 		0518467B2C76DC9300547E8E /* TypesGridRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesGridRow.swift; sourceTree = "<group>"; };
 		0518467E2C76DD4000547E8E /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		051846852C76F6EF00547E8E /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
@@ -318,6 +320,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050DED5F2C9C0744001C7901 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				050DED5E2C9C0744001C7901 /* FMToast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		051846782C76DC3500547E8E /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +439,7 @@
 		05DC6A772C59F740005BE3BB /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				050DED5F2C9C0744001C7901 /* Toast */,
 				05F0AFC32C78546900C3507C /* NavigationBar */,
 				8D2FB6F92C6E43F50086513D /* Image */,
 				05A708E52C6C747B00AE1172 /* LoadingView */,
@@ -1186,6 +1197,7 @@
 				8D1365A92C72106300284DA7 /* MyInfoMainView.swift in Sources */,
 				8DEB88E72C845BA3001AB88A /* TakeHoliday.swift in Sources */,
 				8DC783072C99921F00372FD4 /* OfficialMBTIMainCore.swift in Sources */,
+				050DED602C9C0744001C7901 /* FMToast.swift in Sources */,
 				8D48603C2C7CBE2500166C87 /* TestMainCore.swift in Sources */,
 				05DC6A802C59F75A005BE3BB /* Font+.swift in Sources */,
 				05DC6A872C5A089E005BE3BB /* FMTextField.swift in Sources */,

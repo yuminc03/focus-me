@@ -10,7 +10,6 @@ struct MyInfoMainCore {
   }
   
   enum MyInfo: String {
-    case notice = "공지사항"
     case developer = "개발자 소개"
     case sourceCode = "앱 소스코드"
     case loginSetting = "로그인 설정"
@@ -19,17 +18,23 @@ struct MyInfoMainCore {
   @ObservableState
   struct State: Equatable {
     let id = UUID()
+    let sourceURL = "https://github.com/yuminc03/focus-me"
+    
     let items: [ListItem] = [
-      .init(type: .notice),
       .init(type: .developer),
       .init(type: .sourceCode),
       .init(type: .loginSetting),
     ]
+    
+    var isToastPresent = false
   }
   
-  enum Action {
+  enum Action: BindableAction {
+    case binding(BindingAction<State>)
     case delegate(Delegate)
     case tapListItem(MyInfo)
+    
+    case _setToastPresent(Bool)
     
     enum Delegate {
       case detail(MyInfo)
@@ -37,11 +42,21 @@ struct MyInfoMainCore {
   }
   
   var body: some ReducerOf<Self> {
+    BindingReducer()
     Reduce { state, action in
       switch action {
+      case .binding: break
       case .delegate: break
       case let .tapListItem(type):
-        return .send(.delegate(.detail(type)))
+        switch type {
+        case .developer: break
+        case .sourceCode: break
+        case .loginSetting:
+          return .send(.delegate(.detail(.loginSetting)))
+        }
+        
+      case let ._setToastPresent(isPresent):
+        state.isToastPresent = isPresent
       }
       
       return .none
