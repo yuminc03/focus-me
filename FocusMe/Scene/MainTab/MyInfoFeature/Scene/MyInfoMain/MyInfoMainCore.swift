@@ -18,6 +18,7 @@ struct MyInfoMainCore {
   @ObservableState
   struct State: Equatable {
     let id = UUID()
+    let developerIntroURL = "https://github.com/yuminc03"
     let sourceURL = "https://github.com/yuminc03/focus-me"
     
     let items: [ListItem] = [
@@ -27,6 +28,7 @@ struct MyInfoMainCore {
     ]
     
     var isToastPresent = false
+    var toastMessage = ""
   }
   
   enum Action: BindableAction {
@@ -48,9 +50,15 @@ struct MyInfoMainCore {
       case .binding: break
       case .delegate: break
       case let .tapListItem(type):
+        state.toastMessage = ""
+        
         switch type {
-        case .developer: break
-        case .sourceCode: break
+        case .developer:
+          state.toastMessage = "개발자 설명을 열 수 없습니다. 잠시 후 시도해주세요."
+          
+        case .sourceCode:
+          state.toastMessage = "소스코드 URL을 열 수 없습니다. 잠시 후 시도해주세요."
+          
         case .loginSetting:
           return .send(.delegate(.detail(.loginSetting)))
         }

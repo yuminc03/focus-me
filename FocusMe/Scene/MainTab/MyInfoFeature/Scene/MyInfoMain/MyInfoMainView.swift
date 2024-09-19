@@ -26,7 +26,7 @@ struct MyInfoMainView: View {
       .onAppear {
         NotiManager.post(key: .showTab)
       }
-      .toast(isPresented: $store.isToastPresent, message: "소스코드 URL을 열 수 없습니다. 잠시 후 시도해주세요.")
+      .toast(isPresented: $store.isToastPresent, message: store.toastMessage)
     }
   }
 }
@@ -55,7 +55,13 @@ private extension MyInfoMainView {
       ForEach(store.items) { item in
         ListRow(title: item.type.rawValue)
           .onTapGesture {
-            if item.type == .sourceCode {
+            if item.type == .developer {
+              if let url = URL(string: store.developerIntroURL) {
+                openURL(url)
+              } else {
+                store.send(._setToastPresent(true))
+              }
+            } else if item.type == .sourceCode {
               if let url = URL(string: store.sourceURL) {
                 openURL(url)
               } else {
