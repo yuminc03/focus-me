@@ -31,7 +31,7 @@ struct AppView: View {
         UserInfo.shared.clear()
         store.send(._setAppState(.login))
       }
-      .onAppear {
+      .onDidLoad {
         store.send(._onAppear)
       }
     }
