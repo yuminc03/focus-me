@@ -13,10 +13,12 @@ struct HomeView: View {
     WithPerceptionTracking {
       VStack(spacing: 20) {
         UserNameView
-          .padding(.vertical, 10)
+          .padding(.top, 40)
         
         StartTestView
+        
         SeeAllTypesView
+        
         GettingOfficialTestView
         
         Spacer()
