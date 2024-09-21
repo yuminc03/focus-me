@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.lonalia.MySelf</string>
+	<string>com.lonalia.ForMe</string>
 	<key>PROJECT_ID</key>
 	<string>focusme-f122a</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1024620063212:ios:207b7d826467487aa678c9</string>
+	<string>1:1024620063212:ios:d2a568223a9653aba678c9</string>
 </dict>
 </plist>

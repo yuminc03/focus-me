@@ -24,7 +24,6 @@
 		055022962C65E9A80031330E /* FMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055022952C65E9A80031330E /* FMError.swift */; };
 		0564D9442C63124F00102A44 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0564D9432C63124F00102A44 /* FirebaseAnalytics */; };
 		0564D9462C63126400102A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564D9452C63126400102A44 /* AppDelegate.swift */; };
-		0564D9492C6314D900102A44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0564D9482C6314D900102A44 /* GoogleService-Info.plist */; };
 		05685A2F2C85A9180034C124 /* CompleteTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685A2E2C85A9180034C124 /* CompleteTestView.swift */; };
 		05A708DB2C6C4FE000AE1172 /* FMAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708DA2C6C4FE000AE1172 /* FMAlert.swift */; };
 		05A708E02C6C64F000AE1172 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A708DF2C6C64F000AE1172 /* View+.swift */; };
@@ -88,6 +87,7 @@
 		8D612F1E2C7B12AC00A565AB /* AllTypesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F1D2C7B12AC00A565AB /* AllTypesCoordinator.swift */; };
 		8D612F232C7B21B100A565AB /* TypeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F222C7B21B100A565AB /* TypeDetailView.swift */; };
 		8D612F262C7B65C300A565AB /* TypeDetailCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D612F252C7B65C300A565AB /* TypeDetailCore.swift */; };
+		8D7993852C9F000B00B8E5D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D7993842C9F000B00B8E5D2 /* GoogleService-Info.plist */; };
 		8D7BFD412B8229E2001CA0EE /* FocusMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD402B8229E2001CA0EE /* FocusMeApp.swift */; };
 		8D7BFD432B8229E2001CA0EE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD422B8229E2001CA0EE /* AppView.swift */; };
 		8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BFD442B8229E3001CA0EE /* Assets.xcassets */; };
@@ -177,7 +177,6 @@
 		055022932C65E5860031330E /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		055022952C65E9A80031330E /* FMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMError.swift; sourceTree = "<group>"; };
 		0564D9452C63126400102A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0564D9482C6314D900102A44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05685A2E2C85A9180034C124 /* CompleteTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTestView.swift; sourceTree = "<group>"; };
 		05A708DA2C6C4FE000AE1172 /* FMAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMAlert.swift; sourceTree = "<group>"; };
 		05A708DF2C6C64F000AE1172 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -234,6 +233,7 @@
 		8D612F1D2C7B12AC00A565AB /* AllTypesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTypesCoordinator.swift; sourceTree = "<group>"; };
 		8D612F222C7B21B100A565AB /* TypeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailView.swift; sourceTree = "<group>"; };
 		8D612F252C7B65C300A565AB /* TypeDetailCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailCore.swift; sourceTree = "<group>"; };
+		8D7993842C9F000B00B8E5D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D7BFD3D2B8229E2001CA0EE /* FocusMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD402B8229E2001CA0EE /* FocusMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeApp.swift; sourceTree = "<group>"; };
 		8D7BFD422B8229E2001CA0EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -873,7 +873,7 @@
 		8D7BFD3F2B8229E2001CA0EE /* FocusMe */ = {
 			isa = PBXGroup;
 			children = (
-				0564D9482C6314D900102A44 /* GoogleService-Info.plist */,
+				8D7993842C9F000B00B8E5D2 /* GoogleService-Info.plist */,
 				8DDC07DE2BCD6D700019D478 /* Info.plist */,
 				8D7BFD702B82333B001CA0EE /* App */,
 				8DA40F002BB05BE600A7D271 /* Core */,
@@ -1193,12 +1193,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7993852C9F000B00B8E5D2 /* GoogleService-Info.plist in Resources */,
 				8D7BFD482B8229E3001CA0EE /* Preview Assets.xcassets in Resources */,
 				8DDC07DA2BCD6D260019D478 /* NotoSansKR-SemiBold.ttf in Resources */,
 				8DDC07D92BCD6D260019D478 /* NotoSansKR-Thin.ttf in Resources */,
 				8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */,
 				8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */,
-				0564D9492C6314D900102A44 /* GoogleService-Info.plist in Resources */,
 				0518467F2C76DD4000547E8E /* Icon.xcassets in Resources */,
 				8DDC07D62BCD6D260019D478 /* NotoSansKR-Black.ttf in Resources */,
 				8DDC07D82BCD6D260019D478 /* NotoSansKR-Light.ttf in Resources */,
@@ -1523,7 +1523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.FocusMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.ForMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1559,7 +1559,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.FocusMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonalia.ForMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
