@@ -5,8 +5,8 @@ import ComposableArchitecture
 @Reducer
 struct AllTypesScreen {
   enum State: Equatable, Identifiable {
-    case allTypesMain(AllTypesCore.State)
-    case typeDetail(TypeDetailCore.State)
+    case allTypesMain(AllTypesCore.State) // 모든 MBTI 유형 Collection
+    case typeDetail(TypeDetailCore.State) // MBTI 유형 Detail
     
     var id: UUID {
       switch self {

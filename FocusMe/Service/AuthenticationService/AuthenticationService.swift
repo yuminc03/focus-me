@@ -4,7 +4,6 @@ import ComposableArchitecture
 /// Firebase Authentication Service
 final class AuthenticationService {
   static let shared = AuthenticationService()
-  private var authStateHandle: AuthStateDidChangeListenerHandle?
   
   private init() { }
   

@@ -18,9 +18,17 @@ struct AllTypesCoordinator {
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-        // allTypesMain
+        // MARK: - allTypesMain
+        
+        // 모든 MBTI 유형 Collection 화면에서 특정 MBTI를 눌렀을 때
       case let .router(.routeAction(id: _, action: .allTypesMain(.delegate(.detail(type))))):
         state.routes.push(.typeDetail(.init(type: type)))
+        
+        // MARK: - typeDetail
+        
+        // MBTI Detail 화면에서 뒤로가기 눌렀을 때
+      case .router(.routeAction(id: _, action: .typeDetail(.delegate(.back)))):
+        state.routes.goBack()
         
       default: break
       }
