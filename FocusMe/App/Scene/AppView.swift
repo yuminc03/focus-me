@@ -29,10 +29,13 @@ struct AppView: View {
       }
       .onReceive(NotiManager.publisher(key: .logout)) { _ in
         UserInfo.shared.clear()
+        UDStorage.logout()
         store.send(._setAppState(.login))
       }
-      .onDidLoad {
-        store.send(._onAppear)
+      .onReceive(store.publisher.appState) {
+        if $0 == .splash {
+          store.send(._getCurrentUser)
+        }
       }
     }
   }

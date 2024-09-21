@@ -44,7 +44,7 @@ enum UDStorage {
   @UD(key: .name) static var name: String?
   
   
-  func logout() {
+  static func logout() {
     UDStorage.email = nil
     UDStorage.name = nil
   }

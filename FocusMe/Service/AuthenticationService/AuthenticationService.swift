@@ -4,6 +4,7 @@ import ComposableArchitecture
 /// Firebase Authentication Service
 final class AuthenticationService {
   static let shared = AuthenticationService()
+  private var authStateHandle: AuthStateDidChangeListenerHandle?
   
   private init() { }
   
@@ -69,7 +70,7 @@ final class AuthenticationService {
   func logout() throws {
     do {
       try Auth.auth().signOut()
-      print("로그아웃 됨")
+      print("logout() Success")
     } catch {
       let authError = error as NSError
       guard let errorCode = AuthErrorCode(rawValue: authError.code) else {
@@ -93,22 +94,18 @@ final class AuthenticationService {
     }
   }
   
-  /// 현재 로그인한 사용자 가져오기
-  func getCurrentUser() async throws {
-    return try await withCheckedThrowingContinuation { continuation in
-      _ = Auth.auth().addStateDidChangeListener { auth, user in
-        if let user {
-          print("현재 로그인한 사용자 발견!")
-          UserInfo.shared.uid = user.uid
-          UserInfo.shared.email = user.email
-          UserInfo.shared.name = user.displayName
-          continuation.resume(with: .success(()))
-        } else {
-          print("로그아웃 됨!")
-          UserInfo.shared.clear()
-          continuation.resume(with: .failure(FMError.login(.notFoundCurrentUser)))
-        }
-      }
+  /// 현재 로그인한 사용자 가져오기 (true: 로그인한 사용자 있음)
+  func getCurrentUser() -> Bool {
+    // 현재 로그인한 사용자 가져오기 (로그인 상태 아니면 nil)
+    if let user = Auth.auth().currentUser {
+      print("현재 로그인한 사용자 발견함")
+      UserInfo.shared.uid = user.uid
+      return true
+    } else {
+      print("로그아웃 됨")
+      UserInfo.shared.clear()
+      UDStorage.logout()
+      return false
     }
   }
 }

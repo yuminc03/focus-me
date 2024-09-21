@@ -28,7 +28,6 @@ struct AppCore {
     case main(MainTabCoordinator.Action)
     case login(LoginCoordinator.Action)
     
-    case _onAppear
     case _getCurrentUser
     case _setAppState(AppState)
   }
@@ -42,6 +41,7 @@ struct AppCore {
     }
     Reduce { state, action in
       switch action {
+        // 로그인 화면에서 로그인 버튼 눌렀을 때
       case .login(.router(.routeAction(id: _, action: .login(.delegate(.main))))):
         state.appState = .main
         state.main = .initialState
@@ -50,17 +50,12 @@ struct AppCore {
         state.appState = .main
         state.main = .initialState
         
-      case ._onAppear:
-        return .send(._getCurrentUser)
-        
       case ._getCurrentUser:
-        return .send(._setAppState(.main))
-//        return .run { send in
-//          try await AuthenticationService.shared.getCurrentUser()
-//          await send(._setAppState(.main))
-//        } catch: { error, send in
-//          await send(._setAppState(.login))
-//        }
+        if AuthenticationService.shared.getCurrentUser() {
+          return .send(._setAppState(.main))
+        } else {
+          return .send(._setAppState(.login))
+        }
         
       case let ._setAppState(appState):
         switch appState {
