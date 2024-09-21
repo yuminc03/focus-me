@@ -13,10 +13,7 @@ struct LoginView: View {
   
   var body: some View {
     WithPerceptionTracking {
-      ZStack {
-        Color.bg
-          .ignoresSafeArea()
-        
+      ScrollView {
         VStack(spacing: 20) {
           TitleLabel
             .padding(.top, 40)
@@ -34,10 +31,11 @@ struct LoginView: View {
           Spacer()
         }
         .padding(.horizontal, 20)
-        .contentShape(Rectangle())
-        .onTapGesture {
-          endEditing()
-        }
+      }
+      .backgroundColor()
+      .contentShape(Rectangle())
+      .onTapGesture {
+        endEditing()
       }
       .bind($store.focusedField, to: $focusField)
       .loadingView(isLoading: store.isLoading)
