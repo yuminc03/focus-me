@@ -83,6 +83,7 @@ struct LoginSettingCore {
         }
         
       case ._logoutResponse(.success):
+        NotiManager.post(key: .logout)
         return .send(.delegate(.logout))
         
       case let ._logoutResponse(.failure(error)):
