@@ -36,6 +36,7 @@ struct SignUpCore {
     case binding(BindingAction<State>)
     case delegate(Delegate)
     
+    case tapBackButton
     case tapSignUpButton
     case tapExistAccountButton
     case didChangeConfirmPassword(String)
@@ -49,6 +50,7 @@ struct SignUpCore {
     enum Delegate {
       case main
       case login
+      case back
     }
   }
   
@@ -59,6 +61,9 @@ struct SignUpCore {
       switch action {
       case .binding: break
       case .delegate: break
+      case .tapBackButton:
+        return .send(.delegate(.back))
+        
       case .tapSignUpButton:
         return .send(._requestSignUp)
         

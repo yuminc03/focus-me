@@ -17,11 +17,21 @@ struct LoginCoordinator {
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
+        // MARK: - login
+        
+        // 로그인 화면에서 회원가입하러가기 버튼 눌렀을 때
       case .router(.routeAction(id: _, action: .login(.delegate(.signup)))):
         state.routes.push(.signup(.init()))
         
+        // MARK: - signup
+        
+        // 회원가입 화면에서 이미 계정이 있나요? 버튼 눌렀을 때
       case .router(.routeAction(id: _, action: .signup(.delegate(.login)))):
         state.routes.pop()
+        
+        // 회원가입 화면에서 뒤로가기 버튼 눌렀을 때
+      case .router(.routeAction(id: _, action: .signup(.delegate(.back)))):
+        state.routes.goBack()
         
       default: break
       }

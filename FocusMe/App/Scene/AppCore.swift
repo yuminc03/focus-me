@@ -46,6 +46,7 @@ struct AppCore {
         state.appState = .main
         state.main = .initialState
         
+        // 회원가입 화면에서 회원가입 버튼 눌렀을 때
       case .login(.router(.routeAction(id: _, action: .signup(.delegate(.main))))):
         state.appState = .main
         state.main = .initialState

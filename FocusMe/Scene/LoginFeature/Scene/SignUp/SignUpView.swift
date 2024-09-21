@@ -14,30 +14,27 @@ struct SignUpView: View {
   
   var body: some View {
     WithPerceptionTracking {
-      ZStack {
-        Color.bg
-          .ignoresSafeArea()
+      VStack(spacing: 20) {
+        EmailSection
+          .padding(.top, 40)
+
+        PasswordSection
         
-        VStack(spacing: 20) {
-          TitleLabel
-            .padding(.vertical, 40)
-          
-          EmailSection
-          
-          PasswordSection
-          
-          PasswordConfirmSection
-          
-          NameSection
-          
-          SignUpButton
-            .padding(.top, 10)
-          
-          ExistAccountButton
-          
-          Spacer()
-        }
-        .padding(.horizontal, 20)
+        PasswordConfirmSection
+        
+        NameSection
+        
+        SignUpButton
+          .padding(.top, 10)
+        
+        ExistAccountButton
+        
+        Spacer()
+      }
+      .padding(.horizontal, 20)
+      .backgroundColor()
+      .fmNavigation(title: "회원가입") {
+        store.send(.tapBackButton)
       }
       .loadingView(isLoading: store.isLoading)
       .fmAlert(isPresented: $store.isSignupErrorPresented) {
@@ -60,12 +57,6 @@ struct SignUpView: View {
 // MARK: - Component
 
 private extension SignUpView {
-  var TitleLabel: some View {
-    Text("회원가입")
-      .customFont(.notoSansKRSemiBold, size: 30)
-      .frame(maxWidth: .infinity, alignment: .leading)
-  }
-  
   var EmailSection: some View {
     VStack(alignment: .leading, spacing: 10) {
       Text("이메일")

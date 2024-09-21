@@ -21,10 +21,16 @@ struct AppView: View {
         case .login:
           LoginCoordinatorView(store: store.scope(state: \.login, action: \.login))
             .environmentObject(stateManager)
+            .onAppear {
+              NotiManager.post(key: .hideTab)
+            }
           
         case .main:
           MainTabCoordinatorView(store: store.scope(state: \.main, action: \.main))
             .environmentObject(stateManager)
+            .onAppear {
+              NotiManager.post(key: .showTab)
+            }
         }
       }
       .onReceive(NotiManager.publisher(key: .logout)) { _ in
