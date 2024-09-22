@@ -24,6 +24,8 @@ struct AppCore {
     case main
   }
   
+  private let loginRepo = LoginRepository()
+  
   enum Action {
     case main(MainTabCoordinator.Action)
     case login(LoginCoordinator.Action)
@@ -53,7 +55,12 @@ struct AppCore {
         
       case ._getCurrentUser:
         if AuthenticationService.shared.getCurrentUser() {
-          return .send(._setAppState(.main))
+          return .run { send in
+            try await loginRepo.login(target: .getUserInfo(UserInfo.shared.uid ?? ""))
+            await send(._setAppState(.main))
+          } catch: { error, send in
+            await send(._setAppState(.login))
+          }
         } else {
           return .send(._setAppState(.login))
         }
