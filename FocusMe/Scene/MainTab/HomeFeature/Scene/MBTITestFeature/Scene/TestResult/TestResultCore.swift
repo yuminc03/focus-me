@@ -22,6 +22,7 @@ struct TestResultCore {
   }
   
   @Dependency(\.testAnswerInfo) var testAnswerInfo
+  @Dependency(\.mbtiTestStep) var mbtiTestStep
   
   private let mbtiRepo = MBTIRepository()
   
@@ -109,6 +110,7 @@ struct TestResultCore {
         
       case ._saveMBTIResponse(.success):
         testAnswerInfo.clear()
+        mbtiTestStep.reset()
         return .send(.delegate(.home))
         
       case let ._saveMBTIResponse(.failure(error)):
