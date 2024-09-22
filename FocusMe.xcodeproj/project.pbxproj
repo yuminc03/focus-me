@@ -95,6 +95,7 @@
 		8D7BFD522B8229E3001CA0EE /* FocusMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD512B8229E3001CA0EE /* FocusMeTests.swift */; };
 		8D7BFD5C2B8229E3001CA0EE /* FocusMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */; };
 		8D7BFD5E2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */; };
+		8DBAFBAF2CA03534008EDD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBAFBAE2CA03534008EDD9B /* LaunchScreen.storyboard */; };
 		8DC783072C99921F00372FD4 /* OfficialMBTIMainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */; };
 		8DC7830B2C9993DA00372FD4 /* LinkPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */; };
 		8DC783132C99A0FB00372FD4 /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC783122C99A0FB00372FD4 /* SafariWebView.swift */; };
@@ -244,6 +245,7 @@
 		8D7BFD572B8229E3001CA0EE /* FocusMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7BFD5B2B8229E3001CA0EE /* FocusMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITests.swift; sourceTree = "<group>"; };
 		8D7BFD5D2B8229E3001CA0EE /* FocusMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DBAFBAE2CA03534008EDD9B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC783062C99921F00372FD4 /* OfficialMBTIMainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialMBTIMainCore.swift; sourceTree = "<group>"; };
 		8DC7830A2C9993DA00372FD4 /* LinkPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPreview.swift; sourceTree = "<group>"; };
 		8DC783122C99A0FB00372FD4 /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				05B7DC0D2C733ED700E43519 /* AppCore.swift */,
 				8D7BFD422B8229E2001CA0EE /* AppView.swift */,
 				05F0AFC92C785C0700C3507C /* StateManager.swift */,
+				8DBAFBA52CA03032008EDD9B /* Splash */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -948,6 +951,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		8DBAFBA52CA03032008EDD9B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8DBAFBAE2CA03534008EDD9B /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		8DC7830D2C999DC900372FD4 /* SafariWeb */ = {
 			isa = PBXGroup;
 			children = (
@@ -1199,6 +1210,7 @@
 				8DDC07D92BCD6D260019D478 /* NotoSansKR-Thin.ttf in Resources */,
 				8DDC07D42BCD6D260019D478 /* NotoSansKR-ExtraBold.ttf in Resources */,
 				8D7BFD452B8229E3001CA0EE /* Assets.xcassets in Resources */,
+				8DBAFBAF2CA03534008EDD9B /* LaunchScreen.storyboard in Resources */,
 				0518467F2C76DD4000547E8E /* Icon.xcassets in Resources */,
 				8DDC07D62BCD6D260019D478 /* NotoSansKR-Black.ttf in Resources */,
 				8DDC07D82BCD6D260019D478 /* NotoSansKR-Light.ttf in Resources */,
@@ -1504,6 +1516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";
@@ -1540,6 +1553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusMe/Preview Content\"";

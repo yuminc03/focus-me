@@ -61,11 +61,6 @@ enum MBTI: String, CaseIterable {
     }
   }
   
-  /// 캐릭터 이미지
-  var image: ImageResource {
-    return .charAquarius
-  }
-  
   /// 성향
   var disposition: String {
     switch self {

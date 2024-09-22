@@ -52,6 +52,10 @@ private extension AppView {
     ZStack {
       Color.bg
         .ignoresSafeArea()
+      
+      Image(.dreamCatcher)
+        .resizable()
+        .frame(width: 180, height: 360)
     }
   }
 }

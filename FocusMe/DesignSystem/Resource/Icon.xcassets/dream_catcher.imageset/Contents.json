@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "char_aquarius.png",
+      "filename" : "dream_catcher.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "char_aquarius@2x.png",
+      "filename" : "dream_catcher@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "char_aquarius@3x.png",
+      "filename" : "dream_catcher@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
